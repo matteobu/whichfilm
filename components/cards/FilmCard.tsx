@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import filmData from '../data/CFF_PALME_DOR_FILMS_WINNERS.json';
-import FilmTag from './FilmTag';
-import defaultImage from '../public/logo.png';
+import filmData from '../../data/CFF_PALME_DOR_FILMS_WINNERS.json';
+import FilmTag from '../FilmTag';
+import defaultImage from '../../assets/logo.png';
 interface FilmCardProps {
   id: number;
 }

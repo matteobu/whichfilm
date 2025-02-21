@@ -1,6 +1,6 @@
 import CFF_PALME_DOR from '../../data/CFF_PALME_DOR_FILMS_WINNERS.json';
 import CFF_GRAND_PRIX from '../../data/CFF_GRAND_PRIX_FILMS_WINNERS.json';
-import FilmCard from '../../components/FilmCard';
+import FilmCard from '../../components/cards/FilmCard';
 
 const CFF_PALME_DOR_IDS = CFF_PALME_DOR.map((film) => film.id);
 const CFF_GRAND_PRIX_IDS = CFF_GRAND_PRIX.map((film) => film.id);
