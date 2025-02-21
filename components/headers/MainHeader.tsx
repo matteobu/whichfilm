@@ -3,7 +3,7 @@ import logoImg from '../assets/logo.png';
 
 export default function MainHeader() {
   return (
-    <header className="bg-gradient-dark-violet text-white p-5">
+    <header className="bg-gradient-dark-violet text-white p-3">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         <Link
           href="/"
@@ -19,7 +19,15 @@ export default function MainHeader() {
                 href="/films-table"
                 className="text-lg font-semibold text-pink-300 hover:text-pink-500 transition duration-300"
               >
-                Films Table
+                Films
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/film-festival"
+                className="text-lg font-semibold text-pink-300 hover:text-pink-500 transition duration-300"
+              >
+                Film Festivals
               </Link>
             </li>
             <li>
@@ -27,7 +35,7 @@ export default function MainHeader() {
                 href="/films-table"
                 className="text-lg font-semibold text-pink-300 hover:text-pink-500 transition duration-300"
               >
-                Random Film
+                Directors
               </Link>
             </li>
             <li>
@@ -35,7 +43,7 @@ export default function MainHeader() {
                 href="/films-table"
                 className="text-lg font-semibold text-pink-300 hover:text-pink-500 transition duration-300"
               >
-                Films Table
+                Actors
               </Link>
             </li>
             <li>
@@ -43,7 +51,7 @@ export default function MainHeader() {
                 href="/films-table"
                 className="text-lg font-semibold text-pink-300 hover:text-pink-500 transition duration-300"
               >
-                Films Table
+                I feel lucky
               </Link>
             </li>
           </ul>

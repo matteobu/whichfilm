@@ -13,9 +13,7 @@
     "homepage": "https://allweimagineaslight.com/",
     "id": 927547,
     "imdb_id": "tt32086077",
-    "origin_country": [
-      "IN"
-    ],
+    "origin_country": ["IN"],
     "original_language": "ml",
     "original_title": "പ്രഭയായ് നിനച്ചതെല്ലാം",
     "overview": "In Mumbai, Nurse Prabha's routine is troubled when she receives an unexpected gift from her estranged husband. Her younger roommate, Anu, tries in vain to find a spot in the city to be intimate with her boyfriend. A trip to a beach town allows them to find a space for their desires to manifest.",
@@ -136,9 +134,7 @@
     "homepage": "https://a24films.com/films/the-zone-of-interest",
     "id": 467244,
     "imdb_id": "tt7160372",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "The Zone of Interest",
     "overview": "The commandant of Auschwitz, Rudolf Höss, and his wife Hedwig, strive to build a dream life for their family in a house and garden next to the camp.",
@@ -239,9 +235,7 @@
     "homepage": "https://a24films.com/films/stars-at-noon",
     "id": 603204,
     "imdb_id": "tt10354106",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "Stars at Noon",
     "overview": "In present-day Nicaragua, a headstrong American journalist and a mysterious English businessman strike up a romance as they become embroiled in a dangerous labyrinth of lies and conspiracies and are forced to try and escape the country.",
@@ -309,9 +303,7 @@
     "homepage": "https://close.movie/",
     "id": 901563,
     "imdb_id": "tt9660502",
-    "origin_country": [
-      "BE"
-    ],
+    "origin_country": ["BE"],
     "original_language": "fr",
     "original_title": "Close",
     "overview": "Thirteen-year-olds Léo and Rémi have always been close, but they drift apart after the intimacy of their relationship is questioned by schoolmates.",
@@ -405,9 +397,7 @@
     "homepage": "",
     "id": 588182,
     "imdb_id": "tt10262648",
-    "origin_country": [
-      "FI"
-    ],
+    "origin_country": ["FI"],
     "original_language": "fi",
     "original_title": "Hytti nro 6",
     "overview": "A young Finnish woman escapes an enigmatic love affair in Moscow by boarding a train to the arctic port of Murmansk. Forced to share the long ride and a tiny sleeping car with a larger than life Russian miner, the unexpected encounter leads the occupants of Compartment No. 6 to face major truths about human connection.",
@@ -490,77 +480,7 @@
     "vote_average": 7.013,
     "vote_count": 388
   },
-  {
-    "adult": false,
-    "backdrop_path": "/sLCN5b2WYsYkWMrMMCnRHGv1VEO.jpg",
-    "belongs_to_collection": null,
-    "budget": 0,
-    "genres": [
-      {
-        "id": 12,
-        "name": "Adventure"
-      },
-      {
-        "id": 28,
-        "name": "Action"
-      },
-      {
-        "id": 16,
-        "name": "Animation"
-      },
-      {
-        "id": 878,
-        "name": "Science Fiction"
-      }
-    ],
-    "homepage": "",
-    "id": 18095,
-    "imdb_id": "tt0142232",
-    "origin_country": [
-      "JP"
-    ],
-    "original_language": "ja",
-    "original_title": "ドラゴンボールＧＴ 悟空外伝！ 勇気の証しは四星球",
-    "overview": "Son Goku Jr. is the great-great-great-great-grandson of the legendary martial artist Son Goku. However, unlike his predecessor he's not a brave fighter. He's constantly picked on by school bullies, his grandmother Pan sees this and she's worried, but even though Goku Jr. is not a strong and powerful Saiyan, he has a kind heart, and Pan loves him. When Pan gets sick Goku Jr. realizes he must do something if he doesn't want to lose Pan. Then he will remember about the legends of the Dragon Balls. It was told they granted a wish to the bearer, Goku Jr. needs a magical wish more than ever.",
-    "popularity": 26.956,
-    "poster_path": "/vjqcrp7nQGUVkVWeJR3HUAj0AyR.jpg",
-    "production_companies": [
-      {
-        "id": 5542,
-        "logo_path": "/ayE4LIqoAWotavo7xdvYngwqGML.png",
-        "name": "Toei Animation",
-        "origin_country": "JP"
-      },
-      {
-        "id": 3964,
-        "logo_path": "/l7MfzbsazzcSoefr8hUkrX2HArm.png",
-        "name": "Funimation Global Group",
-        "origin_country": "US"
-      }
-    ],
-    "production_countries": [
-      {
-        "iso_3166_1": "JP",
-        "name": "Japan"
-      }
-    ],
-    "release_date": "1997-03-26",
-    "revenue": 0,
-    "runtime": 45,
-    "spoken_languages": [
-      {
-        "english_name": "Japanese",
-        "iso_639_1": "ja",
-        "name": "日本語"
-      }
-    ],
-    "status": "Released",
-    "tagline": "",
-    "title": "Dragon Ball GT: A Hero's Legacy",
-    "video": false,
-    "vote_average": 6.74,
-    "vote_count": 341
-  },
+
   {
     "adult": false,
     "backdrop_path": "/kWkAWQQrlI5Rq2CtC5aYac9dx9V.jpg",
@@ -583,9 +503,7 @@
     "homepage": "",
     "id": 496967,
     "imdb_id": "tt10199586",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "Atlantique",
     "overview": "Arranged to marry a rich man, young Ada is crushed when her true love goes missing at sea during a migration attempt — until a miracle reunites them.",
@@ -685,9 +603,7 @@
     "homepage": "https://www.focusfeatures.com/blackkklansman",
     "id": 487558,
     "imdb_id": "tt7349662",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "BlacKkKlansman",
     "overview": "Colorado Springs, late 1970s. Ron Stallworth, an African American police officer, and Flip Zimmerman, his Jewish colleague, run an undercover operation to infiltrate the Ku Klux Klan.",
@@ -774,9 +690,7 @@
     "homepage": "http://bpm.film",
     "id": 451945,
     "imdb_id": "tt6135348",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "120 battements par minute",
     "overview": "Paris, in the early 1990s: a group of young activists is desperately tied to finding the cure against an unknown lethal disease. They target the pharmaceutical labs that are retaining potential cures, and multiply direct actions, with the hope of saving their lives as well as the ones of future generations.",
@@ -851,9 +765,7 @@
     "homepage": "https://diaphana.fr/film/juste-la-fin-du-monde/",
     "id": 338189,
     "imdb_id": "tt4645368",
-    "origin_country": [
-      "CA"
-    ],
+    "origin_country": ["CA"],
     "original_language": "fr",
     "original_title": "Juste la fin du monde",
     "overview": "Louis, a terminally ill writer, returns home after a long absence to tell his family that he is dying.",
@@ -933,9 +845,7 @@
     "homepage": "http://www.sonofsaul.co.uk/",
     "id": 336050,
     "imdb_id": "tt3808342",
-    "origin_country": [
-      "HU"
-    ],
+    "origin_country": ["HU"],
     "original_language": "hu",
     "original_title": "Saul fia",
     "overview": "In the horror of 1944 Auschwitz, a prisoner forced to burn the corpses of his own people finds moral survival trying to save from the flames the body of a boy he takes for his son, seeking to give him a proper jewish burial.",
@@ -1043,9 +953,7 @@
     "homepage": "",
     "id": 164531,
     "imdb_id": "tt1699090",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "The Universe 7 Wonders of the Solar System",
     "overview": "The seven wonder of our solar system are discussed: Enceladus' geysers, Rings of Saturn, Jupiter's Great Red Spot, the Asteroid Belt, Mars' Olympus Mons, the Surface of the Sun, and planet Earth.",
@@ -1110,9 +1018,7 @@
     "homepage": "https://www.studiocanal.com/title/inside-llewyn-davis-2013/",
     "id": 86829,
     "imdb_id": "tt2042568",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "Inside Llewyn Davis",
     "overview": "In Greenwich Village in the early 1960s, gifted but volatile folk musician Llewyn Davis struggles with money, relationships, and his uncertain future.",
@@ -1177,11 +1083,7 @@
     "homepage": "https://mk2films.com/en/film/reality",
     "id": 985617,
     "imdb_id": "tt24068064",
-    "origin_country": [
-      "FR",
-      "GB",
-      "US"
-    ],
+    "origin_country": ["FR", "GB", "US"],
     "original_language": "en",
     "original_title": "Reality",
     "overview": "Augusta, Georgia, United States, June 3, 2017. After running some errands, Reality Winner returns home, where she is approached by two men.",
@@ -1276,10 +1178,7 @@
     "homepage": "",
     "id": 74879,
     "imdb_id": "tt1827487",
-    "origin_country": [
-      "BA",
-      "TR"
-    ],
+    "origin_country": ["BA", "TR"],
     "original_language": "tr",
     "original_title": "Bir Zamanlar Anadolu'da",
     "overview": "A group of men lead a search for a victim of a murder to whom a suspect named Kenan and his mentally challenged brother confessed. However, the search is proving more difficult than expected as Kenan is fuzzy as to the body's location. As the group continues looking, its members can't help but chat among themselves about everyday life, which ultimately leads to conversations about their deepest existential concerns and secrets.",
@@ -1346,9 +1245,7 @@
     "homepage": "http://www.legaminauvelo-lefilm.com/index_en.php",
     "id": 63831,
     "imdb_id": "tt1827512",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "Le Gamin au vélo",
     "overview": "Abandoned by his father, a young boy is left in the hands of an unqualified childcare provider.",
@@ -1441,9 +1338,7 @@
     "homepage": "http://www.sonyclassics.com/ofgodsandmen/",
     "id": 46332,
     "imdb_id": "tt1588337",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "Des hommes et des dieux",
     "overview": "French drama based on the 1996 kidnapping and killing of seven monks in Algeria. A group of Trappist monks reside in the monastery of Tibhirine in Algeria, where they live in harmony with the largely muslim population. When a bloody conflict between Algeria's army and Muslim Jihadi insurgents disrupts the peace, they are forced to consider fleeing the monastery and deserting the villagers they have ministered to. In the face of deadly violence the monks wrestle with their faith and their convictions, eventually deciding to stay and help their neighbours keep the army and the insurgents at bay.",
@@ -1515,10 +1410,7 @@
     "homepage": "",
     "id": 21575,
     "imdb_id": "tt1235166",
-    "origin_country": [
-      "FR",
-      "IT"
-    ],
+    "origin_country": ["FR", "IT"],
     "original_language": "fr",
     "original_title": "Un prophète",
     "overview": "Sentenced to six years in prison, Malik El Djebena is alone in the world and can neither read nor write. On his arrival at the prison, he seems younger and more brittle than the others detained there. At once he falls under the sway of a group of Corsicans who enforce their rule in the prison. As the 'missions' go by, he toughens himself and wins the confidence of the Corsican group.",
@@ -1627,10 +1519,7 @@
     "homepage": "",
     "id": 43011,
     "imdb_id": "tt0056504",
-    "origin_country": [
-      "FR",
-      "IT"
-    ],
+    "origin_country": ["FR", "IT"],
     "original_language": "en",
     "original_title": "Sodom and Gomorrah",
     "overview": "Lot leads his people to a fertile valley adjacent to the cities of Sodom and Gomorrah, hotbeds of vice and corruption ruled by the merciless Queen Bera. When Lot orders a dam to be busted in order to prevent the destruction of the cities by the attacking Helamites, the queen, in gratitude, allows Lot's people to settle in Sodom. Soon, however, the veneer of civilization begins crumbling as Lot and the Hebrews become corrupted by the Sodomites.",
@@ -1707,9 +1596,7 @@
     "homepage": "",
     "id": 2010,
     "imdb_id": "tt1016205",
-    "origin_country": [
-      "JP"
-    ],
+    "origin_country": ["JP"],
     "original_language": "ja",
     "original_title": "殯の森",
     "overview": "A young woman working at a retirement home takes an elderly man living there on an excursion into the countryside, but the two wind up stranded in the titular forest.",
@@ -1784,9 +1671,7 @@
     "homepage": "",
     "id": 36143,
     "imdb_id": "tt0450680",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "Flandres",
     "overview": "André Demester secretly and painfully loves Barbe, his childhood friend, accepting from her the little that she gives him. He leaves home to be a soldier in a war in a far off land. Barbarity, camaraderie and fear turn him into a warrior. As the seasons go by, Barbe, alone and wasting away, waits for the soldiers to return. Will Demester’s boundless love for Barbe save him?",
@@ -1867,9 +1752,7 @@
     "homepage": "",
     "id": 308,
     "imdb_id": "tt0412019",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "Broken Flowers",
     "overview": "As the devoutly single Don Johnston is dumped by his latest girlfriend, he receives an anonymous pink letter informing him that he has a son who may be looking for him.",
@@ -1948,9 +1831,7 @@
     "homepage": "http://www.oldboyfilm.com/",
     "id": 87516,
     "imdb_id": "tt1321511",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "Oldboy",
     "overview": "A man has only three and a half days and limited resources to discover why he was imprisoned in a nondescript room for 20 years without any explanation.",
@@ -2025,9 +1906,7 @@
     "homepage": "",
     "id": 31026,
     "imdb_id": "tt0346094",
-    "origin_country": [
-      "TR"
-    ],
+    "origin_country": ["TR"],
     "original_language": "tr",
     "original_title": "Uzak",
     "overview": "After his wife leaves him, a photographer has an existential crisis and tries to cope with his cousin's visit.",
@@ -2097,9 +1976,7 @@
     "homepage": "",
     "id": 7294,
     "imdb_id": "tt0311519",
-    "origin_country": [
-      "FI"
-    ],
+    "origin_country": ["FI"],
     "original_language": "fi",
     "original_title": "Mies vailla menneisyyttä",
     "overview": "Arriving in Helsinki, a nameless man is beaten within an inch of his life by thugs, miraculously recovering only to find that he has completely lost his memory. Back on the streets, he attempts to begin again from zero, befriending a moody dog and becoming besotted with a Salvation Army volunteer.",
@@ -2216,9 +2093,7 @@
     "homepage": "",
     "id": 1791,
     "imdb_id": "tt0254686",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "La Pianiste",
     "overview": "Erika Kohut, a sexually repressed piano teacher living with her domineering mother, meets a young man who starts romantically pursuing her.",
@@ -2300,9 +2175,7 @@
     "homepage": "",
     "id": 25838,
     "imdb_id": "tt0245929",
-    "origin_country": [
-      "CN"
-    ],
+    "origin_country": ["CN"],
     "original_language": "zh",
     "original_title": "鬼子来了",
     "overview": "During the Japanese occupation of China, two prisoners are dumped in a peasant's home in a small town. The owner is bullied into keeping the prisoners until the next New Year, at which time they will be collected. The village leaders convene to interrogate the prisoners. The townspeople then struggle to accommodate the prisoners. One is a bellicose Japanese nationalist, the other a nervous translator. Will the townspeople manage to keep the prisoners until the New Year?",
@@ -2396,9 +2269,7 @@
     "homepage": "",
     "id": 65296,
     "imdb_id": "tt0197569",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "L'humanité",
     "overview": "In a quiet little French town, two detectives are tasked with investigating the brutal rape and murder of a preteen girl.",
@@ -2489,9 +2360,7 @@
     "homepage": "",
     "id": 637,
     "imdb_id": "tt0118799",
-    "origin_country": [
-      "IT"
-    ],
+    "origin_country": ["IT"],
     "original_language": "it",
     "original_title": "La vita è bella",
     "overview": "A touching story of an Italian book seller of Jewish ancestry who lives in his own little fairy tale. His creative and happy life would come to an abrupt halt when his entire family is deported to a concentration camp during World War II. While locked up he tries to convince his son that the whole thing is just a game.",
@@ -2563,9 +2432,7 @@
     "homepage": "",
     "id": 10217,
     "imdb_id": "tt0120255",
-    "origin_country": [
-      "CA"
-    ],
+    "origin_country": ["CA"],
     "original_language": "en",
     "original_title": "The Sweet Hereafter",
     "overview": "A small mountain community in Canada is devastated when a school bus accident leaves more than a dozen of its children dead. A big-city lawyer arrives to help the survivors' and victims' families prepare a class-action suit, but his efforts only seem to push the townspeople further apart. At the same time, one teenage survivor of the accident has to reckon with the loss of innocence brought about by a different kind of damage.",
@@ -2632,9 +2499,7 @@
     "homepage": "",
     "id": 145,
     "imdb_id": "tt0115751",
-    "origin_country": [
-      "DK"
-    ],
+    "origin_country": ["DK"],
     "original_language": "da",
     "original_title": "Breaking the Waves",
     "overview": "In a small and conservative Scottish village, a woman's paralytic husband convinces her to have extramarital intercourse so she can tell him about it and give him a reason for living.",
@@ -2763,10 +2628,7 @@
     "homepage": "",
     "id": 22549,
     "imdb_id": "tt0114863",
-    "origin_country": [
-      "GR",
-      "GB"
-    ],
+    "origin_country": ["GR", "GB"],
     "original_language": "el",
     "original_title": "Το βλέμμα του Οδυσσέα",
     "overview": "An exiled filmmaker finally returns to his home country where former mysteries and afflictions of his early life come back to haunt him once more.",
@@ -2925,9 +2787,7 @@
     "homepage": "",
     "id": 470114,
     "imdb_id": "tt5442456",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "24 Hours To Live",
     "overview": "An assassin seeks redemption after being given a second chance at life.",
@@ -3012,9 +2872,7 @@
     "homepage": "http://www.predstoyanie.ru/",
     "id": 38318,
     "imdb_id": "tt0403645",
-    "origin_country": [
-      "RU"
-    ],
+    "origin_country": ["RU"],
     "original_language": "ru",
     "original_title": "Утомлённые солнцем 2: Предстояние",
     "overview": "Epic film about WWII, a sequel to Utomlyonnye solntsem (1994). Evil Stalin is terrorizing people of Russia while the Nazis are advancing. Russian officer Kotov, who miraculously survived the death sentence in Stalin's Purge, is now fighting in the front-lines. His daughter, Nadia, who survived a rape attempt by Nazi soldiers, is now a nurse risking her own life to save others. In the war-torn nation even former enemies are fighting together to defend their land. People stand up united for the sake of victory. Written by Steve Shelokhonov",
@@ -3086,9 +2944,7 @@
     "homepage": "",
     "id": 10434,
     "imdb_id": "tt0107209",
-    "origin_country": [
-      "DE"
-    ],
+    "origin_country": ["DE"],
     "original_language": "de",
     "original_title": "In weiter Ferne, so nah!",
     "overview": "Damiel is now married to Marion, runs the pizzeria “Da Angelo” and the two have a child. The solitarily remaining angel Cassiel is more and more dissatisfied with his destiny as a mere observer of human life and finally decides to take the great leap. As Karl Engel he soon gets into a dubious milieu and finds himself as the assistant of the German American Baker, who makes his money with shady arms deals and sends films east in exchange for weapons. Cassiel’s adventure turns into a “thriller” when he decides to put a stop to Baker’s game.",
@@ -3165,10 +3021,7 @@
     "homepage": "",
     "id": 47714,
     "imdb_id": "tt0104663",
-    "origin_country": [
-      "IT",
-      "CH"
-    ],
+    "origin_country": ["IT", "CH"],
     "original_language": "it",
     "original_title": "Il ladro di bambini",
     "overview": "Antonio, a policeman (carabiniere), has an order to take two children (Rosetta and her brother Luciano) from Milan to Sicily to an orphanage. Their mother has been arrested for forcing Rosetta (11 years old) to work as a prostitute. First the relation between Antonio and the children is tough, but it relaxes so they become temporary friends.",
@@ -3244,10 +3097,7 @@
     "homepage": "",
     "id": 12627,
     "imdb_id": "tt0101428",
-    "origin_country": [
-      "FR",
-      "CH"
-    ],
+    "origin_country": ["FR", "CH"],
     "original_language": "fr",
     "original_title": "La Belle Noiseuse",
     "overview": "The former famous painter Frenhofer lives quietly with his wife on a countryside residence in the French Provence. When the young artist Nicolas visits him with his girlfriend Marianne, Frenhofer decides to start again the work on a painting he long ago stopped: La Belle Noiseuse. And he wants Marianne as model.",
@@ -3335,9 +3185,7 @@
     "homepage": "",
     "id": 263785,
     "imdb_id": "tt0071744",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "The Law",
     "overview": "An examination of the workings of a big city's legal system as seen through the eyes of people involved in a sensational murder trial.",
@@ -3370,9 +3218,7 @@
     "homepage": "",
     "id": 128775,
     "imdb_id": "tt0131012",
-    "origin_country": [
-      "JP"
-    ],
+    "origin_country": ["JP"],
     "original_language": "ja",
     "original_title": "死の棘",
     "overview": "Miho and Toshio, putting their children and household at stake, duel for control in their degrading, middle-aged marriage.",
@@ -3437,9 +3283,7 @@
     "homepage": "",
     "id": 48524,
     "imdb_id": "tt0098520",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "Trop belle pour toi",
     "overview": "A car dealer, well-to-do and with a beautiful wife, finds himself attracted to his rather plain new temporary secretary. Despite her own commitments she feels the same and the two soon embark on an affair. Though it would seem it has happened before his wife finds this particular entanglement of her husband's very difficult to accept.",
@@ -3518,9 +3362,7 @@
     "homepage": "",
     "id": 11216,
     "imdb_id": "tt0095765",
-    "origin_country": [
-      "IT"
-    ],
+    "origin_country": ["IT"],
     "original_language": "it",
     "original_title": "Nuovo Cinema Paradiso",
     "overview": "A filmmaker recalls his childhood, when he fell in love with the movies at his village's theater and formed a deep friendship with the theater's projectionist.",
@@ -3593,10 +3435,7 @@
     "homepage": "",
     "id": 41949,
     "imdb_id": "tt0096464",
-    "origin_country": [
-      "ZW",
-      "GB"
-    ],
+    "origin_country": ["ZW", "GB"],
     "original_language": "en",
     "original_title": "A World Apart",
     "overview": "A White enclave in Johannesburg, South Africa, in the 1960s. Molly Roth, 13 years old, is the daughter of leftist parents, and she must piece together what's happening around her when her father disappears one night, barely evading arrest, and, not long after, her mother is detained by the authorities. Some of Molly's White friends turn against her, and her family's friendships with Blacks take on new meaning. Relationships are fragile in the world of apartheid. How will she manage?",
@@ -3685,9 +3524,7 @@
     "homepage": "",
     "id": 80920,
     "imdb_id": "tt2012665",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "Repentance",
     "overview": "An earnest life-coach/author, Thomas Carter, is mysteriously abducted by a deranged client, Angel Sanchez, who delves into Thomas' teachings and uses his spiritual messages of Karma - action and reaction (Vipaka), against him to terrorize him and his family for their past sins.",
@@ -3735,9 +3572,7 @@
     "homepage": "",
     "id": 413254,
     "imdb_id": "tt0001027",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "The Sacrifice",
     "overview": "Oh, the woe of simultaneous birthdays, as were Mr. and Mrs. Hardlucks', and both being of a generous nature, were seized with an insatiable desire to make on this anniversary of their nativity suitable gifts, each to the other, Hardluck has a watch, but no fob. Mrs. Hardluck has a wealth of hair, but no decorative comb for her hair. What is worse, finances are low, or rather exhausted. An idea strikes Hardluck. He will pawn his watch and buy a comb; thus surprising her. Mrs. Hardluck's mind is also illumined by a bright thought. She will sacrifice her hair, and with the money buy him a fob. This they do, of course, unknown to each other. Well, here's the situation: He had no fob for his watch, and she no comb for her hair; but now he has no watch for his fob, and she has no hair for her comb.  Mack Sennett appears as an extra in this film produced by the Biograph Company.",
@@ -3782,9 +3617,7 @@
     "homepage": "http://alanparker.com/film/birdy/",
     "id": 11296,
     "imdb_id": "tt0086969",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "Birdy",
     "overview": "Two young men are seriously affected by the Vietnam War. One of them has always been obsessed with birds - but now believes he really is a bird, and has been sent to a mental hospital. Can his friend help him pull through?",
@@ -3840,9 +3673,7 @@
     "homepage": "",
     "id": 84946,
     "imdb_id": "tt0084388",
-    "origin_country": [
-      "HU"
-    ],
+    "origin_country": ["HU"],
     "original_language": "hu",
     "original_title": "Napló gyermekeimnek",
     "overview": "After having lost her parents, young Juli returns from the Soviet Union to her native Budapest. Scarred by the wounds of the past, the ghost of Stalin’s oppression haunts her as she reunites with her aunt and adoptive mother Magda.",
@@ -3899,9 +3730,7 @@
     "homepage": "",
     "id": 4543,
     "imdb_id": "tt0085959",
-    "origin_country": [
-      "GB"
-    ],
+    "origin_country": ["GB"],
     "original_language": "en",
     "original_title": "Monty Python's The Meaning of Life",
     "overview": "Life's questions are 'answered' in a series of outrageous vignettes, beginning with a staid London insurance company which transforms before our eyes into a pirate ship. Then there's the National Health doctors who try to claim a healthy liver from a still-living donor. The world's most voracious glutton brings the art of vomiting to new heights before his spectacular demise.",
@@ -3968,9 +3797,7 @@
     "homepage": "",
     "id": 42130,
     "imdb_id": "tt0084422",
-    "origin_country": [
-      "IT"
-    ],
+    "origin_country": ["IT"],
     "original_language": "it",
     "original_title": "La notte di San Lorenzo",
     "overview": "The Night of San Lorenzo, the night of the shooting stars, is the night when dreams come true in Italian folklore. In 1944, a group of Italians flee their town after hearing rumours that the Nazis plan to blow it up and that the Americans are about to arrive to liberate them.",
@@ -4032,9 +3859,7 @@
     "homepage": "",
     "id": 331334,
     "imdb_id": "tt0462401",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "Light Years Away",
     "overview": "Astronomer David Summers (Christopher Knight) has just discovered the Dream Galaxy, and with it, Misty (Meadow Williams) -- the girl of his dreams. Also featuring Eric Roberts, Hal Linden, Adrianne Curry and Barry Van Dyke.",
@@ -4086,9 +3911,7 @@
     "homepage": "",
     "id": 39543,
     "imdb_id": "tt0081176",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "Mon oncle d'Amérique",
     "overview": "Prof. Henri Laborit uses the stories of the lives of three people to discuss behaviorist theories of survival, combat, rewards and punishment, and anxiety. René is a technical manager at a textile factory and must face the anxiety caused by corporate downsizing. Janine is a self-educated actress/stylist who learns that the wife of her lover is dying and must decide to let them reunite. Jean is a controversial career-climbing writer/politician at a crossroads in life.",
@@ -4163,9 +3986,7 @@
     "homepage": "",
     "id": 68553,
     "imdb_id": "tt0079907",
-    "origin_country": [
-      "SU"
-    ],
+    "origin_country": ["SU"],
     "original_language": "ru",
     "original_title": "Сибириада",
     "overview": "The story about a very small god-forgotten village in Siberia reflects the history of Russia from the beginning of the century till the early 1980s. Three generations try to find the land of happiness and to give it to the people. One builds the road through taiga to the star over horizon, the second 'build communism' and the third searches for oil.",
@@ -4241,9 +4062,7 @@
     "homepage": "",
     "id": 48131,
     "imdb_id": "tt0078259",
-    "origin_country": [
-      "GB"
-    ],
+    "origin_country": ["GB"],
     "original_language": "en",
     "original_title": "The Shout",
     "overview": "A traveller by the name of Crossley forces himself upon a musician and his wife in a lonely part of Devon, and uses the aboriginal magic he has learned to displace his host.",
@@ -4322,9 +4141,7 @@
     "homepage": "",
     "id": 42200,
     "imdb_id": "tt0075848",
-    "origin_country": [
-      "IT"
-    ],
+    "origin_country": ["IT"],
     "original_language": "it",
     "original_title": "Ciao maschio",
     "overview": "In metahistorical New York city electrotechnician Lafayette deals with a megalomaniac director of a wax museum of ancient Rome, an italian lonely anarchist, a group of feminist actresses - including Angelica who falls in love with him - and a small adopted chimpanzee.",
@@ -4389,9 +4206,7 @@
     "homepage": "",
     "id": 48205,
     "imdb_id": "tt0074870",
-    "origin_country": [
-      "DE"
-    ],
+    "origin_country": ["DE"],
     "original_language": "de",
     "original_title": "Die Marquise von O...",
     "overview": "A German Marquise has to deal with a pregnancy she cannot explain and an infatuated Russian Count.",
@@ -4470,9 +4285,7 @@
     "homepage": "",
     "id": 51857,
     "imdb_id": "tt0074360",
-    "origin_country": [
-      "ES"
-    ],
+    "origin_country": ["ES"],
     "original_language": "es",
     "original_title": "Cría cuervos",
     "overview": "Ana, an eight-year-old girl living in Madrid with her grandmother and two sisters, mourns the death of her mother.",
@@ -4527,9 +4340,7 @@
     "homepage": "",
     "id": 11710,
     "imdb_id": "tt0071691",
-    "origin_country": [
-      "DE"
-    ],
+    "origin_country": ["DE"],
     "original_language": "de",
     "original_title": "Jeder für sich und Gott gegen alle",
     "overview": "The film follows Kaspar Hauser (Bruno S.), who lived the first seventeen years of his life chained in a tiny cellar with only a toy horse to occupy his time, devoid of all human contact except for a man who wears a black overcoat and top hat who feeds him.",
@@ -4595,9 +4406,7 @@
     "homepage": "",
     "id": 47406,
     "imdb_id": "tt0071502",
-    "origin_country": [
-      "IT"
-    ],
+    "origin_country": ["IT"],
     "original_language": "it",
     "original_title": "Il fiore delle Mille e una notte",
     "overview": "The final part of Pasolini's Trilogy of Life series is rich with exotic tales of slaves and kings, potions, betrayals, demons and, most of all, love and lovemaking in all its myriad forms. Mysterious and liberating, this is an exquisitely dreamlike and adult interpretation of the original folk tales.",
@@ -4671,9 +4480,7 @@
     "homepage": "",
     "id": 48693,
     "imdb_id": "tt0070359",
-    "origin_country": [
-      "FR"
-    ],
+    "origin_country": ["FR"],
     "original_language": "fr",
     "original_title": "La Maman et la Putain",
     "overview": "Aimless young Alexandre juggles his relationships with his girlfriend, Marie, and a casual lover named Veronika. Marie becomes increasingly jealous of Alexandre's fling with Veronika and as the trio continues their unsustainable affair, the emotional stakes get higher, leading to conflict and unhappiness.",
@@ -4756,9 +4563,7 @@
     "homepage": "",
     "id": 2103,
     "imdb_id": "tt0307479",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "Solaris",
     "overview": "A troubled psychologist is sent to investigate the crew of an isolated research station orbiting a bizarre planet.",
@@ -4823,9 +4628,7 @@
     "homepage": "",
     "id": 59881,
     "imdb_id": "tt0067820",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "Taking Off",
     "overview": "Unable to deal with her parents, Jeannie Tyne runs away from home. Larry and Lynn Tyne search for her, and in the process meet other people whose children ran away. With their children gone, the parents are now free to rediscover/enjoy life.",
@@ -4892,9 +4695,7 @@
     "homepage": "",
     "id": 16328,
     "imdb_id": "tt0067277",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "Johnny Got His Gun",
     "overview": "A young American soldier, rendered in pseudocoma from an artillery shell from WWI, recalls his life leading up to that point.",
@@ -4949,9 +4750,7 @@
     "homepage": "",
     "id": 26451,
     "imdb_id": "tt0065889",
-    "origin_country": [
-      "IT"
-    ],
+    "origin_country": ["IT"],
     "original_language": "it",
     "original_title": "Indagine su un cittadino al di sopra di ogni sospetto",
     "overview": "Rome, Italy. After committing a heinous crime, a senior police officer exposes evidence incriminating him because his moral commitment prevents him from circumventing the law and the social order it protects.",
@@ -5010,9 +4809,7 @@
     "homepage": "",
     "id": 87208,
     "imdb_id": "tt0065261",
-    "origin_country": [
-      "SE"
-    ],
+    "origin_country": ["SE"],
     "original_language": "sv",
     "original_title": "Ådalen 31",
     "overview": "A film about the 1931 Ådalen shootings, in which Swedish military forces opened fire against labour demonstrators in the Swedish sawmill district of Ådalen.",
@@ -5063,9 +4860,7 @@
     "homepage": "",
     "id": 59088,
     "imdb_id": "tt0062277",
-    "origin_country": [
-      "YU"
-    ],
+    "origin_country": ["YU"],
     "original_language": "sr",
     "original_title": "Skupljaci perja",
     "overview": "The protagonist, Bora, is a charming but mean-spirited gypsy, while his older wife, Lence, is submissive. Bora is in love with the younger Tisa, who is being offered in marriage by her father. The two get themselves in trouble and eventually have to flee. Tisa rejects her husband and she and Bora get married in the church, and their adventures continue.",
@@ -5125,9 +4920,7 @@
     "homepage": "",
     "id": 441762,
     "imdb_id": "tt3313054",
-    "origin_country": [
-      "US"
-    ],
+    "origin_country": ["US"],
     "original_language": "en",
     "original_title": "Accident",
     "overview": "A group of teenagers suffer a terrible accident during a joy ride and get trapped at the bottom of a ravine.",
