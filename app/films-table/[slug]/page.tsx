@@ -1,4 +1,4 @@
-import filmData from '../../../data/CFF_PALME_DOR_FILMS_WINNERS.json';
+import filmData from '../../../database/jsonFiles/CFF_PALME_DOR_FILMS_WINNERS.json';
 
 export default async function FilmPage({ params }) {
   const { slug } = await params;

@@ -1,13 +1,8 @@
-import CFF_PALME_DOR from '../../data/CFF_PALME_DOR_FILMS_WINNERS.json';
-import CFF_GRAND_PRIX from '../../data/CFF_GRAND_PRIX_FILMS_WINNERS.json';
 import FilmCard from '../../components/cards/FilmCard';
-
-const CFF_PALME_DOR_IDS = CFF_PALME_DOR.map((film) => film.id);
-const CFF_GRAND_PRIX_IDS = CFF_GRAND_PRIX.map((film) => film.id);
-
-const filmIds = [...CFF_PALME_DOR_IDS, ...CFF_GRAND_PRIX_IDS];
-
+import { getFilms } from '../../lib/films';
 export default function FilmsTable() {
+  const films = getFilms();
+
   return (
     <main className="bg-gradient-dark-violet min-h-screen flex flex-col items-center justify-center text-white py-10">
       <div className="text-center">
@@ -16,8 +11,8 @@ export default function FilmsTable() {
           the Cannes Film Festival
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filmIds.map((id) => (
-            <FilmCard id={id} />
+          {films.map((f) => (
+            <FilmCard film={f} />
           ))}
         </div>
       </div>

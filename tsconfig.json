@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "database/scripts/insertFilm.js"  ],
   "exclude": [
     "node_modules"
   ]

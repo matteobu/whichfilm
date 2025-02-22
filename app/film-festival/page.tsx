@@ -1,5 +1,5 @@
 import FilmFestivalCard from '../../components/cards/FilmFestivalCard';
-import filmFestivals from '../../data/indieFilmFestivals.json';
+import filmFestivals from '../../database/jsonFiles/indieFilmFestivals.json';
 
 const FilmFestivalList: React.FC = () => {
   return (
