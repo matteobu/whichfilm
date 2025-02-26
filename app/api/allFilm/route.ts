@@ -3,16 +3,18 @@ import { NextResponse } from 'next/server';
 
 const db = sql('film_indie.db');
 
+// This function is synchronous so no need for async/await
 export function getAllFilms() {
   return db.prepare('SELECT * FROM film').all();
 }
 
-// To use in case of request with query from the client
-export async function GET() {
+// Handle the GET request
+export function GET() {
   try {
-    const results = getAllFilms();
-    return NextResponse.json(results);
+    const results = getAllFilms(); // Synchronous, no need for await
+    return NextResponse.json(results); // Return films as JSON
   } catch (error) {
+    // If an error occurs, return a 500 response with an error message
     return NextResponse.json(
       { error: 'Errore nel recupero dei film' },
       { status: 500 }

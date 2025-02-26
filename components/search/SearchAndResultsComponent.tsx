@@ -7,31 +7,50 @@ const SearchComponent = () => {
   const [query, setQuery] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [results, setResults] = useState<any[]>([]);
+  const [allFilmQuery, setAllFilmQuery] = useState(false); // Store in state
+
+  useEffect(() => {
+    fetch(`/api/allFilm`)
+      .then((res) => res.json())
+      .then((data) => {
+        setAllFilmQuery(true);
+        setResults(data);
+      })
+      .catch((error) => console.error('Fetch error:', error));
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedQuery(query);
-    }, 100);
+    }, 200);
 
     return () => clearTimeout(timer);
   }, [query]);
 
   useEffect(() => {
     if (debouncedQuery) {
-      // Fetch from the server-side API that calls Orama
       fetch(`/api/search?query=${debouncedQuery}`)
         .then((res) => res.json())
-        .then((data) => setResults(data))
+        .then((data) => {
+          setAllFilmQuery(false);
+          setResults(data);
+        })
         .catch((error) => console.error('Fetch error:', error));
     } else {
-      setResults([]);
+      fetch(`/api/allFilm`)
+        .then((res) => res.json())
+        .then((data) => {
+          setAllFilmQuery(true);
+          setResults(data);
+        })
+        .catch((error) => console.error('Fetch error:', error));
     }
   }, [debouncedQuery]);
 
   return (
     <div className="w-full flex flex-col justify-center items-center bg-gradient-dark-violet">
       <SearchInput query={query} setQuery={setQuery} />
-      <SearchResults results={results} />
+      <SearchResults results={results} test={allFilmQuery} />
     </div>
   );
 };

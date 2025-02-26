@@ -1,11 +1,12 @@
 import { notFound } from 'next/navigation';
-import filmData from '../../../database/jsonFiles/CFF_PALME_DOR_FILMS_WINNERS.json';
+import filmData from '../../../database/jsonFiles/CFF_ALL.json';
 
 export default async function FilmPage({ params }) {
   const { slug } = await params;
   const filmInfo = filmData.find((f) => f.id === +slug);
 
-  if (!filmInfo) { // If the film is not found, return a not found page // todo
+  if (!filmInfo) {
+    // If the film is not found, return a not found page // todo
     notFound();
   }
 
@@ -32,15 +33,13 @@ export default async function FilmPage({ params }) {
   } = filmInfo;
 
   const year = release_date.split('-')[0];
-  const languageList = spoken_languages.map((lang) => lang.name).join(', ');
-  const genreList = genres.map((genre) => genre.name).join(', ');
+  const languageList = spoken_languages.map((lang) => lang).join(', ');
+  const genreList = genres.map((genre) => genre).join(', ');
 
   return (
     <main className="bg-gradient-to-r from-purple-900 via-indigo-900 to-violet-700 min-h-screen text-white">
-      {/* Header & Trailer Section - Two Equal Columns */}
       <section className="max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
-          {/* Left: Header Section */}
           <div className="relative w-full md:w-1/2 min-h-96 flex flex-col justify-center items-center">
             {backdrop_path ? (
               <img
@@ -60,11 +59,10 @@ export default async function FilmPage({ params }) {
             </div>
           </div>
 
-          {/* Right: YouTube Trailer - Same Height as Left */}
           <div className="w-full md:w-1/2 min-h-96 flex items-center justify-center">
             <iframe
               className="w-full h-full rounded-lg shadow-xl"
-              src={`https://www.youtube.com/embed/${filmInfo.imdb_id}`}
+              src={`https://www.youtube.com/embed/${filmInfo.title} trailer`}
               title="Trailer"
               allowFullScreen
             />
