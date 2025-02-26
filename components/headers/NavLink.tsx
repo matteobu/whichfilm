@@ -1,7 +1,10 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { activeClassName, inactiveClassName } from './constants';
+import {
+  activeClassName,
+  inactiveClassName,
+} from '../utils-components/constants';
 
 interface NavLinkProps {
   href: string;
