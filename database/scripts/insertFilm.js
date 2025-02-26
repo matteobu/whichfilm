@@ -1,9 +1,8 @@
 import Database from 'better-sqlite3';
 const db = new Database('../film_indie.db');
-import CFF_GRAND_PRIX_FILMS_WINNERS from '../jsonFiles/CFF_GRAND_PRIX_FILMS_WINNERS.json' assert { type: 'json' };
-import CFF_PALME_DOR_FILMS_WINNERS from '../jsonFiles/CFF_PALME_DOR_FILMS_WINNERS.json' assert { type: 'json' };
+import CFF_ALL from '../jsonFiles/CFF_ALL.json' assert { type: 'json' };
 
-const awardFilms = CFF_PALME_DOR_FILMS_WINNERS;
+const awardFilms = CFF_ALL;
 // const awardFilms = CFF_GRAND_PRIX_FILMS_WINNERS;
 
 awardFilms.forEach((film) => {
@@ -16,7 +15,7 @@ awardFilms.forEach((film) => {
       console.log(`Film with tmbd_id ${film.id} already exists.`);
     } else {
       const filmInsert = db.prepare(`
-        INSERT INTO film (tmbd_id, title, backdrop_path, release_date, overview, runtime, festival_id)
+        INSERT INTO film (tmbd_id, title, backdrop_path, release_date, overview, runtime, genres, festival_id)
         VALUES (?, ?, ?, ?, ?, ?, ?)
       `);
       filmInsert.run(
@@ -26,6 +25,7 @@ awardFilms.forEach((film) => {
         film.release_date,
         film.overview,
         film.runtime,
+        film.genres,
         987654
       );
       console.log(`Film inserted: ${film.title}`);

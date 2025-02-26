@@ -5,7 +5,7 @@ import {
   FaEnvelope,
   FaInstagram,
   FaXTwitter,
-} from 'react-icons/fa6'; // Importing icons from react-icons
+} from 'react-icons/fa6';
 
 const Footer = () => {
   return (

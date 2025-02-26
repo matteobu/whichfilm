@@ -1,5 +1,10 @@
-export function getRandomObjects<T>(arr: T[], num: number): T[] {
-  const arrayCopy = [...arr];
+import { OramaSearchHits } from './types';
+
+export function getRandomObjects(
+  response: OramaSearchHits[],
+  num: number
+): OramaSearchHits[] {
+  const arrayCopy = [...response];
   const today = new Date();
 
   const year = today.getFullYear();
@@ -13,5 +18,5 @@ export function getRandomObjects<T>(arr: T[], num: number): T[] {
     [arrayCopy[i], arrayCopy[j]] = [arrayCopy[j], arrayCopy[i]];
   }
 
-  return arrayCopy.slice(0, num);
+  return arrayCopy.slice(0, num) as unknown as OramaSearchHits[];
 }

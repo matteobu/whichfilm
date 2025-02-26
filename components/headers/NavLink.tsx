@@ -15,7 +15,7 @@ interface NavLinkProps {
 const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
   const pathname = usePathname();
   const isActive = pathname === href;
-  console.log(href);
+
   let className = '';
 
   if (href === '/orama-search') {
