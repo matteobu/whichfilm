@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import NavLink from './NavLink';
-import { activeClassName } from './constants';
+import { activeClassName } from '../utils-components/constants';
 
 export default function MainHeader() {
   return (

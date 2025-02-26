@@ -1,8 +1,13 @@
+import { notFound } from 'next/navigation';
 import filmData from '../../../database/jsonFiles/CFF_PALME_DOR_FILMS_WINNERS.json';
 
 export default async function FilmPage({ params }) {
   const { slug } = await params;
   const filmInfo = filmData.find((f) => f.id === +slug);
+
+  if (!filmInfo) { // If the film is not found, return a not found page // todo
+    notFound();
+  }
 
   if (!filmInfo) {
     return (

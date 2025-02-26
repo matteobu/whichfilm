@@ -1,25 +1,26 @@
+'use client';
 import Link from 'next/link';
 import FilmTag from '../FilmTag';
 import defaultImage from '../../assets/logo.png';
+
 interface FilmCardProps {
   film: any;
 }
 
-const FilmCard: React.FC<FilmCardProps> = async ({ film }) => {
+const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
   if (!film) {
-    return;
+    return null;
   }
 
   const { title, backdrop_path, release_date, overview, genres } = film;
   const year = release_date.split('-')[0];
-
   const imageSrc = backdrop_path
     ? `https://image.tmdb.org/t/p/w500${backdrop_path}`
     : defaultImage.src;
 
   return (
     <Link
-      href={`/films-table/${film.id}`}
+      href={`/films-table/${film.tmdb_id}`}
       className="block text-xl font-semibold text-pink-300 hover:text-pink-500 text-center"
     >
       <div className="max-w-sm w-72 h-96 rounded-2xl overflow-hidden shadow-lg bg-gradient-to-r from-purple-900 via-indigo-900 to-violet-700 hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col">
@@ -27,7 +28,7 @@ const FilmCard: React.FC<FilmCardProps> = async ({ film }) => {
           <img
             className="w-full h-full object-cover rounded-t-2xl"
             src={imageSrc}
-            alt={title}
+            alt={title || 'Film Image'} // Handle alt text
           />
         </div>
 
@@ -39,8 +40,8 @@ const FilmCard: React.FC<FilmCardProps> = async ({ film }) => {
 
           <div className="flex flex-row mt-auto gap-2">
             <FilmTag text={year} />
-            {/* <FilmTag text={genres[0].name} />
-            {genres[1] && <FilmTag text={genres[1].name} />} */}
+            {/* <FilmTag text={genres[0]} />
+            {genres[1] && <FilmTag text={genres[1]} />} */}
           </div>
         </div>
       </div>
