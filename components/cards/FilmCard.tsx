@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import FilmTag from '../FilmTag';
+import FilmTag from './FilmTag';
 import defaultImage from '../../assets/logo.png';
 
 interface FilmCardProps {
@@ -13,6 +13,7 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
   }
 
   const { title, backdrop_path, release_date, overview, genres } = film;
+
   const year = release_date.split('-')[0];
   const imageSrc = backdrop_path
     ? `https://image.tmdb.org/t/p/w500${backdrop_path}`
@@ -28,7 +29,7 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
           <img
             className="w-full h-full object-cover rounded-t-2xl"
             src={imageSrc}
-            alt={title || 'Film Image'} // Handle alt text
+            alt={title || 'Film Image'}
           />
         </div>
 
@@ -40,7 +41,7 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
 
           <div className="flex flex-row mt-auto gap-2">
             <FilmTag text={year} />
-            {/* <FilmTag text={genres[0]} />
+            {/* <FilmTag text={genres.} />
             {genres[1] && <FilmTag text={genres[1]} />} */}
           </div>
         </div>

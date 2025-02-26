@@ -2,8 +2,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
-  activeClassName,
-  inactiveClassName,
+  activeButtonClassName,
+  inactiveButtonClassName,
+  oramaSearchButtonClassName,
 } from '../utils-components/constants';
 
 interface NavLinkProps {
@@ -12,14 +13,20 @@ interface NavLinkProps {
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
-  const isActive = usePathname() === href;
+  const pathname = usePathname();
+  const isActive = pathname === href;
+  console.log(href);
+  let className = '';
+
+  if (href === '/orama-search') {
+    className = oramaSearchButtonClassName;
+  } else {
+    className = isActive ? activeButtonClassName : inactiveButtonClassName;
+  }
 
   return (
     <li>
-      <Link
-        href={href}
-        className={`${isActive ? activeClassName : inactiveClassName}`}
-      >
+      <Link href={href} className={className}>
         {children}
       </Link>
     </li>
