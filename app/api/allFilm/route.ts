@@ -1,22 +1,28 @@
 import sql from 'better-sqlite3';
 import { NextResponse } from 'next/server';
+import { OramaClient } from '@oramacloud/client';
 
 const db = sql('film_indie.db');
 
-// This function is synchronous so no need for async/await
-export function getAllFilms() {
-  return db.prepare('SELECT * FROM film').all();
+export async function getAllFilms() {
+  const client = new OramaClient({
+    endpoint: 'https://cloud.orama.run/v1/indexes/film-oofphg',
+    api_key: process.env.ORAMA_API_KEY,
+  });
+  const results = await client.search({
+    term: '',
+    limit: 20,
+  });
+  return results;
 }
 
-// Handle the GET request
-export function GET() {
+export async function GET() {
   try {
-    const results = getAllFilms(); // Synchronous, no need for await
-    return NextResponse.json(results); // Return films as JSON
+    const results = await getAllFilms();
+    return NextResponse.json(results);
   } catch (error) {
-    // If an error occurs, return a 500 response with an error message
     return NextResponse.json(
-      { error: 'Errore nel recupero dei film' },
+      { error: 'error on fetching films' },
       { status: 500 }
     );
   }

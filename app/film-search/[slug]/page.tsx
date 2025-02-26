@@ -1,12 +1,11 @@
 import { notFound } from 'next/navigation';
-import filmData from '../../../database/jsonFiles/CFF_ALL.json';
+import filmData from '../../../database/jsonFiles/cff_ifb_ALL.json';
 
 export default async function FilmPage({ params }) {
   const { slug } = await params;
   const filmInfo = filmData.find((f) => f.id === +slug);
 
   if (!filmInfo) {
-    // If the film is not found, return a not found page // todo
     notFound();
   }
 
@@ -26,9 +25,6 @@ export default async function FilmPage({ params }) {
     release_date,
     overview,
     genres,
-    runtime,
-    vote_average,
-    vote_count,
     spoken_languages,
   } = filmInfo;
 
@@ -84,9 +80,7 @@ export default async function FilmPage({ params }) {
               <p>
                 <strong>Genres:</strong> {genreList}
               </p>
-              <p>
-                <strong>Runtime:</strong> {runtime} minutes
-              </p>
+
               <p>
                 <strong>Languages:</strong> {languageList}
               </p>
@@ -95,13 +89,6 @@ export default async function FilmPage({ params }) {
               <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 mb-4">
                 Ratings & Revenue
               </h2>
-              <p>
-                <strong>Rating:</strong> {vote_average} ({vote_count} votes)
-              </p>
-              <p>
-                <strong>Revenue:</strong> $
-                {new Intl.NumberFormat().format(filmInfo.revenue)}
-              </p>
             </div>
           </div>
         </div>

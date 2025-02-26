@@ -23,7 +23,7 @@ const FilmTag: React.FC<TagProps> = ({ text }) => {
 
   return (
     <span
-      className={`mt-3 self-start ${color} text-white text-xs font-bold px-3 py-1 rounded-full`}
+      className={`mt-2 self-start ${color} text-white text-xs font-bold px-2 py-1 rounded-full`}
     >
       {text}
     </span>
