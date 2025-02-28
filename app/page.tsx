@@ -4,23 +4,11 @@ import Link from 'next/link';
 import SmallFilmCard from '../components/cards/SmallFilmCard';
 import { useEffect, useState } from 'react';
 import { OramaSearchResponse } from '../components/utils-components/types';
+import { getRandomFilms } from './utils/utils';
 
 export default function Home() {
   const [results, setResults] = useState<OramaSearchResponse>();
-
-  // Generate a random selection of 20 films from the results
-  const getRandomFilms = (films: any[], count: number) => {
-    const randomFilms = [];
-    const seenIndices = new Set();
-    while (randomFilms.length < count && films.length > 0) {
-      const randomIndex = Math.floor(Math.random() * films.length);
-      if (!seenIndices.has(randomIndex)) {
-        randomFilms.push(films[randomIndex]);
-        seenIndices.add(randomIndex);
-      }
-    }
-    return randomFilms;
-  };
+  const filmsToDisplay = results?.hits ? getRandomFilms(results.hits, 15) : [];
 
   useEffect(() => {
     fetch(`/api/allFilm`)
@@ -31,8 +19,6 @@ export default function Home() {
       })
       .catch((error) => console.error('Fetch error:', error));
   }, []);
-
-  const filmsToDisplay = results?.hits ? getRandomFilms(results.hits, 15) : [];
 
   return (
     <main className="flex flex-col bg-gradient-dark-gray-blue text-white h-screen">
@@ -45,8 +31,6 @@ export default function Home() {
           objectFit="cover"
         />
       </div>
-
-      {/* Main Content */}
       <div className="text-center mt-4 flex flex-col">
         <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 m-2">
           Welcome to the Best Independent Film Database
@@ -61,8 +45,6 @@ export default function Home() {
           </Link>
           and hunt down that flick you’re craving!
         </h1>
-
-        {/* Loading Message or Film Cards */}
         <div className="flex flex-col items-center mt-6">
           {filmsToDisplay.length === 0 ? (
             <p className="text-xl text-white italic font-semibold">

@@ -11,14 +11,11 @@ export async function GET(req: Request) {
     }
 
     if (!process.env.ORAMA_API_KEY) {
-      console.error('Missing ORAMA_API_KEY in environment variables');
       return NextResponse.json(
         { error: 'Server misconfiguration: Missing API key' },
         { status: 500 }
       );
     }
-
-    console.log(`Searching films for query: ${query}`);
 
     const client = new OramaClient({
       endpoint: 'https://cloud.orama.run/v1/indexes/film-oofphg',
@@ -32,14 +29,11 @@ export async function GET(req: Request) {
     });
 
     if (!results || results.hits?.length === 0) {
-      console.warn(`No films found for query: ${query}`);
       return NextResponse.json({ error: 'No films found' }, { status: 404 });
     }
 
-    console.log(`Films found for query "${query}":`, results);
     return NextResponse.json(results);
   } catch (error) {
-    console.error('API Fetch Error:', error);
     return NextResponse.json(
       { error: 'Internal Server Error' },
       { status: 500 }

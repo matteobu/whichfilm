@@ -15,7 +15,6 @@ export default function MainHeader() {
           <ul className="flex space-x-6 items-center h-full">
             <NavLink href="/film-search">Films</NavLink>
             <NavLink href="/film-festival">Film Festivals</NavLink>
-            {/* Other NavLinks */}
           </ul>
         </nav>
       </div>

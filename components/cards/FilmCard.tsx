@@ -2,15 +2,13 @@
 import Link from 'next/link';
 import { TbAlertOctagonFilled } from 'react-icons/tb';
 import { BsFillAwardFill } from 'react-icons/bs';
-
 import FilmTag from './FilmTag';
 import defaultImage from '../../assets/logo.png';
-
-interface FilmCardProps {
-  film: any;
-}
+import { getFilmFestivalOrAward } from '../utils-components/utils';
+import { FilmCardProps, OramaSearchHits } from '../utils-components/types';
 
 const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
+  console.log({ film });
   if (!film) {
     return null;
   }
@@ -24,7 +22,6 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
     festival,
     award,
     notStrictIndie,
-    tmdb_id,
   } = film.document;
 
   const year = release_date.split('-')[0];
@@ -68,6 +65,8 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
             <div className="flex flex-row gap-2">
               <FilmTag text={year || 'n.d.'} />
               <FilmTag text={genres[0]} />
+              <FilmTag text={genres[1]} />
+              <FilmTag text={genres[2]} />
             </div>
           </div>
         </div>
@@ -77,20 +76,3 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
 };
 
 export default FilmCard;
-
-export function getFilmFestivalOrAward(
-  festivalAward: string,
-  type: 'festival' | 'award'
-) {
-  const filmFestival = {
-    vff: 'Venice Film Festival',
-  };
-  const filmAward = {
-    special_jury_prize: 'Special Jury Prize',
-    golden_lion: 'Golden Lion',
-    grand_jury_prize: 'Grand Jury Prize',
-  };
-  return type === 'festival'
-    ? filmFestival[festivalAward]
-    : filmAward[festivalAward];
-}

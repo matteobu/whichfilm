@@ -1,21 +1,10 @@
 import React from 'react';
 import defaultImage from '../../assets/logo.png';
-
-interface Festival {
-  name: string;
-  location: string;
-  overview: string;
-  imageUrl?: string; // Optional image for the festival
-}
-
-interface FilmFestivalCardProps {
-  festival: Festival;
-}
+import { FilmFestivalCardProps } from '../utils-components/types';
 
 const FilmFestivalCard: React.FC<FilmFestivalCardProps> = ({ festival }) => {
   return (
     <div className="w-64 h-64 rounded-lg overflow-hidden shadow-lg bg-gradient-to-r from-purple-900 via-indigo-900 to-violet-700 p-4 hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
-      {/* Festival Image */}
       {festival.imageUrl ? (
         <img
           src={
@@ -31,16 +20,10 @@ const FilmFestivalCard: React.FC<FilmFestivalCardProps> = ({ festival }) => {
           <p className="text-white">No Image</p>
         </div>
       )}
-
-      {/* Festival Name */}
       <h1 className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 mb-1 text-center">
         {festival.name}
       </h1>
-
-      {/* Festival Location */}
       <p className="text-sm text-white mb-2 text-center">{festival.location}</p>
-
-      {/* Festival Overview */}
       <p className="text-sm text-white line-clamp-3 text-center">
         {festival.overview}
       </p>

@@ -21,7 +21,6 @@ const SearchResults = ({ results, noSearch }: SearchResultsProps) => {
   const [selectedFestival, setSelectedFestival] = useState<string | null>(null);
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
 
-  // Function to filter films based on festival & genre
   const filteredResults = filmResults.filter((film) => {
     const matchesFestival =
       !selectedFestival || film.document.festival?.includes(selectedFestival);

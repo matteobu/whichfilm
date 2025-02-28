@@ -1,25 +1,7 @@
-interface TagProps {
-  text: string;
-}
+import { TAG_COLORS } from '../utils-components/constants';
 
-const FilmTag: React.FC<TagProps> = ({ text }) => {
-  const tagColors: Record<string, string> = {
-    year: 'bg-indigo-500',
-    drama: 'bg-red-500',
-    crime: 'bg-purple-500',
-    documentary: 'bg-yellow-500',
-    adventure: 'bg-blue-500',
-    comedy: 'bg-green-500',
-    action: 'bg-gray-700',
-    romance: 'bg-teal-500',
-    war: 'bg-orange-500',
-    music: 'bg-pink-600',
-    thriller: 'bg-yellow-600',
-    fantasy: 'bg-blue-600',
-    default: 'bg-pink-500',
-  };
-
-  const color = tagColors[text.toLowerCase()] || tagColors.default;
+const FilmTag: React.FC<{ text: string }> = ({ text }) => {
+  const color = TAG_COLORS[text?.toLowerCase()] || TAG_COLORS.default;
 
   return (
     <span

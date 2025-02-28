@@ -1,16 +1,13 @@
 'use client';
 import Link from 'next/link';
 import defaultImage from '../../assets/logo.png';
+import { SmallFilmCardProps } from '../utils-components/types';
 
-interface FilmCardProps {
-  film: any;
-}
-
-const SmallFilmCard: React.FC<FilmCardProps> = ({ film }) => {
+const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {
   if (!film) {
     return null;
   }
-
+  
   const { title, backdrop_path } = film.document;
   const imageSrc = backdrop_path
     ? `https://image.tmdb.org/t/p/w500${backdrop_path}`

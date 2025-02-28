@@ -1,11 +1,9 @@
-import { notFound } from 'next/navigation';
 import filmData from '../../../database/jsonFiles/00_vff_merged.json';
 
 export default async function FilmPage({ params }) {
   const { slug } = await params;
-  console.log(params);
   const filmInfo = filmData.find((f) => f.id === +slug);
-  console.log(filmInfo);
+
   if (!filmInfo) {
     return (
       <main className="bg-gradient-to-r from-purple-900 via-indigo-900 to-violet-700 min-h-screen flex items-center justify-center text-white py-10">
@@ -80,6 +78,9 @@ export default async function FilmPage({ params }) {
 
               <p>
                 <strong>Languages:</strong> {languageList}
+              </p>
+              <p>
+                <strong>Year:</strong> {year}
               </p>
             </div>
           </div>

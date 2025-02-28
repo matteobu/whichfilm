@@ -1,8 +1,37 @@
+// SEARCH COMPONENT
 export interface SearchResultsProps {
   results: OramaSearchResponse;
   noSearch: boolean;
 }
 
+// NAVLINK
+export interface NavLinkProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+// FILM CARD
+export interface FilmCardProps {
+  film: OramaSearchHits;
+}
+// SMALL FILM CARD
+export interface SmallFilmCardProps {
+  film: OramaSearchHits;
+}
+// FILM FESTIVAL CARD
+
+export interface Festival {
+  name: string;
+  location: string;
+  overview: string;
+  imageUrl?: string;
+}
+
+export interface FilmFestivalCardProps {
+  festival: Festival;
+}
+
+// ORAMA SEARCH
 export type OramaSearchResponse = {
   count: number;
   elapsed: {
@@ -17,6 +46,7 @@ export type OramaSearchHits = {
   score: number;
   document: {
     adult: boolean;
+    award: string;
     backdrop_path: string | null;
     belongs_to_collection: string | null;
     budget: number;
