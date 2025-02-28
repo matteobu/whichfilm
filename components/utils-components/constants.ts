@@ -11,3 +11,26 @@ export {
   inactiveButtonClassName,
   oramaSearchButtonClassName,
 };
+
+export const FESTIVAL_NAMES: Record<string, string> = {
+  sundance: 'Sundance',
+  cff: 'Cannes',
+  tiff: 'Toronto',
+  tribeca: 'Tribeca',
+  berlinale: 'Berlinale',
+  sxsw: 'SXSW',
+  vff: 'Venice',
+  afi: 'AFI Fest',
+  locarno: 'Locarno',
+  telluride: 'Telluride',
+  raindance: 'Raindance',
+  busan: 'Busan',
+  rotterdam: 'Rotterdam',
+  ssiff: 'San Sebastián',
+  karlovy: 'Karlovy Vary',
+  hkiff: 'Hong Kong',
+  cleveland: 'Cleveland',
+  siff: 'Seattle',
+  nyff: 'New York',
+  nziiff: 'New Zealand',
+};

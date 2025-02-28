@@ -1,3 +1,8 @@
+export interface SearchResultsProps {
+  results: OramaSearchResponse;
+  noSearch: boolean;
+}
+
 export type OramaSearchResponse = {
   count: number;
   elapsed: {
@@ -33,8 +38,9 @@ export type OramaSearchHits = {
     tagline: string;
     title: string;
     video: boolean;
+    festival: string;
     vote_average: number;
     vote_count: number;
     notStrictIndie: boolean;
   };
-}[];
+};
