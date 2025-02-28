@@ -1,11 +1,7 @@
 'use client';
-
 import FilmCard from '../cards/FilmCard';
 import NoResults from '../error/noResults';
-import {
-  OramaSearchHits,
-  OramaSearchResponse,
-} from '../utils-components/types';
+import { OramaSearchResponse } from '../utils-components/types';
 import { getRandomObjects } from '../utils-components/utils';
 
 interface SearchResultsProps {
