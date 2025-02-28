@@ -17,6 +17,9 @@ body {
   --color-globalGradientStart: #7c3aed; /* Gradient start */
   --color-globalGradientMid: #9333ea; /* Gradient mid */
   --color-globalGradientEnd: #3b82f6; /* Gradient end */
+  --color-dark-gray: #1a1a1d; /* Dark gray */
+  --color-dark-gray-blue: #09122c; /* Dark Gray Blue */
+  --color-dark-violet-wine: #6a1e55; /* Dark Wine Violet */
 }
 
 @layer utilities {
@@ -25,6 +28,13 @@ body {
       to right,
       var(--color-darker-violet),
       var(--color-dark-violet)
+    );
+  }
+  .bg-gradient-dark-gray-blue {
+    background: linear-gradient(
+      to right,
+      var(--color-dark-gray),
+      var(--color-dark-gray-blue)
     );
   }
 }

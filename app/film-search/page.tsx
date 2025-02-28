@@ -2,7 +2,7 @@ import SearchAndResultsComponent from '../../components/search/SearchAndResultsC
 
 export default function FilmSearch() {
   return (
-    <main className="bg-gradient-dark-violet min-h-screen text-white p-1">
+    <main className="bg-gradient-dark-gray-blue min-h-screen text-white p-1">
       <SearchAndResultsComponent />
     </main>
   );

@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-dark-violet text-pink-300 p-3 w-full ">
+    <footer className="bg-gradient-dark-gray-blue text-pink-300 p-3 w-full ">
       <div className="flex justify-between items-center border-t border-pink-300 pt-4">
         <p className="text-sm text-pink-300 opacity-80">
           © matteobu All rights reserved.

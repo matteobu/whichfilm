@@ -8,7 +8,7 @@ const SearchComponent = () => {
   const [query, setQuery] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [results, setResults] = useState<OramaSearchResponse>();
-  const [allFilmQuery, setAllFilmQuery] = useState(false); 
+  const [allFilmQuery, setAllFilmQuery] = useState(false);
 
   useEffect(() => {
     fetch(`/api/allFilm`)
@@ -49,7 +49,7 @@ const SearchComponent = () => {
   }, [debouncedQuery]);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center bg-gradient-dark-violet">
+    <div className="w-full flex flex-col justify-center items-center bg-gradient-dark-gray-blue">
       <SearchInput query={query} setQuery={setQuery} />
       <SearchResults results={results} noSearch={allFilmQuery} />
     </div>
