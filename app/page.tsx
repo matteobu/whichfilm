@@ -1,16 +1,43 @@
 'use client';
 import Image from 'next/image';
-import { OramaChatBox } from '@orama/react-components';
-import NavLink from '../components/headers/NavLink';
 import Link from 'next/link';
+import SmallFilmCard from '../components/cards/SmallFilmCard';
+import { useEffect, useState } from 'react';
+import { OramaSearchResponse } from '../components/utils-components/types';
 
 export default function Home() {
-  const randomIndex = Math.floor(Math.random() * h2Array.length);
+  const [results, setResults] = useState<OramaSearchResponse>();
+
+  // Generate a random selection of 20 films from the results
+  const getRandomFilms = (films: any[], count: number) => {
+    const randomFilms = [];
+    const seenIndices = new Set();
+    while (randomFilms.length < count && films.length > 0) {
+      const randomIndex = Math.floor(Math.random() * films.length);
+      if (!seenIndices.has(randomIndex)) {
+        randomFilms.push(films[randomIndex]);
+        seenIndices.add(randomIndex);
+      }
+    }
+    return randomFilms;
+  };
+
+  useEffect(() => {
+    fetch(`/api/allFilm`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setResults(data);
+      })
+      .catch((error) => console.error('Fetch error:', error));
+  }, []);
+
+  const filmsToDisplay = results?.hits ? getRandomFilms(results.hits, 15) : [];
 
   return (
-    <main className="flex flex-col bg-gradient-dark-gray-blue text-white h-screen p-1">
+    <main className="flex flex-col bg-gradient-dark-gray-blue text-white h-screen">
       {/* Banner */}
-      <div className="w-full h-[30vh] sm:h-[35vh] relative">
+      <div className="w-full h-[30vh] sm:h-[35vh] relative p-2 bg-gradient-dark-gray-blue border-8 border-transparent bg-clip-border overflow-hidden rounded-4xl">
         <Image
           src="/whichfilmbanner.png"
           alt="Banner"
@@ -34,16 +61,23 @@ export default function Home() {
           </Link>
           and hunt down that flick you’re craving!
         </h1>
+
+        {/* Loading Message or Film Cards */}
+        <div className="flex flex-col items-center mt-6">
+          {filmsToDisplay.length === 0 ? (
+            <p className="text-xl text-white italic font-semibold">
+              Hold tight, we're digging through indie films like pros... Just
+              chill and wait!
+            </p>
+          ) : (
+            <div className="flex flex-wrap justify-center gap-4">
+              {filmsToDisplay.map((film, index) => (
+                <SmallFilmCard key={index} film={film} />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </main>
   );
 }
-
-const h2Array = [
-  'Mostly winners from indie film festivals, because participation trophies still count, right?',
-  "Yeah, you heard that right. We're the 'best'. But don't get too excited, it's not like you have any better options.",
-  "If you're looking for indie gems that’ll change your life, good luck. Most of them will just remind you of how much you’ve wasted your time.",
-  "We've got a ton of movies, but don’t even think about asking us for some stupid thing like 'find me a movie where aliens teach a dog how to dance.'",
-  'We’re not here to cater to your bad taste. But we might find something slightly better than whatever half-assed recommendation you got last time.',
-  "Indie doesn't always mean 'good,' but who are we to judge your awful choices? Enjoy feeling disappointed. It's basically the indie experience.",
-];

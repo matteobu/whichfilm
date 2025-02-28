@@ -9,9 +9,9 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-dark-gray-blue text-pink-300 p-3 w-full ">
-      <div className="flex justify-between items-center border-t border-pink-300 pt-4">
-        <p className="text-sm text-pink-300 opacity-80">
+    <footer className="bg-gradient-dark-gray-blue text-pink-500 p-3 w-full ">
+      <div className="flex justify-between items-center border-t border-pink-500 pt-4">
+        <p className="text-sm text-pink-500 opacity-80">
           © matteobu All rights reserved.
         </p>
         <div className="flex gap-4">
@@ -19,7 +19,7 @@ const Footer = () => {
             href="https://www.instagram.com/ehi.matteo"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-pink-300 hover:text-pink-500"
+            className="text-pink-500 hover:text-pink-900"
             aria-label="Instagram"
           >
             <FaInstagram size={24} />
@@ -28,7 +28,7 @@ const Footer = () => {
             href="https://x.com/dev_m_"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-pink-300 hover:text-pink-500"
+            className="text-pink-500 hover:text-pink-900"
             aria-label="Twitter"
           >
             <FaXTwitter size={24} />
@@ -37,7 +37,7 @@ const Footer = () => {
             href="https://github.com/matteobu"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-pink-300 hover:text-pink-500"
+            className="text-pink-500 hover:text-pink-900"
             aria-label="GitHub"
           >
             <FaGithub size={24} />
@@ -46,14 +46,14 @@ const Footer = () => {
             href="https://www.linkedin.com/in/matteo-bucciol/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-pink-300 hover:text-pink-500"
+            className="text-pink-500 hover:text-pink-900"
             aria-label="LinkedIn"
           >
             <FaLinkedin size={24} />
           </a>
           <a
             href="mailto:bucciol.matteo@proton.me"
-            className="text-pink-300 hover:text-pink-500"
+            className="text-pink-500 hover:text-pink-900"
             aria-label="Email"
           >
             <FaEnvelope size={24} />

@@ -1,14 +1,11 @@
 import { notFound } from 'next/navigation';
-import filmData from '../../../database/jsonFiles/cff_ifb_ALL.json';
+import filmData from '../../../database/jsonFiles/00_vff_merged.json';
 
 export default async function FilmPage({ params }) {
   const { slug } = await params;
+  console.log(params);
   const filmInfo = filmData.find((f) => f.id === +slug);
-
-  if (!filmInfo) {
-    notFound();
-  }
-
+  console.log(filmInfo);
   if (!filmInfo) {
     return (
       <main className="bg-gradient-to-r from-purple-900 via-indigo-900 to-violet-700 min-h-screen flex items-center justify-center text-white py-10">
@@ -33,7 +30,7 @@ export default async function FilmPage({ params }) {
   const genreList = genres.map((genre) => genre).join(', ');
 
   return (
-    <main className="bg-gradient-to-r from-purple-900 via-indigo-900 to-violet-700 min-h-screen text-white">
+    <main className="bg-gradient-dark-gray-blue min-h-screen text-white">
       <section className="max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
           <div className="relative w-full md:w-1/2 min-h-96 flex flex-col justify-center items-center">
@@ -84,11 +81,6 @@ export default async function FilmPage({ params }) {
               <p>
                 <strong>Languages:</strong> {languageList}
               </p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 mb-4">
-                Ratings & Revenue
-              </h2>
             </div>
           </div>
         </div>
