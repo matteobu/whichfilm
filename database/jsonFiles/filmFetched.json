@@ -2491,5 +2491,779 @@
     "festival": "vff",
     "award": "special_jury_prize",
     "notStrictIndie": false
+  },
+
+  {
+    "title": "Old Enough",
+    "year": "1984",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Old Enough is considered an independent film as it had a small budget and was produced outside of the major studio system."
+  },
+  {
+    "title": "Blood Simple",
+    "year": "1985",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Blood Simple, made by the Coen Brothers, is a classic example of an independent film due to its low-budget production and distribution outside the major studio system."
+  },
+  {
+    "title": "Almost You",
+    "year": "1985",
+    "award": "Special Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Despite receiving a special jury prize, Almost You was produced with significant backing from established studios, which makes it closer to mainstream."
+  },
+  {
+    "title": "Smooth Talk",
+    "year": "1986",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Smooth Talk was independently produced and distributed with a minimal budget, which categorizes it as an indie film."
+  },
+  {
+    "title": "Desert Hearts",
+    "year": "1986",
+    "award": "Special Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Desert Hearts was produced on a relatively low budget outside major studio systems, making it an independent film despite its recognition."
+  },
+  {
+    "title": "Waiting for the Moon",
+    "year": "1987",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Waiting for the Moon is considered an independent film due to its small budget and independent distribution."
+  },
+  {
+    "title": "The Trouble with Dick",
+    "year": "1987",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "The Trouble with Dick is an indie film due to its low-budget production and independent financing."
+  },
+  {
+    "title": "Heat and Sunlight",
+    "year": "1988",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Although Heat and Sunlight won the Grand Jury Prize, it had a relatively small production budget and was distributed independently."
+  },
+  {
+    "title": "Beirut: The Last Home Movie",
+    "year": "1988",
+    "award": "Grand Jury Prize Documentary",
+    "notStrictIndie": false,
+    "noteOnIndie": "Beirut: The Last Home Movie is an independent documentary film produced with minimal budget and outside mainstream studios."
+  },
+  {
+    "title": "True Love",
+    "year": "1990",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "True Love, made on a small budget and with a limited distribution, is categorized as an independent film."
+  },
+  {
+    "title": "sex, lies and videotape",
+    "year": "1990",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Despite its mainstream success, 'sex, lies and videotape' is considered an indie film due to its low-budget and independent production."
+  },
+  {
+    "title": "Chameleon Street",
+    "year": "1990",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Chameleon Street is an independent film due to its small budget and unique approach, made outside the mainstream studio system."
+  },
+  {
+    "title": "Longtime Companion",
+    "year": "1990",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Longtime Companion, while successful, was produced with a limited budget and outside the major studio system, qualifying it as an indie film."
+  },
+  {
+    "title": "Berkeley in the Sixties",
+    "year": "1990",
+    "award": "Audience Award Documentary",
+    "notStrictIndie": false,
+    "noteOnIndie": "As a documentary produced with limited funding and distribution, Berkeley in the Sixties is considered an independent film."
+  },
+  {
+    "title": "Poison",
+    "year": "1991",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Poison is an independent film due to its innovative narrative and production outside of mainstream studio systems."
+  },
+  {
+    "title": "One Cup of Coffee",
+    "year": "1991",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "One Cup of Coffee had limited studio involvement, which makes it more aligned with independent cinema."
+  },
+  {
+    "title": "Daughters of the Dust",
+    "year": "1991",
+    "award": "Excellence in Cinematography Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Daughters of the Dust is considered independent due to its small budget and unique storytelling, outside the mainstream Hollywood system."
+  },
+  {
+    "title": "Straight Out of Brooklyn",
+    "year": "1991",
+    "award": "Special Jury Recognition",
+    "notStrictIndie": false,
+    "noteOnIndie": "Straight Out of Brooklyn is an independent film due to its low-budget production and distinctive perspective from a first-time filmmaker."
+  },
+  {
+    "title": "In the Soup",
+    "year": "1992",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "In the Soup is a classic independent film with a low budget and was produced outside the mainstream system."
+  },
+  {
+    "title": "The Waterdance",
+    "year": "1992",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "The Waterdance had an independent production style, despite its critical success, making it part of indie cinema."
+  },
+  {
+    "title": "The Hours and Times",
+    "year": "1992",
+    "award": "Special Jury Recognition",
+    "notStrictIndie": false,
+    "noteOnIndie": "This film, with its minimal budget and distinct artistic direction, fits into the independent film category."
+  },
+  {
+    "title": "My Crasy Life",
+    "year": "1992",
+    "award": "Special Jury Recognition",
+    "notStrictIndie": false,
+    "noteOnIndie": "My Crasy Life is considered an indie film due to its focus on marginalized voices and independent production."
+  },
+  {
+    "title": "Ruby in Paradise",
+    "year": "1993",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Ruby in Paradise was an independent film with a small budget and minimal studio involvement, which places it firmly in the indie category."
+  },
+  {
+    "title": "Public Access",
+    "year": "1993",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Public Access is an independent film with a gritty, low-budget production that bypassed traditional studio systems."
+  },
+  {
+    "title": "El Mariachi",
+    "year": "1993",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "El Mariachi is an iconic indie film, known for being produced on a very low budget and for its DIY approach to filmmaking."
+  },
+  {
+    "title": "Just Another Girl on the I.R.T.",
+    "year": "1993",
+    "award": "Special Jury Recognition",
+    "notStrictIndie": false,
+    "noteOnIndie": "This film is independent due to its low-budget production and unique, authentic storytelling outside the mainstream."
+  },
+  {
+    "title": "Earth and the American Dream",
+    "year": "1993",
+    "award": "Special Jury Recognition",
+    "notStrictIndie": false,
+    "noteOnIndie": "Earth and the American Dream is an independent film due to its small budget and unconventional approach to its subject matter."
+  },
+  {
+    "title": "What Happened Was...",
+    "year": "1994",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "What Happened Was... is an independent film as it was produced on a small budget and features a unique narrative style."
+  },
+  {
+    "title": "Spanking the Monkey",
+    "year": "1994",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Spanking the Monkey is an indie film due to its modest budget and unconventional themes."
+  },
+  {
+    "title": "Coming Out Under Fire",
+    "year": "1994",
+    "award": "Special Jury Recognition",
+    "notStrictIndie": false,
+    "noteOnIndie": "Coming Out Under Fire was produced with limited resources and is considered an independent film due to its unique approach to a sensitive topic."
+  },
+  {
+    "title": "The Brothers McMullen",
+    "year": "1995",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "The Brothers McMullen is a quintessential indie film, made on a minimal budget and featuring a story that resonated with independent filmgoers."
+  },
+  {
+    "title": "The Young Poisoner's Handbook",
+    "year": "1995",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "The Young Poisoner's Handbook is an independent film due to its limited budget and its departure from traditional Hollywood narratives."
+  },
+  {
+    "title": "Picture Bride",
+    "year": "1995",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Picture Bride is an indie film as it was produced on a low budget with limited studio involvement."
+  },
+  {
+    "title": "El héroe",
+    "year": "1995",
+    "award": "Special Jury Recognition",
+    "notStrictIndie": false,
+    "noteOnIndie": "El héroe is an independent film due to its modest production budget and its unique narrative approach."
+  },
+  {
+    "title": "Welcome to the Dollhouse",
+    "year": "1996",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Welcome to the Dollhouse is an indie film that received critical acclaim, produced outside of the major studio systems."
+  },
+  {
+    "title": "Care of the Spitfire Grill",
+    "year": "1996",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Despite its success, The Spitfire Grill retains its indie status due to its modest production budget and its focus on character-driven storytelling."
+  },
+  {
+    "title": "When We Were Kings",
+    "year": "1996",
+    "award": "Special Jury Recognition",
+    "notStrictIndie": false,
+    "noteOnIndie": "When We Were Kings, while a documentary, is considered independent due to its small budget and distinct, personal vision."
+  },
+  {
+    "title": "Sunday",
+    "year": "1997",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Sunday is an indie film as it was made with a low budget and featured unconventional storytelling techniques."
+  },
+  {
+    "title": "Love Jones",
+    "year": "1997",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Love Jones is an indie film with a small budget and a focus on authentic, character-driven storytelling."
+  },
+  {
+    "title": "Hurricane",
+    "year": "1997",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Hurricane is an indie film due to its modest budget and the independent production style."
+  },
+  {
+    "title": "Kirby Dick for SICK: The Life & Death of Bob Flanagan, Supermasochist",
+    "year": "1997",
+    "award": "Special Jury Recognition",
+    "notStrictIndie": false,
+    "noteOnIndie": "Kirby Dick’s documentary is an independent film due to its unique subject matter and the fact it was produced on a small budget."
+  },
+  {
+    "title": "Parker Posey for The House of Yes",
+    "year": "1997",
+    "award": "Special Jury Recognition",
+    "notStrictIndie": false,
+    "noteOnIndie": "The House of Yes, while receiving a special jury recognition, is an indie film due to its low-budget production and its dark comedy approach."
+  },
+  {
+    "title": "Slam",
+    "year": "1998",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Slam, despite its critical success, is considered an indie film due to its grassroots production and distribution."
+  },
+  {
+    "title": "Smoke Signals",
+    "year": "1998",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Smoke Signals, while popular, is an independent film with a small budget and a focus on Native American stories."
+  },
+  {
+    "title": "Three Seasons",
+    "year": "1999",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Three Seasons is an indie film due to its low-budget production and its focus on authentic storytelling from Vietnam."
+  },
+  {
+    "title": "Three Seasons",
+    "year": "1999",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "The fact that Three Seasons won both the Grand Jury and Audience Awards highlights its status as an indie film."
+  },
+  {
+    "title": "On the Ropes",
+    "year": "1999",
+    "award": "Special Jury Prize",
+    "notStrictIndie": false,
+    "noteOnIndie": "On the Ropes is considered an indie film due to its documentary style and independent production."
+  },
+  {
+    "title": "Girlfight",
+    "year": "2000",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Girlfight, although widely praised, is considered an independent film due to its low budget and its production outside the major studio system."
+  },
+  {
+    "title": "You Can Count on Me",
+    "year": "2000",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "You Can Count on Me, despite its success, is still an indie film as it was produced on a modest budget and with limited studio involvement."
+  },
+  {
+    "title": "Girlfight",
+    "year": "2000",
+    "award": "Directing Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Girlfight's directing award further highlights its indie credentials, produced with a small budget outside of mainstream studio systems."
+  },
+  {
+    "title": "The Believer",
+    "year": "2001",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "The Believer was produced with minimal studio involvement and is categorized as an indie film due to its small budget and unique narrative."
+  },
+  {
+    "title": "Hedwig and the Angry Inch",
+    "year": "2001",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Despite its success, Hedwig and the Angry Inch is considered independent due to its small budget, unconventional storytelling, and grassroots appeal."
+  },
+  {
+    "title": "Real Women Have Curves",
+    "year": "2002",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Real Women Have Curves is considered an indie film due to its low budget, independent production, and focus on authentic representation."
+  },
+  {
+    "title": "Personal Velocity: Three Portraits",
+    "year": "2002",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Personal Velocity: Three Portraits is an independent film with a small budget and a unique narrative structure, typical of indie cinema."
+  },
+  {
+    "title": "The Station Agent",
+    "year": "2003",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "The Station Agent is an indie film with a small budget, featuring subtle storytelling and produced outside the mainstream studio system."
+  },
+  {
+    "title": "American Splendor",
+    "year": "2003",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "American Splendor is an indie film due to its low-budget production and its focus on unconventional storytelling, not relying on mainstream Hollywood formulas."
+  },
+  {
+    "title": "Maria Full of Grace",
+    "year": "2004",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Maria Full of Grace is an indie film, produced on a low budget and with a focus on telling a real-life story from an authentic perspective."
+  },
+  {
+    "title": "Primer",
+    "year": "2004",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Primer is a quintessential independent film, made with a small budget and offering a unique and intellectual take on time travel."
+  },
+  {
+    "title": "Hustle & Flow",
+    "year": "2005",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Hustle & Flow, although successful, is considered an indie film due to its modest budget and focus on the personal journey of its characters."
+  },
+  {
+    "title": "Forty Shades of Blue",
+    "year": "2005",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Forty Shades of Blue is an indie film due to its low-budget production and its narrative approach focused on personal, introspective themes."
+  },
+  {
+    "title": "Quinceañera",
+    "year": "2006",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Quinceañera is an independent film due to its modest production budget and its focus on telling an authentic story about a young Latina woman."
+  },
+  {
+    "title": "Quinceañera",
+    "year": "2006",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Quinceañera is an indie film with a small budget and a focus on culture and family, which makes it distinct from mainstream cinema."
+  },
+  {
+    "title": "Grace Is Gone",
+    "year": "2007",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Grace Is Gone is considered an independent film due to its low-budget production and its unique emotional depth outside mainstream cinema."
+  },
+  {
+    "title": "Padre Nuestro",
+    "year": "2007",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Padre Nuestro is an indie film, produced with limited resources and highlighting cultural issues with a raw, authentic perspective."
+  },
+  {
+    "title": "The Wackness",
+    "year": "2008",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "The Wackness is an indie film with a low budget, focusing on themes of adolescence and mental health, making it different from mainstream films."
+  },
+  {
+    "title": "Frozen River",
+    "year": "2008",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Frozen River is a critically acclaimed indie film, produced on a small budget with an emphasis on real-life struggles, characteristic of independent cinema."
+  },
+  {
+    "title": "Precious: Based on the Novel 'Push' by Sapphire",
+    "year": "2009",
+    "award": "Audience Award Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Precious is an independent film due to its low-budget production, yet it received mainstream success for its bold and emotional storytelling."
+  },
+  {
+    "title": "Precious: Based on the Novel 'Push' by Sapphire",
+    "year": "2009",
+    "award": "Grand Jury Prize Dramatic",
+    "notStrictIndie": false,
+    "noteOnIndie": "Precious fits into the independent film category due to its small budget, despite its widespread success and recognition."
+  },
+  {
+    "title": "happythankyoumoreplease",
+    "year": 2010,
+    "award": "Audience Award: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "Although it is an independent film, the film’s relatively wide appeal and distribution made it more mainstream."
+  },
+  {
+    "title": "Winter's Bone",
+    "year": 2010,
+    "award": "Grand Jury Prize: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A mainstream film that was well-received at Sundance but had a limited budget and was distributed by a major studio."
+  },
+  {
+    "title": "Like Crazy",
+    "year": 2011,
+    "award": "Grand Jury Prize: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A love story with a smaller budget, but the film had significant commercial success and distribution in mainstream theaters."
+  },
+  {
+    "title": "Circumstance",
+    "year": 2011,
+    "award": "Audience Award: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "Despite being an independent film, its success and the sensitive subject matter helped it reach a broader audience."
+  },
+  {
+    "title": "Beasts of the Southern Wild",
+    "year": 2012,
+    "award": "Grand Jury Prize: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A critically acclaimed indie film that captured mainstream attention due to its narrative and cast."
+  },
+  {
+    "title": "The Surrogate (retitled The Sessions)",
+    "year": 2012,
+    "award": "Audience Award: U.S. Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "The film is deeply rooted in its independent filmmaking background, despite its wider recognition."
+  },
+  {
+    "title": "Fruitvale Station",
+    "year": 2013,
+    "award": "U. S. Grand Jury Prize: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A deeply poignant and socially conscious film, which although having an independent spirit, was distributed and recognized widely by mainstream channels."
+  },
+  {
+    "title": "Fruitvale Station",
+    "year": 2013,
+    "award": "Audience Award: U. S. Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "Although an indie film, it had a significant mainstream presence and received wide recognition."
+  },
+  {
+    "title": "Whiplash",
+    "year": 2014,
+    "award": "Grand Jury Prize: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "An indie film that gained mainstream success due to its captivating storytelling and critical reception."
+  },
+  {
+    "title": "Rich Hill",
+    "year": 2014,
+    "award": "Grand Jury Prize: Documentary",
+    "notStrickIndie": false,
+    "noteOnIndie": "While it had an indie approach to documentary filmmaking, its distribution made it accessible to a wider audience."
+  },
+  {
+    "title": "Fishing Without Nets",
+    "year": 2014,
+    "award": "Directing Award: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A powerful indie film that gained significant attention for its realistic portrayal of Somali pirates."
+  },
+  {
+    "title": "Low Down",
+    "year": 2014,
+    "award": "Cinematography Award: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "Despite its indie origins, the film had notable cinematography that helped it stand out in a broader market."
+  },
+  {
+    "title": "Me and Earl and the Dying Girl",
+    "year": 2015,
+    "award": "Grand Jury Prize: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A quirky, independent film with a low budget, but it gained mainstream recognition and distribution."
+  },
+  {
+    "title": "The Witch",
+    "year": 2015,
+    "award": "Directing Award: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A horror film with an indie spirit, focusing on atmospheric tension rather than big-budget spectacle."
+  },
+  {
+    "title": "The Diary of a Teenage Girl",
+    "year": 2015,
+    "award": "Cinematography Award: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "An indie film that gained critical acclaim for its innovative and emotionally charged storytelling."
+  },
+  {
+    "title": "Dope",
+    "year": 2015,
+    "award": "Editing Award: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A unique indie film that resonated with audiences, despite its mainstream appeal."
+  },
+  {
+    "title": "The Birth of a Nation",
+    "year": 2016,
+    "award": "Grand Jury Prize: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "While the film was created with an indie sensibility, it had widespread mainstream success following its controversial narrative."
+  },
+  {
+    "title": "Swiss Army Man",
+    "year": 2016,
+    "award": "Directing Award: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A quirky and unconventional indie film that became popular in mainstream circles due to its unique approach and originality."
+  },
+  {
+    "title": "I Don't Feel at Home in This World Anymore",
+    "year": 2017,
+    "award": "Grand Jury Prize: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A truly independent film with a unique style, capturing the essence of indie filmmaking with its dark humor and original narrative."
+  },
+  {
+    "title": "Crown Heights",
+    "year": 2017,
+    "award": "Audience Award: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "Though it had a significant audience, it remains deeply rooted in its independent filmmaking background."
+  },
+  {
+    "title": "Beach Rats",
+    "year": 2017,
+    "award": "Directing Award: Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A dramatic film with a distinctive indie tone, praised for its exploration of complex themes and emotions in a raw, understated manner."
+  },
+  {
+    "title": "The Miseducation of Cameron Post",
+    "year": 2018,
+    "award": "U.S. Dramatic Grand Jury Prize",
+    "notStrickIndie": false,
+    "noteOnIndie": "A strong indie film with mainstream recognition, tackling LGBTQ+ issues with a deeply personal narrative."
+  },
+  {
+    "title": "Burden",
+    "year": 2018,
+    "award": "U.S. Dramatic Audience Award",
+    "notStrickIndie": false,
+    "noteOnIndie": "Despite being a sensitive, thought-provoking film, it garnered mainstream attention, making it accessible to a broader audience."
+  },
+  {
+    "title": "The Kindergarten Teacher",
+    "year": 2018,
+    "award": "U.S. Dramatic Directing Award",
+    "notStrickIndie": false,
+    "noteOnIndie": "A deeply affecting indie film that explores important themes, offering a stark portrayal of a woman's isolation."
+  },
+  {
+    "title": "Clemency",
+    "year": 2019,
+    "award": "US Dramatic Grand Jury Prize",
+    "notStrickIndie": false,
+    "noteOnIndie": "A film that straddles the line between indie and mainstream, with serious, socially important subject matter."
+  },
+  {
+    "title": "Brittany Runs a Marathon",
+    "year": 2019,
+    "award": "US Dramatic Audience Award",
+    "notStrickIndie": false,
+    "noteOnIndie": "A comedy-drama with indie roots but wide mainstream appeal due to its accessible narrative and heartfelt themes."
+  },
+  {
+    "title": "The Last Black Man in San Francisco",
+    "year": 2019,
+    "award": "US Dramatic Directing Award",
+    "notStrickIndie": false,
+    "noteOnIndie": "An indie film that received significant critical attention for its poetic and emotionally resonant story."
+  },
+  {
+    "title": "Minari",
+    "year": 2020,
+    "award": "US Dramatic Grand Jury Prize",
+    "notStrickIndie": false,
+    "noteOnIndie": "Although it had an independent feel, the film found significant mainstream recognition due to its universal themes."
+  },
+  {
+    "title": "Minari",
+    "year": 2020,
+    "award": "US Dramatic Audience Award",
+    "notStrickIndie": false,
+    "noteOnIndie": "A critically acclaimed film that blends both independent spirit and mainstream appeal."
+  },
+  {
+    "title": "The 40-Year-Old Version",
+    "year": 2020,
+    "award": "US Dramatic Directing Award",
+    "notStrickIndie": false,
+    "noteOnIndie": "A highly creative indie film, offering a personal, humorous exploration of the filmmaker's own life and identity."
+  },
+  {
+    "title": "CODA",
+    "year": 2021,
+    "award": "U.S. Grand Jury Prize: Dramatic Competition",
+    "notStrickIndie": false,
+    "noteOnIndie": "A heartfelt, emotionally powerful film that bridged the gap between indie and mainstream, with wide commercial success."
+  },
+  {
+    "title": "CODA",
+    "year": 2021,
+    "award": "Directing Award: U.S. Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "The film has a distinct indie feel but gained wide recognition due to its mainstream distribution."
+  },
+  {
+    "title": "CODA",
+    "year": 2021,
+    "award": "Audience Award: U.S. Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A film that started as an indie project but reached mainstream audiences through its universal themes and critical acclaim."
+  },
+  {
+    "title": "Nanny",
+    "year": 2022,
+    "award": "U.S. Grand Jury Prize: Dramatic Competition",
+    "notStrickIndie": false,
+    "noteOnIndie": "An indie film with significant mainstream appeal due to its powerful performances and unique cultural perspective."
+  },
+  {
+    "title": "Cha Cha Real Smooth",
+    "year": 2022,
+    "award": "Audience Award: U.S. Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A coming-of-age indie film that found widespread popularity, especially among younger audiences."
+  },
+  {
+    "title": "Palm Trees and Power Lines",
+    "year": 2022,
+    "award": "Directing Award: U.S. Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A low-budget indie film that examines the complexities of relationships, resonating deeply with its audience."
+  },
+  {
+    "title": "A Thousand and One",
+    "year": 2023,
+    "award": "U.S. Grand Jury Prize: Dramatic Competition",
+    "notStrickIndie": false,
+
+    "noteOnIndie": "An intimate, powerful indie film that addresses important themes of identity and belonging."
+  },
+  {
+    "title": "The Persian Version",
+    "year": 2023,
+    "award": "Audience Award: U.S. Dramatic",
+    "notStrickIndie": false,
+
+    "noteOnIndie": "A film that bridges the indie and mainstream by exploring culturally significant themes with humor and heart."
+  },
+  {
+    "title": "The Accidental Getaway Driver",
+    "year": 2023,
+    "award": "Directing Award: U.S. Dramatic",
+    "notStrickIndie": false,
+
+    "noteOnIndie": "An indie film that stands out for its unique narrative and directorial vision, exploring the human condition in a poignant way."
+  },
+  {
+    "title": "In the Summers",
+    "year": 2024,
+    "award": "Grand Jury Prize U.S. Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A film with deep indie roots, focusing on unique storytelling and character-driven narratives."
+  },
+  {
+    "title": "Dìdi (弟弟)",
+    "year": 2024,
+    "award": "Audience Award U.S. Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A coming-of-age story that won the hearts of audiences, staying true to its indie sensibility."
+  },
+  {
+    "title": "In the Summers",
+    "year": 2024,
+    "award": "Directing U.S. Dramatic",
+    "notStrickIndie": false,
+    "noteOnIndie": "A bold, deeply emotional indie film that explores intricate personal stories with sensitivity and nuance."
   }
 ]
