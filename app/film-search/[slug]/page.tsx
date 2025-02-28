@@ -1,4 +1,4 @@
-import filmData from '../../../database/jsonFiles/00_vff_merged.json';
+import filmData from '../../../database/jsonFiles/filmFetched.json';
 
 export default async function FilmPage({ params }) {
   const { slug } = await params;
