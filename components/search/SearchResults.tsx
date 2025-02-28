@@ -6,7 +6,12 @@ import { SearchResultsProps } from '../utils-components/types';
 import { getRandomObjects } from '../utils-components/utils';
 import { FESTIVAL_NAMES } from '../utils-components/constants';
 
-const SearchResults = ({ results, noSearch }: SearchResultsProps) => {
+const SearchResults = ({
+  results,
+  noSearch,
+  selectedFestival,
+  selectedGenre,
+}: SearchResultsProps) => {
   const oramaHits = results?.hits ?? [];
   if (!oramaHits.length) return <NoResults />;
 
@@ -17,9 +22,6 @@ const SearchResults = ({ results, noSearch }: SearchResultsProps) => {
   const uniqueGenres = Array.from(
     new Set(filmResults.flatMap((film) => film.document.genres || []))
   );
-
-  const [selectedFestival, setSelectedFestival] = useState<string | null>(null);
-  const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
 
   const filteredResults = filmResults.filter((film) => {
     const matchesFestival =
@@ -44,60 +46,6 @@ const SearchResults = ({ results, noSearch }: SearchResultsProps) => {
             it’s not a jackpot.
           </h1>
         )}
-
-        {/* Filter Buttons - Film Festival */}
-        <div className="flex flex-wrap justify-center gap-1 my-4">
-          <button
-            className={`px-2 py-1 text-xs rounded-md font-semibold transition ${
-              !selectedFestival
-                ? 'bg-pink-500 text-white'
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-            }`}
-            onClick={() => setSelectedFestival(null)}
-          >
-            All Festivals
-          </button>
-          {uniqueFestivals.map((festival) => (
-            <button
-              key={festival}
-              className={`px-2 py-1 text-xs rounded-md font-semibold transition ${
-                selectedFestival === festival
-                  ? 'bg-pink-500 text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-              }`}
-              onClick={() => setSelectedFestival(festival)}
-            >
-              {FESTIVAL_NAMES[festival]} {/* Display the full name */}
-            </button>
-          ))}
-        </div>
-
-        {/* Filter Buttons - Genres */}
-        <div className="flex flex-wrap justify-center gap-1 my-4">
-          <button
-            className={`px-2 py-1 text-xs rounded-md font-semibold transition ${
-              !selectedGenre
-                ? 'bg-blue-500 text-white'
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-            }`}
-            onClick={() => setSelectedGenre(null)}
-          >
-            All Genres
-          </button>
-          {uniqueGenres.map((genre) => (
-            <button
-              key={genre}
-              className={`px-2 py-1 text-xs rounded-md font-semibold transition ${
-                selectedGenre === genre
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-              }`}
-              onClick={() => setSelectedGenre(genre)}
-            >
-              {genre}
-            </button>
-          ))}
-        </div>
       </div>
 
       {/* Film Results Grid */}

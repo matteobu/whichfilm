@@ -1,6 +1,8 @@
 // SEARCH COMPONENT
 export interface SearchResultsProps {
   results: OramaSearchResponse;
+  selectedFestival: string;
+  selectedGenre: string;
   noSearch: boolean;
 }
 
