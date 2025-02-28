@@ -8,7 +8,7 @@ import { getRandomFilms } from './utils/utils';
 
 export default function Home() {
   const [results, setResults] = useState<OramaSearchResponse>();
-  const filmsToDisplay = results?.hits ? getRandomFilms(results.hits, 15) : [];
+  const [filmsToDisplay, setFilmsToDisplay] = useState([]);
 
   useEffect(() => {
     fetch(`/api/allFilm`)
@@ -20,9 +20,21 @@ export default function Home() {
       .catch((error) => console.error('Fetch error:', error));
   }, []);
 
+  useEffect(() => {
+    const updateFilmCount = () => {
+      if (results?.hits) {
+        const isUnder1450 = window.innerWidth <= 1450;
+        const numFilms = isUnder1450 ? 12 : 15;
+        setFilmsToDisplay(getRandomFilms(results.hits, numFilms));
+      }
+    };
+    updateFilmCount();
+    window.addEventListener('resize', updateFilmCount);
+    return () => window.removeEventListener('resize', updateFilmCount);
+  }, [results]);
+
   return (
     <main className="flex flex-col bg-gradient-dark-gray-blue text-white h-screen">
-      {/* Banner */}
       <div className="w-full h-[30vh] sm:h-[35vh] relative p-2 bg-gradient-dark-gray-blue border-8 border-transparent bg-clip-border overflow-hidden rounded-4xl">
         <Image
           src="/whichfilmbanner.png"
