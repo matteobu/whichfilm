@@ -3,24 +3,32 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 /* app.css */
 @import 'tailwindcss';
 
 /* Define custom theme variable */
 @theme {
-  --color-darker-violet: #190c49; /* Even Darker Violet */
-  --color-dark-violet: #2a0a55; /* Dark Violet */
-  --color-globalTextPrimary: #9333ea; /* Text color */
-  --color-globalLinkHover: #ec4899; /* Hover link color */
-  --color-globalGradientStart: #7c3aed; /* Gradient start */
-  --color-globalGradientMid: #9333ea; /* Gradient mid */
-  --color-globalGradientEnd: #3b82f6; /* Gradient end */
-  --color-dark-gray: #1a1a1d; /* Dark gray */
-  --color-dark-gray-blue: #09122c; /* Dark Gray Blue */
-  --color-dark-violet-wine: #6a1e55; /* Dark Wine Violet */
+  --color-darker-violet: #190c49;  
+  --color-dark-violet: #2a0a55;  
+  --color-globalTextPrimary: #9333ea;  
+  --color-globalLinkHover: #ec4899;  
+  --color-globalGradientStart: #7c3aed;  
+  --color-globalGradientMid: #9333ea;  
+  --color-globalGradientEnd: #3b82f6;  
+  --color-dark-gray: #1a1a1d;  
+  --color-dark-gray-blue: #09122c;  
+  --color-dark-violet-wine: #6a1e55;  
+  --color-pink-gradient: #9333ea,  
+  --color-blue-gradient: #3b82f6,
+ /* TEXT PINK TO BLUE */
+  --color-globalGradientStart: #9333ea;  
+  --color-globalGradientMid: #9333ea;  
+  --color-globalGradientEnd: #3b82f6;  
 }
+
+
 
 @layer utilities {
   .bg-gradient-dark-violet {
@@ -36,5 +44,15 @@ body {
       var(--color-dark-gray),
       var(--color-dark-gray-blue)
     );
+  }
+  .bg-gradient-pink-purple-blue-text {
+    background: linear-gradient(
+      to right,
+      var(--color-globalGradientStart),
+      var(--color-globalGradientMid),
+      var(--color-globalGradientEnd)
+    );
+    -webkit-background-clip: text; /* Needed for Safari */
+    background-clip: text; /* Clipping the background to the text */
   }
 }

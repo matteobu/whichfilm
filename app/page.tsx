@@ -34,8 +34,10 @@ export default function Home() {
   }, [results]);
 
   return (
-    <main className="flex flex-col bg-gradient-dark-gray-blue text-white h-screen">
-      <div className="w-full h-[30vh] sm:h-[35vh] relative p-2 bg-gradient-dark-gray-blue border-8 border-transparent bg-clip-border overflow-hidden rounded-4xl">
+    <main className="flex flex-col bg-gradient-dark-gray-blue text-white h-screen overflow-hidden">
+      {' '}
+      <div className="w-full h-[20vh] sm:h-[25vh] relative p-2 bg-gradient-dark-gray-blue border-8 border-transparent bg-clip-border overflow-hidden rounded-4xl">
+        {' '}
         <Image
           src="/whichfilmbanner.png"
           alt="Banner"
@@ -44,10 +46,7 @@ export default function Home() {
         />
       </div>
       <div className="text-center mt-4 flex flex-col">
-        <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 m-2">
-          Welcome to the Best Independent Film Database
-        </h1>
-        <h1 className="text-2xl font-bold text-white bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 m-2">
+        <h1 className="text-xl font-bold text-white bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 m-1">
           Just click on{' '}
           <Link
             href="/film-search"
@@ -64,7 +63,7 @@ export default function Home() {
           </Link>
           and hunt down that flick you’re craving!
         </h1>
-        <div className="flex flex-col items-center mt-6">
+        <div className="flex flex-col items-center mt-2">
           {filmsToDisplay.length === 0 ? (
             <p className="text-xl text-white italic font-semibold">
               Hold tight, we're digging through indie films like pros... Just

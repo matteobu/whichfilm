@@ -14,14 +14,8 @@ const SearchResults = ({
 }: SearchResultsProps) => {
   const oramaHits = results?.hits ?? [];
   if (!oramaHits.length) return <NoResults />;
-
   const filmResults = noSearch ? getRandomObjects(oramaHits, 20) : oramaHits;
   if (filmResults.length === 0) return <NoResults />;
-
-  const uniqueFestivals = Object.keys(FESTIVAL_NAMES);
-  const uniqueGenres = Array.from(
-    new Set(filmResults.flatMap((film) => film.document.genres || []))
-  );
 
   const filteredResults = filmResults.filter((film) => {
     const matchesFestival =
@@ -47,8 +41,6 @@ const SearchResults = ({
           </h1>
         )}
       </div>
-
-      {/* Film Results Grid */}
       {filteredResults.length === 0 ? (
         <NoResults />
       ) : (

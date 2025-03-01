@@ -26,7 +26,6 @@ export function getFilmFestivalOrAward(
   festivalAward: string,
   type: 'festival' | 'award'
 ) {
-  console.log(festivalAward);
   const filmAward = {
     special_jury_prize: 'Special Jury Prize',
     golden_lion: 'Golden Lion',
@@ -40,4 +39,15 @@ export function getFilmFestivalOrAward(
   return type === 'festival'
     ? FESTIVAL_NAMES[festivalAward]
     : filmAward[festivalAward];
+}
+
+export async function getFilmIdsByTitle(filteredTitles, filmData) {
+  return filteredTitles
+    .map((title) => {
+      const film = filmData.find(
+        (f) => f.title.toLowerCase() === title.toLowerCase()
+      );
+      return film ? film.id : null;
+    })
+    .filter((id) => id !== null);
 }

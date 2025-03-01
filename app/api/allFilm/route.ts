@@ -17,7 +17,7 @@ export async function GET() {
 
     const results = await client.search({
       term: '',
-      limit: 20,
+      limit: 200, // This should be adjusted based on the total number of objects in the film index.
     });
 
     if (!results || results.hits?.length === 0) {

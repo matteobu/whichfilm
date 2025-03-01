@@ -8,7 +8,6 @@ import { getFilmFestivalOrAward } from '../utils-components/utils';
 import { FilmCardProps } from '../utils-components/types';
 
 const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
-  console.log({ film });
   if (!film) {
     return null;
   }
