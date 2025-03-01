@@ -55,6 +55,13 @@ export default function Home() {
           >
             Films{' '}
           </Link>
+          or{' '}
+          <Link
+            href="/film-festival"
+            className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500"
+          >
+            Film Festival{' '}
+          </Link>
           and hunt down that flick you’re craving!
         </h1>
         <div className="flex flex-col items-center mt-6">
