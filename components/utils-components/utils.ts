@@ -26,11 +26,17 @@ export function getFilmFestivalOrAward(
   festivalAward: string,
   type: 'festival' | 'award'
 ) {
+  console.log(festivalAward);
   const filmAward = {
     special_jury_prize: 'Special Jury Prize',
     golden_lion: 'Golden Lion',
     grand_jury_prize: 'Grand Jury Prize',
   };
+
+  if (type === 'award' && !filmAward[festivalAward]) {
+    return festivalAward; // Return the original award name if it's not found in the filmAward object
+  }
+
   return type === 'festival'
     ? FESTIVAL_NAMES[festivalAward]
     : filmAward[festivalAward];

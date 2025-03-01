@@ -1,3 +1,4 @@
+import { getFilmFestivalOrAward } from '../../../components/utils-components/utils';
 import filmData from '../../../database/jsonFiles/filmFetched.json';
 
 export default async function FilmPage({ params }) {
@@ -21,6 +22,8 @@ export default async function FilmPage({ params }) {
     overview,
     genres,
     spoken_languages,
+    award,
+    festival,
   } = filmInfo;
 
   const year = release_date.split('-')[0];
@@ -81,6 +84,11 @@ export default async function FilmPage({ params }) {
               </p>
               <p>
                 <strong>Year:</strong> {year}
+              </p>
+              <p>
+                <strong>Festival & Award: </strong>
+                {getFilmFestivalOrAward(festival, 'festival')}{' -- '}
+                {getFilmFestivalOrAward(award, 'award')}
               </p>
             </div>
           </div>
