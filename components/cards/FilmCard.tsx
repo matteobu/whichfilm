@@ -5,7 +5,7 @@ import { BsFillAwardFill } from 'react-icons/bs';
 import FilmTag from './FilmTag';
 import defaultImage from '../../assets/logo.png';
 import { getFilmFestivalOrAward } from '../utils-components/utils';
-import { FilmCardProps, OramaSearchHits } from '../utils-components/types';
+import { FilmCardProps } from '../utils-components/types';
 
 const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
   console.log({ film });
@@ -20,7 +20,7 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
     overview,
     genres,
     festival,
-    award,
+    awards,
     notStrictIndie,
   } = film.document;
 
@@ -57,11 +57,16 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
         <div className="p-2 flex flex-col flex-grow">
           <p className="text-mint-500 text-sm mt-2 line-clamp-3">{overview}</p>
           <div className="flex flex-col gap-1 mt-auto">
-            <p className="text-violet-200 text-xs mt-2 line-clamp-3 flex items-center gap-2">
-              <BsFillAwardFill />
-              {getFilmFestivalOrAward(festival, 'festival')}:{' '}
-              {getFilmFestivalOrAward(award, 'award')}
-            </p>
+            {awards.map((award, index) => (
+              <p
+                key={index}
+                className="text-violet-200 text-xs mt-2 line-clamp-3 flex items-center gap-2"
+              >
+                <BsFillAwardFill />
+                {getFilmFestivalOrAward(festival, 'festival')}:{' '}
+                {getFilmFestivalOrAward(award, 'award')}
+              </p>
+            ))}
             <div className="flex flex-row gap-2">
               <FilmTag text={year || 'n.d.'} />
               <FilmTag text={genres[0]} />

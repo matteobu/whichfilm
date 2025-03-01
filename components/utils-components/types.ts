@@ -48,7 +48,7 @@ export type OramaSearchHits = {
   score: number;
   document: {
     adult: boolean;
-    award: string;
+    awards: string[];
     backdrop_path: string | null;
     belongs_to_collection: string | null;
     budget: number;
