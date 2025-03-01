@@ -57,16 +57,11 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
         <div className="p-2 flex flex-col flex-grow">
           <p className="text-mint-500 text-sm mt-2 line-clamp-3">{overview}</p>
           <div className="flex flex-col gap-1 mt-auto">
-            {awards.map((award, index) => (
-              <p
-                key={index}
-                className="text-violet-200 text-xs mt-2 line-clamp-3 flex items-center gap-2"
-              >
-                <BsFillAwardFill />
-                {getFilmFestivalOrAward(festival, 'festival')}:{' '}
-                {getFilmFestivalOrAward(award, 'award')}
-              </p>
-            ))}
+            <p className="text-violet-200 text-xs mt-2 line-clamp-3 flex items-center gap-2">
+              <BsFillAwardFill />
+              Award secured at {getFilmFestivalOrAward(festival, 'festival')}.
+            </p>
+
             <div className="flex flex-row gap-2">
               <FilmTag text={year || 'n.d.'} />
               <FilmTag text={genres[0]} />
