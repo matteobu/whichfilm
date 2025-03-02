@@ -1,28 +1,27 @@
 'use client';
 import { useEffect } from 'react';
-import { FESTIVAL_NAMES } from '../utils-components/constants';
+import { FESTIVAL_NAMES, FESTIVAL_OR_GENRE } from '../utils-components/constants';
 import { OramaSearchResponse } from '../utils-components/types';
 
 interface SearchFilterModalProps {
   results: OramaSearchResponse;
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  selectedFestival: string | null;
-  selectedGenre: string | null;
-  setSelectedFestival: React.Dispatch<React.SetStateAction<string | null>>;
-  setSelectedGenre: React.Dispatch<React.SetStateAction<string | null>>;
+  selectedFestival: string;
+  selectedGenre: string;
+  handleFilters: (filmFestival: string, genres: string) => void;
 }
 
 const SearchFilterModal = ({
   results,
   setIsModalOpen,
+  handleFilters,
   selectedFestival,
   selectedGenre,
-  setSelectedFestival,
-  setSelectedGenre,
 }: SearchFilterModalProps) => {
   const uniqueGenres = Array.from(
     new Set(results.hits.flatMap((film) => film.document.genres || []))
   );
+
   useEffect(() => {
     const handleClose = (e: any) => {
       if (e.key === 'Escape') {
@@ -31,7 +30,6 @@ const SearchFilterModal = ({
     };
 
     window.addEventListener('keydown', handleClose);
-
     return () => window.removeEventListener('keydown', handleClose);
   }, [setIsModalOpen]);
 
@@ -57,7 +55,7 @@ const SearchFilterModal = ({
                     ? 'bg-pink-500 text-white'
                     : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 }`}
-                onClick={() => setSelectedFestival(null)}
+                onClick={() => handleFilters(FESTIVAL_OR_GENRE.festival, null)}
               >
                 All Festivals
               </button>
@@ -70,7 +68,8 @@ const SearchFilterModal = ({
                       : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   }`}
                   onClick={() =>
-                    setSelectedFestival(
+                    handleFilters(
+                      FESTIVAL_OR_GENRE.festival,
                       festival === selectedFestival ? null : festival
                     )
                   }
@@ -80,8 +79,6 @@ const SearchFilterModal = ({
               ))}
             </div>
           </div>
-
-          {/* Genre Filter */}
           <div className="w-full">
             <h3 className="text-lg font-semibold mb-2 text-center">Genres</h3>
             <div className="grid grid-cols-2 gap-2">
@@ -91,7 +88,7 @@ const SearchFilterModal = ({
                     ? 'bg-blue-500 text-white'
                     : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                 }`}
-                onClick={() => setSelectedGenre(null)}
+                onClick={() => handleFilters(FESTIVAL_OR_GENRE.genre, null)}
               >
                 All Genres
               </button>
@@ -105,7 +102,10 @@ const SearchFilterModal = ({
                       : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   }`}
                   onClick={() =>
-                    setSelectedGenre(genre === selectedGenre ? null : genre)
+                    handleFilters(
+                      FESTIVAL_OR_GENRE.genre,
+                      genre === selectedGenre ? null : genre
+                    )
                   }
                 >
                   {genre}

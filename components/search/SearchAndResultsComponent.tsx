@@ -4,7 +4,8 @@ import SearchInput from './SearchInput';
 import SearchResults from './SearchResults';
 import { OramaSearchResponse } from '../utils-components/types';
 import SearchFilterModal from './SearchFilterModal';
-import { IoFilterSharp } from 'react-icons/io5'; // Import the icon
+import { IoFilterSharp } from 'react-icons/io5';
+import { FESTIVAL_OR_GENRE } from '../utils-components/constants';
 
 const SearchComponent = () => {
   const [query, setQuery] = useState('');
@@ -54,6 +55,19 @@ const SearchComponent = () => {
     }
   }, [debouncedQuery]);
 
+  const handleFilters = (filterType: string, value: string) => {
+    const filterSetters = {
+      [FESTIVAL_OR_GENRE.festival]: setSelectedFestival,
+      [FESTIVAL_OR_GENRE.genre]: setSelectedGenre,
+    };
+    const setter = filterSetters[filterType];
+    if (setter) {
+      setter(value);
+    } else {
+      console.warn(`Unknown filter type: ${filterType}`);
+    }
+  };
+
   return (
     <div className="w-full flex flex-col justify-center items-center bg-gradient-dark-gray-blue">
       <div className="flex justify-center items-center w-full space-x-4 mb-4">
@@ -69,10 +83,9 @@ const SearchComponent = () => {
         <SearchFilterModal
           results={results}
           setIsModalOpen={setIsModalOpen}
+          handleFilters={handleFilters}
           selectedFestival={selectedFestival}
           selectedGenre={selectedGenre}
-          setSelectedFestival={setSelectedFestival}
-          setSelectedGenre={setSelectedGenre}
         />
       )}
       <SearchResults
