@@ -43,6 +43,17 @@ export type OramaSearchResponse = {
   hits: OramaSearchHits[];
 };
 
+export type CastInfo = {
+  original_name: string;
+  profile_path: string;
+  character: string;
+};
+export type CrewInfo = {
+  original_name: string;
+  profile_path: string;
+  job: string;
+};
+
 export type OramaSearchHits = {
   id: string;
   score: number;
@@ -52,13 +63,14 @@ export type OramaSearchHits = {
     backdrop_path: string | null;
     belongs_to_collection: string | null;
     budget: number;
+    cast: CastInfo[];
+    crew: CrewInfo[];
     genres: string[];
     homepage: string;
     id: string;
     imdb_id: string;
     origin_country: string[];
     original_language: string;
-    original_title: string;
     overview: string;
     popularity: number;
     poster_path: string | null;

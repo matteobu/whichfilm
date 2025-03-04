@@ -16,29 +16,22 @@ export default function MainHeader() {
             which film ?
           </Link>
           <span className="hidden sm:block text-l font-bold text-transparent bg-gradient-pink-purple-blue-text">
-            Welcome to the best independent film database
+            independent film database, because who needs Hollywood anyway?
           </span>
         </div>
 
         <nav>
           <ul className="flex space-x-6 items-center h-full">
-            {/* Films link with icon */}
             <NavLink href="/film-search">
-              {/* Icon visible only on small screens */}
               <PiFilmReel className="text-xl sm:hidden" />
               <span className="hidden sm:inline">Films</span>
             </NavLink>
 
-            {/* Film Festivals link with icon */}
             <NavLink href="/film-festival">
-              {/* Icon visible only on small screens */}
               <MdOutlineFestival className="text-xl sm:hidden" />
               <span className="hidden sm:inline">Film Festivals</span>
             </NavLink>
-
-            {/* About link with icon */}
             <NavLink href="/about">
-              {/* Icon visible only on small screens */}
               <FaCircleInfo className="text-xl sm:hidden" />
               <span className="hidden sm:inline">About</span>
             </NavLink>

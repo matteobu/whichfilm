@@ -1,6 +1,7 @@
 import { getFilmFestivalOrAward } from '../../../components/utils-components/utils';
 import filmData from '../../../database/jsonFiles/filmFetched.json';
 import SimilarFilmsBox from '../../../components/search/SimilarFilmBox';
+import CastGrid from '../../../components/cards/CastCrewGrid';
 
 export default async function FilmPage({ params }) {
   const { slug } = await params;
@@ -23,13 +24,16 @@ export default async function FilmPage({ params }) {
     overview,
     genres,
     spoken_languages,
-    award,
+    awards,
     festival,
+    cast,
+    crew,
   } = filmInfo;
 
   const year = release_date.split('-')[0];
   const languageList = spoken_languages.map((lang) => lang).join(', ');
   const genreList = genres.map((genre) => genre).join(', ');
+  const cast_crew = [...crew, ...cast.slice(0, 4)];
 
   return (
     <main className="bg-gradient-dark-gray-blue min-h-screen text-white">
@@ -61,19 +65,29 @@ export default async function FilmPage({ params }) {
               <strong>Festival & Award:</strong>{' '}
               {getFilmFestivalOrAward(festival, 'festival')}
               {' -- '}
-              {getFilmFestivalOrAward(award, 'award')}
+              {awards &&
+                awards.map((a) => {
+                  getFilmFestivalOrAward(a, 'award');
+                })}
             </p>
           </div>
 
-          {/* Title Positioned Center */}
           <div className="absolute inset-0 flex justify-center items-center rounded-2xl">
             <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-center">
               {title}
             </h1>
           </div>
         </div>
-        <div className="relative w-full md:w-1/2 min-h-96 flex flex-col items-center">
-          <p className="text-lg ">{overview}</p>
+        <div className="relative w-full md:w-1/2 min-h-96 flex flex-col items-center justify-between space-y-6">
+          <div className="w-full text-center">
+            <div className="w-full text-start text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 mt-4">
+              <p>Quick rundown</p>
+            </div>
+            <p className="text-lg text-start">{overview}</p>
+          </div>
+          <div className="w-full mt-6 rounded-lg">
+            <CastGrid cast={cast_crew} />
+          </div>
         </div>
         {/* <div className="w-full md:w-1/2 min-h-96 flex items-center justify-center">
             <iframe
@@ -86,7 +100,6 @@ export default async function FilmPage({ params }) {
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto px-6 pb-10 ">
-        {' '}
         <SimilarFilmsBox title={title} genres={genres} filmData={filmData} />
       </section>
     </main>

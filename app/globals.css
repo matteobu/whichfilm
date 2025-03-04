@@ -55,4 +55,8 @@ body {
     -webkit-background-clip: text; /* Needed for Safari */
     background-clip: text; /* Clipping the background to the text */
   }
+
+  .castCrew-card{
+    color: var(--color-globalGradientEnd)
+  }
 }
