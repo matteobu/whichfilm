@@ -32,7 +32,6 @@ const SimilarFilmsBox = ({ title, genres, filmData }) => {
         data.answer,
         title
       );
-
       const similarFilmsId = await getFilmIdsByTitle(similarFilms, filmData);
 
       setSimilarFilms(similarFilms);

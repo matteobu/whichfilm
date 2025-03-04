@@ -14,7 +14,6 @@ export default function Home() {
     fetch(`/api/allFilm`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setResults(data);
       })
       .catch((error) => console.error('Fetch error:', error));

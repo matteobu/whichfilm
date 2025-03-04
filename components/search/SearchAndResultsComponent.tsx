@@ -21,7 +21,6 @@ const SearchComponent = () => {
       .then((res) => res.json())
       .then((data) => {
         setAllFilmQuery(true);
-        console.log(data);
         setResults(data);
       })
       .catch((error) => console.error('Fetch error:', error));

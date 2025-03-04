@@ -69,14 +69,13 @@ export function getFilmFestivalOrAward(
  */
 export async function getFilmIdsByTitle(filteredTitles, filmData) {
   return filteredTitles
-    .map((title) => {
-      // Find the film with a matching title (case insensitive)
+    .map((title: string) => {
       const film = filmData.find(
         (f) => f.title.toLowerCase() === title.toLowerCase()
       );
       return film ? film.id : null;
     })
-    .filter((id) => id !== null); // Remove null entries for titles that weren't found
+    .filter((id: number) => id !== null);
 }
 
 /**

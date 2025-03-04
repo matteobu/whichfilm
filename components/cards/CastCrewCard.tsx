@@ -8,9 +8,10 @@ const CastCrewCard = ({ name, profilePath, role }) => {
         <Image
           src={`https://image.tmdb.org/t/p/w200${profilePath}`}
           alt={name}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg opacity-50"
+          width={200}
+          height={300}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="rounded-lg opacity-50 cover fill"
         />
       </div>
       <div className="text-s text-white absolute bottom-0 left-0 w-full p-4 text-center z-10">
