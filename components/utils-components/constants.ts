@@ -6,6 +6,9 @@ const inactiveButtonClassName =
 const oramaSearchButtonClassName =
   'text-m font-semibold text-pink-300 bg-gradient-dark-violet border-2 border-pink-300 rounded-lg px-2 py-0.3 hover:bg-violet-100 transition duration-300';
 
+export const mainClassName =
+  'flex flex-col bg-gradient-dark-gray-blue text-white h-screen overflow-hidden py-4';
+
 export const FESTIVAL_OR_GENRE = {
   festival: 'festival',
   genre: 'genre',
