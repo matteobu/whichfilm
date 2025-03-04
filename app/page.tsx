@@ -21,16 +21,9 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const updateFilmCount = () => {
-      if (results?.hits) {
-        const isUnder1450 = window.innerWidth <= 1450;
-        const numFilms = isUnder1450 ? 12 : 15;
-        setFilmsToDisplay(getRandomFilms(results.hits, numFilms));
-      }
-    };
-    updateFilmCount();
-    window.addEventListener('resize', updateFilmCount);
-    return () => window.removeEventListener('resize', updateFilmCount);
+    if (results?.hits) {
+      setFilmsToDisplay(getRandomFilms(results.hits, 15));
+    }
   }, [results]);
 
   return (
