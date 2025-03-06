@@ -20,7 +20,8 @@ const SearchResults = ({
 
     return oramaHits.filter((film) => {
       const matchesFestival =
-        !selectedFestival || film.document.festival?.includes(selectedFestival);
+        !selectedFestival || film.document.infoIndieAndAwards[selectedFestival];
+      console.log(matchesFestival);
       const matchesGenre =
         !selectedGenre || film.document.genres?.includes(selectedGenre);
 
