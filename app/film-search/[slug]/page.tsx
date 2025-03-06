@@ -24,11 +24,22 @@ export default async function FilmPage({ params }) {
     overview,
     genres,
     spoken_languages,
-    awards,
-    festival,
+    infoIndieAndAwards,
     cast,
     crew,
   } = filmInfo;
+
+  // Extract the key dynamically
+  const indieAwards = infoIndieAndAwards;
+
+  // Find the key dynamically (excluding known keys)
+  const festival = Object.keys(indieAwards).find(
+    (key) => key !== 'notStrictIndie' && key !== 'noteOnIndie'
+  );
+
+  const awards = festival ? indieAwards[festival].awards : [];
+
+  console.log(awards);
 
   const year = release_date.split('-')[0];
   const languageList = spoken_languages.map((lang) => lang).join(', ');
