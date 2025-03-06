@@ -22,7 +22,11 @@ const CastGrid = ({ cast }) => {
             >
               {
                 <img
-                  src={`https://image.tmdb.org/t/p/w500${c.profile_path}`}
+                  src={
+                    c.profile_path !== null
+                      ? `https://image.tmdb.org/t/p/w500${c.profile_path}`
+                      : '/nopic.jpg'
+                  }
                   alt={c.original_name}
                   className={`w-14 h-14 m-2 border-2 border-pink-500 rounded-full transition-opacity duration-500 ${
                     hovered === index ? 'opacity-0' : 'opacity-100'

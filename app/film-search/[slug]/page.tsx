@@ -1,7 +1,7 @@
-import { getFilmFestivalOrAward } from '../../../components/utils-components/utils';
 import filmData from '../../../database/jsonFiles/filmFetched.json';
 import SimilarFilmsBox from '../../../components/search/SimilarFilmBox';
 import CastGrid from '../../../components/cards/CastCrewGrid';
+import { FESTIVAL_NAMES } from '../../../components/utils-components/constants';
 
 export default async function FilmPage({ params }) {
   const { slug } = await params;
@@ -24,12 +24,19 @@ export default async function FilmPage({ params }) {
     overview,
     genres,
     spoken_languages,
-    awards,
-    festival,
+    infoIndieAndAwards,
     cast,
     crew,
   } = filmInfo;
 
+  const festival = Object.keys(infoIndieAndAwards).find(
+    (key) => key !== 'notStrictIndie' && key !== 'noteOnIndie'
+  );
+  console.log(festival);
+  console.log(infoIndieAndAwards);
+  console.log(infoIndieAndAwards[festival].awards);
+  const awards = festival ? infoIndieAndAwards[festival].awards : [];
+  console.log(awards);
   const year = release_date.split('-')[0];
   const languageList = spoken_languages.map((lang) => lang).join(', ');
   const genreList = genres.map((genre) => genre).join(', ');
@@ -62,13 +69,9 @@ export default async function FilmPage({ params }) {
               <strong>Year:</strong> {year}
             </p>
             <p>
-              <strong>Festival & Award:</strong>{' '}
-              {getFilmFestivalOrAward(festival, 'festival')}
+              <strong>Festival & Award:</strong> {FESTIVAL_NAMES[festival]}
               {' -- '}
-              {awards &&
-                awards.map((a) => {
-                  getFilmFestivalOrAward(a, 'award');
-                })}
+              {awards && awards.map((a) => a)}
             </p>
           </div>
 

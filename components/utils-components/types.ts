@@ -54,12 +54,18 @@ export type CrewInfo = {
   job: string;
 };
 
+export type IndieAwards = {
+  notStrictIndie: boolean;
+  noteOnIndie: string;
+} & {
+  [festivalName: string]: { awards: (string | null)[] } | boolean | string;
+};
+
 export type OramaSearchHits = {
   id: string;
   score: number;
   document: {
     adult: boolean;
-    awards: string[];
     backdrop_path: string | null;
     belongs_to_collection: string | null;
     budget: number;
@@ -69,6 +75,7 @@ export type OramaSearchHits = {
     homepage: string;
     id: string;
     imdb_id: string;
+    infoIndieAndAwards: IndieAwards;
     origin_country: string[];
     original_language: string;
     overview: string;
@@ -82,9 +89,7 @@ export type OramaSearchHits = {
     tagline: string;
     title: string;
     video: boolean;
-    festival: string;
     vote_average: number;
     vote_count: number;
-    notStrictIndie: boolean;
   };
 };

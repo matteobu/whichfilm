@@ -4,32 +4,49 @@ import Link from 'next/link';
 import SmallFilmCard from '../components/cards/SmallFilmCard';
 import { useEffect, useState } from 'react';
 import { OramaSearchResponse } from '../components/utils-components/types';
-import { getRandomFilms } from './utils/utils';
+import {
+  getInfoForLocalStorage,
+  getRandomFilms,
+  isDifferentDay,
+} from './utils/utils';
 
 export default function Home() {
-  const [results, setResults] = useState<OramaSearchResponse>();
   const [filmsToDisplay, setFilmsToDisplay] = useState([]);
 
   useEffect(() => {
+    const { storedFilms, storedTimestamp, currentTime } =
+      getInfoForLocalStorage();
+
+    if (storedFilms && storedTimestamp) {
+      const parsedTimestamp = parseInt(storedTimestamp);
+      if (isDifferentDay(parsedTimestamp, currentTime)) {
+        localStorage.removeItem('filmsData');
+        localStorage.removeItem('filmsTimestamp');
+        fetchFilms();
+      } else {
+        const parsedFilms = JSON.parse(storedFilms);
+        setFilmsToDisplay(parsedFilms);
+      }
+    } else {
+      fetchFilms();
+    }
+  }, []);
+
+  const fetchFilms = () => {
     fetch(`/api/allFilm`)
       .then((res) => res.json())
       .then((data) => {
-        setResults(data);
+        const todaysFilm = getRandomFilms(data.hits, 20);
+        setFilmsToDisplay(todaysFilm);
+        localStorage.setItem('filmsData', JSON.stringify(todaysFilm));
+        localStorage.setItem('filmsTimestamp', new Date().getTime().toString());
       })
       .catch((error) => console.error('Fetch error:', error));
-  }, []);
-
-  useEffect(() => {
-    if (results?.hits) {
-      setFilmsToDisplay(getRandomFilms(results.hits, 15));
-    }
-  }, [results]);
+  };
 
   return (
     <main className="flex flex-col bg-gradient-dark-gray-blue text-white h-screen overflow-hidden">
-      {' '}
       <div className="w-full h-[20vh] sm:h-[25vh] relative p-2 bg-gradient-dark-gray-blue border-8 border-transparent bg-clip-border overflow-hidden rounded-4xl">
-        {' '}
         <Image
           src="/whichfilmbanner.png"
           alt="Banner"

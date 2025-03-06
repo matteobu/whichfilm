@@ -8,6 +8,7 @@ body {
 /* app.css */
 @import 'tailwindcss';
 
+
 /* Define custom theme variable */
 @theme {
   --color-darker-violet: #190c49;  

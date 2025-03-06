@@ -33,34 +33,6 @@ export function getRandomObjects(
 }
 
 /**
- * Retrieves the display name for a film festival or award based on its identifier
- *
- * @param festivalAward - The identifier string for a festival or award
- * @param type - Whether to lookup a 'festival' or 'award' display name
- * @returns The human-readable display name for the given festival or award
- */
-export function getFilmFestivalOrAward(
-  festivalAward: string,
-  type: 'festival' | 'award'
-) {
-  const filmAward = {
-    special_jury_prize: 'Special Jury Prize',
-    golden_lion: 'Golden Lion',
-    grand_jury_prize: 'Grand Jury Prize',
-  };
-
-  // If type is award but not found in our mapping, return the original string
-  if (type === 'award' && !filmAward[festivalAward]) {
-    return festivalAward;
-  }
-
-  // Return appropriate display name based on type
-  return type === 'festival'
-    ? FESTIVAL_NAMES[festivalAward]
-    : filmAward[festivalAward];
-}
-
-/**
  * Finds film IDs by matching titles in a dataset
  *
  * @param filteredTitles - Array of film titles to look up

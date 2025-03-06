@@ -4,8 +4,8 @@ import { TbAlertOctagonFilled } from 'react-icons/tb';
 import { BsFillAwardFill } from 'react-icons/bs';
 import FilmTag from './FilmTag';
 import defaultImage from '../../assets/logo.png';
-import { getFilmFestivalOrAward } from '../utils-components/utils';
 import { FilmCardProps } from '../utils-components/types';
+import { FESTIVAL_NAMES } from '../utils-components/constants';
 
 const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
   if (!film) {
@@ -18,11 +18,12 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
     release_date,
     overview,
     genres,
-    festival,
-    awards,
-    notStrictIndie,
+    infoIndieAndAwards,
   } = film.document;
 
+  const festival = Object.keys(infoIndieAndAwards).find(
+    (key) => key !== 'notStrictIndie' && key !== 'noteOnIndie'
+  );
   const year = release_date.split('-')[0];
   const imageSrc = backdrop_path
     ? `https://image.tmdb.org/t/p/w500${backdrop_path}`
@@ -43,7 +44,7 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
             src={imageSrc}
             alt={title || 'Film Image'}
           />
-          {notStrictIndie && (
+          {infoIndieAndAwards.notStrictIndie && (
             <div className="absolute top-2 right-2 flex items-center z-10">
               <TbAlertOctagonFilled
                 className="text-red-500 text-2xl"
@@ -58,7 +59,7 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
           <div className="flex flex-col gap-1 mt-auto">
             <p className="text-violet-200 text-xs mt-2 line-clamp-3 flex items-center gap-2">
               <BsFillAwardFill />
-              Award secured at {getFilmFestivalOrAward(festival, 'festival')}.
+              Award secured at {FESTIVAL_NAMES[festival]}.
             </p>
 
             <div className="flex flex-row gap-2">
