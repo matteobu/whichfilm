@@ -21,7 +21,7 @@ const FESTIVAL_NAMES: Record<string, string> = {
   // tribeca: 'Tribeca',
   berlinale: 'Berlinale',
   // sxsw: 'SXSW',
-  venice: 'Venice',
+  venice: 'Venice Film Festival',
   // afi: 'AFI Fest',
   // locarno: 'Locarno',
   // telluride: 'Telluride',
