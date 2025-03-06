@@ -10,6 +10,22 @@ export const getRandomFilms = (films: any[], count: number) => {
   }
   return randomFilms;
 };
+export const isDifferentDay = (storedTimestamp, currentTimestamp) => {
+  const storedDate = new Date(storedTimestamp);
+  const currentDate = new Date(currentTimestamp);
+  return (
+    storedDate.getUTCFullYear() !== currentDate.getUTCFullYear() ||
+    storedDate.getUTCMonth() !== currentDate.getUTCMonth() ||
+    storedDate.getUTCDate() !== currentDate.getUTCDate()
+  );
+};
+
+export const getInfoForLocalStorage = () => {
+  const storedFilms = localStorage.getItem('filmsData');
+  const storedTimestamp = localStorage.getItem('filmsTimestamp');
+  const currentTime = new Date().getTime();
+  return { storedFilms, storedTimestamp, currentTime };
+};
 
 export async function extractAndVerifySimilarTitles(
   text: string,
