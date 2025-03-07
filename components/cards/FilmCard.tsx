@@ -4,8 +4,8 @@ import { TbAlertOctagonFilled } from 'react-icons/tb';
 import { BsFillAwardFill } from 'react-icons/bs';
 import FilmTag from './FilmTag';
 import defaultImage from '../../assets/logo.png';
-import { FilmCardProps } from '../utils-components/types';
-import { FESTIVAL_NAMES } from '../utils-components/constants';
+import { FilmCardProps } from '../../utils/types';
+import { FESTIVAL_NAMES } from '../../utils/constants';
 
 const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
   if (!film) {

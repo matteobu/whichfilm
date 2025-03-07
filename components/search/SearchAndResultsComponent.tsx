@@ -1,16 +1,14 @@
 'use client';
-import { useState, useEffect } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import SearchInput from './SearchInput';
 import SearchResults from './SearchResults';
-import { OramaSearchResponse } from '../utils-components/types';
+import { OramaSearchResponse } from '../../utils/types';
 import SearchFilterModal from './SearchFilterModal';
-import { IoFilterSharp } from 'react-icons/io5';
-import { FESTIVAL_OR_GENRE } from '../utils-components/constants';
+import { FESTIVAL_OR_GENRE } from '../../utils/constants';
 
 const SearchComponent = () => {
   const searchParams = useSearchParams();
-  const router = useRouter();
 
   const filmQuery = searchParams.get('query') || '';
   const [query, setQuery] = useState(filmQuery);
@@ -97,34 +95,36 @@ const SearchComponent = () => {
     console.log('query in film-search: ', q);
   };
   return (
-    <div className="w-full flex flex-col justify-center items-center bg-gradient-dark-gray-blue">
-      <SearchInput
-        query={query}
-        setQuery={setQuery}
-        setIsModalOpen={setIsModalOpen}
-        handleClick={handleClick}
-        filterIconToDisplay={true}
-      />
-
-      {isModalOpen && (
-        <SearchFilterModal
-          results={results}
+    <Suspense>
+      <div className="w-full flex flex-col justify-center items-center bg-gradient-dark-gray-blue">
+        <SearchInput
+          query={query}
+          setQuery={setQuery}
           setIsModalOpen={setIsModalOpen}
-          handleFilters={handleFilters}
+          handleClick={handleClick}
+          filterIconToDisplay={true}
+        />
+
+        {isModalOpen && (
+          <SearchFilterModal
+            results={results}
+            setIsModalOpen={setIsModalOpen}
+            handleFilters={handleFilters}
+            selectedFestival={selectedFestival}
+            selectedGenre={selectedGenre}
+          />
+        )}
+        <SearchResults
+          results={results}
+          isLoading={isLoading}
+          noSearch={allFilmQuery}
+          noQueryResults={noQueryResults}
+          handleNoQueryResults={handleNoQueryResults}
           selectedFestival={selectedFestival}
           selectedGenre={selectedGenre}
         />
-      )}
-      <SearchResults
-        results={results}
-        isLoading={isLoading}
-        noSearch={allFilmQuery}
-        noQueryResults={noQueryResults}
-        handleNoQueryResults={handleNoQueryResults}
-        selectedFestival={selectedFestival}
-        selectedGenre={selectedGenre}
-      />
-    </div>
+      </div>
+    </Suspense>
   );
 };
 

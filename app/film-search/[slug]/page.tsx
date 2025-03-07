@@ -1,7 +1,7 @@
 import filmData from '../../../database/jsonFiles/filmFetched.json';
 import SimilarFilmsBox from '../../../components/search/SimilarFilmBox';
 import CastGrid from '../../../components/cards/CastCrewGrid';
-import { FESTIVAL_NAMES } from '../../../components/utils-components/constants';
+import { FESTIVAL_NAMES } from '../../../utils/constants';
 
 export default async function FilmPage({ params }) {
   const { slug } = await params;

@@ -3,7 +3,7 @@ import { useEffect, useMemo } from 'react';
 import FilmCard from '../cards/FilmCard';
 import Loading from '../error/Loading';
 import NoResults from '../error/No-Results';
-import { SearchResultsProps } from '../utils-components/types';
+import { SearchResultsProps } from '../../utils/types';
 
 const ITEMS_PER_PAGE = 20;
 

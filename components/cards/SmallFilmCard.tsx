@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import defaultImage from '../../assets/logo.png';
-import { SmallFilmCardProps } from '../utils-components/types';
+import { SmallFilmCardProps } from '../../utils/types';
 import Image from 'next/image';
 
 const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {

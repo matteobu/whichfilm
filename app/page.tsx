@@ -7,7 +7,7 @@ import {
   getInfoForLocalStorage,
   getRandomFilms,
   isDifferentDay,
-} from './utils/utils';
+} from '../utils/utils';
 import SearchInput from '../components/search/SearchInput';
 import { useRouter } from 'next/navigation';
 

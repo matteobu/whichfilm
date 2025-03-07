@@ -1,7 +1,7 @@
 'use client';
 import { Key, useState } from 'react';
 import CastCrewCard from './CastCrewCard';
-import { CastInfo, CrewInfo } from '../utils-components/types';
+import { CastInfo, CrewInfo } from '../../utils/types';
 
 const CastGrid = ({ cast }) => {
   const [hovered, setHovered] = useState(null);

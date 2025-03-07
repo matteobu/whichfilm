@@ -5,8 +5,8 @@ import {
   activeButtonClassName,
   inactiveButtonClassName,
   oramaSearchButtonClassName,
-} from '../utils-components/constants';
-import { NavLinkProps } from '../utils-components/types';
+} from '../../utils/constants';
+import { NavLinkProps } from '../../utils/types';
 
 const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
   const pathname = usePathname();

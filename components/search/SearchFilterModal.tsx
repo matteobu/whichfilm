@@ -1,7 +1,7 @@
 'use client';
 import { useEffect } from 'react';
-import { FESTIVAL_NAMES, FESTIVAL_OR_GENRE } from '../utils-components/constants';
-import { OramaSearchResponse } from '../utils-components/types';
+import { FESTIVAL_NAMES, FESTIVAL_OR_GENRE } from '../../utils/constants';
+import { OramaSearchResponse } from '../../utils/types';
 
 interface SearchFilterModalProps {
   results: OramaSearchResponse;
