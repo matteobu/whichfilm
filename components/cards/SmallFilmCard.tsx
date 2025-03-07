@@ -1,36 +1,42 @@
 'use client';
 import Link from 'next/link';
 import defaultImage from '../../assets/logo.png';
-import { SmallFilmCardProps } from '../utils-components/types';
+import { SmallFilmCardProps } from '../../utils/types';
+import Image from 'next/image';
 
 const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {
   if (!film) {
     return null;
   }
 
-  const { title, backdrop_path } = film.document;
-  const imageSrc = backdrop_path
-    ? `https://image.tmdb.org/t/p/w500${backdrop_path}`
+  const { title, poster_path, infoIndieAndAwards } = film.document;
+  const imageSrc = poster_path
+    ? `https://image.tmdb.org/t/p/w500${poster_path}`
     : defaultImage.src;
 
+  const isNotIndie = infoIndieAndAwards.notStrictIndie;
   return (
     <Link
       href={`/film-search/${film.id}`}
-      className="block text-xl font-semibold text-pink-300 hover:text-pink-500"
+      className="block m-2 text-xl font-semibold text-pink-300 hover:text-pink-500"
     >
-      <div className="flex items-center max-w-xs w-80 h-32 bg-dark-violet rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out">
-        <div className="w-1/3 h-full overflow-hidden border-2 rounded-xl border-pink-500">
-          <img
-            src={imageSrc}
-            alt={title || 'Film Image'}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="flex flex-col justify-center pl-4 w-2/3">
-          <h2 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
-            {title}
-          </h2>
-        </div>
+      <div className="w-[150px] h-[250px] relative overflow-hidden border-2 rounded-xl border-pink-500 transition-opacity duration-300 opacity-40 hover:opacity-100">
+        <Image
+          src={imageSrc}
+          alt={title || 'Film Image'}
+          className="object-cover"
+          width={150}
+          height={250}
+        />
+        {isNotIndie ? (
+          <div className="relative bottom-0 left-0 w-full bg-red-800 opacity-80 text-white text-center text-sm py-1 z-20">
+            this ain’t that indie
+          </div>
+        ) : (
+          <div className="absolute bottom-0 left-0 w-full bg-green-800 opacity-80 text-white text-center text-sm py-1 z-20">
+            whichfilm approved
+          </div>
+        )}
       </div>
     </Link>
   );

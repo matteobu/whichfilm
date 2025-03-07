@@ -1,8 +1,7 @@
 'use client';
-import { OramaClient } from '@oramacloud/client';
-import { extractAndVerifySimilarTitles } from '../../app/utils/utils';
+import { extractAndVerifySimilarTitles } from '../../utils/utils';
 import { useState } from 'react';
-import { getFilmIdsByTitle } from '../utils-components/utils';
+import { getFilmIdsByTitle } from '../../utils/utils';
 
 const SimilarFilmsBox = ({ title, genres, filmData }) => {
   const [loading, setLoading] = useState(false);

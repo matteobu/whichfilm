@@ -1,8 +1,13 @@
+import { Dispatch, SetStateAction } from 'react';
+
 // SEARCH COMPONENT
 export interface SearchResultsProps {
   results: OramaSearchResponse;
   selectedFestival: string;
   selectedGenre: string;
+  noQueryResults: boolean;
+  isLoading: boolean;
+  handleNoQueryResults: Dispatch<SetStateAction<boolean>>;
   noSearch: boolean;
 }
 

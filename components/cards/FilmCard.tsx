@@ -4,8 +4,8 @@ import { TbAlertOctagonFilled } from 'react-icons/tb';
 import { BsFillAwardFill } from 'react-icons/bs';
 import FilmTag from './FilmTag';
 import defaultImage from '../../assets/logo.png';
-import { FilmCardProps } from '../utils-components/types';
-import { FESTIVAL_NAMES } from '../utils-components/constants';
+import { FilmCardProps } from '../../utils/types';
+import { FESTIVAL_NAMES } from '../../utils/constants';
 
 const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
   if (!film) {
@@ -36,7 +36,7 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
     >
       <div className="relative max-w-sm w-72 h-96 rounded-2xl overflow-hidden shadow-lg bg-dark-violet hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col">
         <div className="relative w-full h-48">
-          <h1 className="absolute  top-0 left-0 w-full text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 p-4 text-center z-10">
+          <h1 className="absolute  top-0 left-0 w-full text-2xl font-bold bg-clip-text text-white p-4 text-center">
             {title.toUpperCase()}
           </h1>
           <img
@@ -45,7 +45,7 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
             alt={title || 'Film Image'}
           />
           {infoIndieAndAwards.notStrictIndie && (
-            <div className="absolute top-2 right-2 flex items-center z-10">
+            <div className="absolute top-2 right-2 flex items-center">
               <TbAlertOctagonFilled
                 className="text-red-500 text-2xl"
                 title=" Not Strictly an Independent Film"

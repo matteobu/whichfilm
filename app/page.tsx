@@ -3,14 +3,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SmallFilmCard from '../components/cards/SmallFilmCard';
 import { useEffect, useState } from 'react';
-import { OramaSearchResponse } from '../components/utils-components/types';
 import {
   getInfoForLocalStorage,
   getRandomFilms,
   isDifferentDay,
-} from './utils/utils';
+} from '../utils/utils';
+import SearchInput from '../components/search/SearchInput';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const [query, setQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
   const [filmsToDisplay, setFilmsToDisplay] = useState([]);
 
   useEffect(() => {
@@ -36,7 +39,7 @@ export default function Home() {
     fetch(`/api/allFilm`)
       .then((res) => res.json())
       .then((data) => {
-        const todaysFilm = getRandomFilms(data.hits, 20);
+        const todaysFilm = getRandomFilms(data.hits, 7);
         setFilmsToDisplay(todaysFilm);
         localStorage.setItem('filmsData', JSON.stringify(todaysFilm));
         localStorage.setItem('filmsTimestamp', new Date().getTime().toString());
@@ -44,19 +47,45 @@ export default function Home() {
       .catch((error) => console.error('Fetch error:', error));
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(query);
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, [query]);
+
+  const router = useRouter();
+
+  const handleClick = (q: string) => {
+    router.push(`/film-search?query=${debouncedQuery}`);
+  };
+
   return (
-    <main className="flex flex-col bg-gradient-dark-gray-blue text-white h-screen overflow-hidden">
-      <div className="w-full h-[20vh] sm:h-[25vh] relative p-2 bg-gradient-dark-gray-blue border-8 border-transparent bg-clip-border overflow-hidden rounded-4xl">
+    <main className="w-full flex flex-col justify-center items-center bg-gradient-dark-gray-blue">
+      <div className="relative w-full h-[30vh] sm:h-[30vh]">
         <Image
-          src="/whichfilmbanner.png"
+          src="/whichfilm.png"
           alt="Banner"
           layout="fill"
           objectFit="cover"
+          className="absolute inset-0 z-0 opacity-50"
         />
+
+        <div className="w-full flex flex-col justify-center items-center bg-gradient-dark-gray-blue p-3">
+          <div className="flex justify-center z-50 items-center w-full space-x-4 mb-4">
+            <SearchInput
+              query={query}
+              setQuery={setQuery}
+              handleClick={handleClick}
+              filterIconToDisplay={false}
+            />
+          </div>
+        </div>
       </div>
-      <div className="text-center mt-4 flex flex-col">
+      <div className="relative z-10 text-center mt-4 flex flex-col">
         <h1 className="text-xl font-bold text-white bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 m-1">
-          Just click on{' '}
+          We’ve got your week’s picks locked and loaded, or just hit up{' '}
           <Link
             href="/film-search"
             className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500"
@@ -79,7 +108,7 @@ export default function Home() {
               chill and wait!
             </p>
           ) : (
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center">
               {filmsToDisplay.map((film, index) => (
                 <SmallFilmCard key={index} film={film} />
               ))}

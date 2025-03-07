@@ -1,14 +1,14 @@
 'use client';
 import { Key, useState } from 'react';
 import CastCrewCard from './CastCrewCard';
-import { CastInfo, CrewInfo } from '../utils-components/types';
+import { CastInfo, CrewInfo } from '../../utils/types';
 
 const CastGrid = ({ cast }) => {
   const [hovered, setHovered] = useState(null);
 
   return (
     <>
-      <div className="w-full pl-2 text-start text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
+      <div className="w-full pl-2 text-start text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
         <p>The showmakers</p>
       </div>
       <div className="w-full flex flex-row">

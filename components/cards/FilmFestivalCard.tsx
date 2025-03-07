@@ -1,6 +1,6 @@
 import React from 'react';
 import defaultImage from '../../assets/logo.png';
-import { FilmFestivalCardProps } from '../utils-components/types';
+import { FilmFestivalCardProps } from '../../utils/types';
 
 const FilmFestivalCard: React.FC<FilmFestivalCardProps> = ({ festival }) => {
   return (

@@ -1,4 +1,4 @@
-import { TAG_COLORS } from '../utils-components/constants';
+import { TAG_COLORS } from '../../utils/constants';
 
 const FilmTag: React.FC<{ text: string }> = ({ text }) => {
   const color = TAG_COLORS[text?.toLowerCase()] || TAG_COLORS.default;
