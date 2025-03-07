@@ -8,7 +8,7 @@ const CastGrid = ({ cast }) => {
 
   return (
     <>
-      <div className="w-full pl-2 text-start text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
+      <div className="w-full pl-2 text-start text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
         <p>The showmakers</p>
       </div>
       <div className="w-full flex flex-row">
