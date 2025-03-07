@@ -32,23 +32,21 @@ export default async function FilmPage({ params }) {
   const festival = Object.keys(infoIndieAndAwards).find(
     (key) => key !== 'notStrictIndie' && key !== 'noteOnIndie'
   );
-  console.log(festival);
-  console.log(infoIndieAndAwards);
-  console.log(infoIndieAndAwards[festival].awards);
-  const awards = festival ? infoIndieAndAwards[festival].awards : [];
-  console.log(awards);
+
+  const awards = festival ? infoIndieAndAwards[festival]?.awards || [] : [];
+  const noteOnIndie = infoIndieAndAwards.noteOnIndie;
   const year = release_date.split('-')[0];
   const languageList = spoken_languages.map((lang) => lang).join(', ');
   const genreList = genres.map((genre) => genre).join(', ');
   const cast_crew = [...crew, ...cast.slice(0, 4)];
 
   return (
-    <main className="bg-gradient-dark-gray-blue min-h-screen text-white">
-      <section className="flex flex-col md:flex-row gap-8 items-stretch max-w-7xl mx-auto px-6 py-2">
-        <div className="relative w-full md:w-1/2 min-h-96 flex flex-col justify-center items-center">
+    <main className="bg-gradient-dark-gray-blue min-h-screen text-white px-6 py-6">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+        <div className="relative w-full min-h-96 flex flex-col justify-center items-center rounded-xl overflow-hidden">
           {backdrop_path ? (
             <img
-              className="absolute inset-0 w-full h-full object-cover opacity-70 rounded-2xl"
+              className="absolute inset-0 w-full h-full object-cover opacity-70 rounded-xl"
               src={`https://image.tmdb.org/t/p/w1280${backdrop_path}`}
               alt={title}
             />
@@ -58,7 +56,7 @@ export default async function FilmPage({ params }) {
             </div>
           )}
 
-          <div className="absolute bottom-2 left-4 text-white bg-opacity-50 rounded-lg">
+          <div className="absolute bottom-4 left-4  p-4 rounded-lg">
             <p>
               <strong>Genres:</strong> {genreList}
             </p>
@@ -68,42 +66,48 @@ export default async function FilmPage({ params }) {
             <p>
               <strong>Year:</strong> {year}
             </p>
-            <p>
-              <strong>Festival & Award:</strong> {FESTIVAL_NAMES[festival]}
-              {' -- '}
-              {awards && awards.map((a) => a)}
-            </p>
+            {festival && (
+              <p>
+                <strong>Festival & Award:</strong> {FESTIVAL_NAMES[festival]} -{' '}
+                {awards.join(', ')}
+              </p>
+            )}
           </div>
 
-          <div className="absolute inset-0 flex justify-center items-center rounded-2xl">
+          <div className="absolute inset-0 flex justify-center items-center">
             <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-center">
               {title}
             </h1>
           </div>
         </div>
-        <div className="relative w-full md:w-1/2 min-h-96 flex flex-col items-center justify-between space-y-6">
-          <div className="w-full text-center">
-            <div className="w-full text-start text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 mt-4">
-              <p>Quick rundown</p>
+        <div className="w-full min-h-96 flex justify-center items-center">
+          <iframe
+            className="w-full h-full rounded-xl shadow-xl"
+            src={`https://www.youtube.com/embed/${filmInfo.title} trailer`}
+            title="Trailer"
+            allowFullScreen
+          />
+        </div>
+        <div className="w-full min-h-96 p-4 rounded-xl bg-gray-900 bg-opacity-60 shadow-md">
+          <CastGrid cast={cast_crew} />
+          <div>
+            <div className="w-full pl-2 text-start text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
+              <p>Overview</p>
             </div>
-            <p className="text-lg text-start">{overview}</p>
-          </div>
-          <div className="w-full mt-6 rounded-lg">
-            <CastGrid cast={cast_crew} />
+            <p className="pl-2 text-lg text-start">{overview}</p>
+            {typeof noteOnIndie === 'string' && (
+              <>
+                <div className="w-full pl-2 text-start text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
+                  <p>Indie vibes check</p>
+                </div>
+                <p className="pl-2 text-lg text-start">{noteOnIndie}</p>
+              </>
+            )}
           </div>
         </div>
-        {/* <div className="w-full md:w-1/2 min-h-96 flex items-center justify-center">
-            <iframe
-              className="w-1/2 h-full rounded-lg shadow-xl"
-              src={`https://www.youtube.com/embed/${filmInfo.title} trailer`}
-              title="Trailer"
-              allowFullScreen
-            />
-          </div> */}
-      </section>
-
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto px-6 pb-10 ">
-        <SimilarFilmsBox title={title} genres={genres} filmData={filmData} />
+        <div className="w-full min-h-96 p-4 rounded-xl bg-gray-900 bg-opacity-60 shadow-md">
+          <SimilarFilmsBox title={title} genres={genres} filmData={filmData} />
+        </div>
       </section>
     </main>
   );
