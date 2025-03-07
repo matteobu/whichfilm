@@ -1,27 +1,29 @@
 'use client';
-import { useMemo, useState, useRef, useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import FilmCard from '../cards/FilmCard';
-import NoResults from '../error/noResults';
+import Loading from '../error/Loading';
+import NoResults from '../error/No-Results';
 import { SearchResultsProps } from '../utils-components/types';
 
 const ITEMS_PER_PAGE = 20;
 
 const SearchResults = ({
   results,
+  isLoading,
   noSearch,
+  noQueryResults,
+  handleNoQueryResults,
   selectedFestival,
   selectedGenre,
 }: SearchResultsProps) => {
   const oramaHits = results?.hits ?? [];
 
-  // Compute filtered results dynamically
   const filteredResults = useMemo(() => {
     if (!oramaHits.length) return [];
 
     return oramaHits.filter((film) => {
       const matchesFestival =
         !selectedFestival || film.document.infoIndieAndAwards[selectedFestival];
-      console.log(matchesFestival);
       const matchesGenre =
         !selectedGenre || film.document.genres?.includes(selectedGenre);
 
@@ -29,42 +31,17 @@ const SearchResults = ({
     });
   }, [oramaHits, selectedFestival, selectedGenre]);
 
-  const [page, setPage] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
-  const observerRef = useRef<HTMLDivElement | null>(null);
+  if (noQueryResults && !oramaHits.length) {
+    return <NoResults onClose={() => handleNoQueryResults(false)} />;
+  }
 
-  const visibleFilms = useMemo(() => {
-    return filteredResults.slice(0, page * ITEMS_PER_PAGE);
-  }, [filteredResults, page]);
+  if (isLoading) {
+    return <Loading />;
+  }
 
-  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    if (
-      entries[0].isIntersecting &&
-      visibleFilms.length < filteredResults.length &&
-      !isLoading
-    ) {
-      setIsLoading(true);
-      setTimeout(() => {
-        setPage((prevPage) => prevPage + 1);
-        setIsLoading(false);
-      }, 1000); // Ensure at least 1 second delay
-    }
-  };
-
-  useEffect(() => {
-    if (!filteredResults.length) return;
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 1,
-    });
-
-    if (observerRef.current) observer.observe(observerRef.current);
-    return () => observer.disconnect();
-  }, [filteredResults, visibleFilms]);
-
-  // Handle empty states
-  if (!oramaHits.length) return <NoResults />;
-  if (filteredResults.length === 0) return <NoResults />;
+  if (filteredResults.length === 0 && oramaHits.length === 0) {
+    return <NoResults onClose={() => handleNoQueryResults(false)} />;
+  }
 
   return (
     <>
@@ -83,22 +60,12 @@ const SearchResults = ({
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
-        {visibleFilms.map((film, index) => (
+        {filteredResults.map((film, index) => (
           <div key={index} style={{ flexBasis: 'calc(25% - 1rem)' }}>
             <FilmCard film={film} />
           </div>
         ))}
       </div>
-
-      {/* Loading more indicator */}
-      {visibleFilms.length < filteredResults.length && (
-        <div
-          ref={observerRef}
-          className="text-center mt-4 text-lg text-gray-500"
-        >
-          {isLoading ? 'Loading more...' : 'Scroll down to load more'}
-        </div>
-      )}
     </>
   );
 };
