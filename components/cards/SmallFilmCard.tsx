@@ -52,7 +52,7 @@ const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {
                 z-10 p-1 border-2 border-pink-500 shadow-md 
                 bg-[linear-gradient(to_right,#2c2c2c,#1e3a5f)]"
         >
-          {vote_average.toFixed(1)}
+          {vote_average ? vote_average.toFixed(1) : 'N.P'}
         </div>
 
         <Image
