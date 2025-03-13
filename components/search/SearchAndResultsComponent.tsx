@@ -87,12 +87,11 @@ const SearchComponent = () => {
   const handleNoQueryResults = (value: boolean) => {
     setQuery('');
     setNoQueryResults(value);
+    fetchAllFilms();
   };
 
   const handleClick = (q: string) => {
     setDebouncedQuery(q);
-
-    console.log('query in film-search: ', q);
   };
   return (
     <Suspense>

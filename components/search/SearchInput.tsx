@@ -16,7 +16,6 @@ const SearchInput = ({
   setIsModalOpen,
   filterIconToDisplay,
 }: SearchInputProps) => {
-  console.log(filterIconToDisplay);
   return (
     <div className="flex justify-center items-center w-full space-x-4 mb-4">
       {filterIconToDisplay && (

@@ -31,7 +31,7 @@ const SearchResults = ({
     });
   }, [oramaHits, selectedFestival, selectedGenre]);
 
-  if (noQueryResults && !oramaHits.length) {
+  if (noQueryResults) {
     return <NoResults onClose={() => handleNoQueryResults(false)} />;
   }
 

@@ -1,57 +1,30 @@
 'use client';
 import React from 'react';
-
-const FESTIVAL_NAMES: Record<string, string> = {
-  sundance: 'Sundance',
-  vff: 'Venice',
-};
+import { FESTIVAL_NAMES } from '../../utils/constants';
 
 const About = () => {
   return (
     <div className="w-full min-h-screen bg-gradient-dark-gray-blue text-white flex flex-col items-center py-8">
-      {/* Header Section */}
       <header className="text-center mb-12">
         <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 mb-4">
-          About Us
+          Welcome to the indie film haven
         </h1>
-        <p className="text-xl max-w-3xl mx-auto">
-          Welcome to the indie film haven! We’re all about hidden gems, raw
-          storytelling, and films that make you feel something deep. Let’s
-          explore the world of indie film festivals together.
+        <p className="text-lg mt-2">
+          where the popcorn is stale, the aspect ratios are weird, and the
+          budget is mostly vibes.
         </p>
       </header>
-
-      {/* Main Content Section */}
       <section className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6">
-        <div>
-          <h2 className="text-2xl font-semibold text-pink-500">Who We Are</h2>
-          <p className="text-lg mt-2">
-            We’re indie film lovers, festival junkies, and cinephiles. Our goal
-            is to bring you closer to the films that matter, that make you think
-            and feel.
-          </p>
-        </div>
-
-        <div>
-          <h2 className="text-2xl font-semibold text-pink-500">What We Do</h2>
-          <p className="text-lg mt-2">
-            We dig deep into indie film festivals to unearth the best
-            under-the-radar films. It’s all about the stories that pack the
-            biggest punch, no matter the budget.
-          </p>
-        </div>
-
-        <div>
-          <h2 className="text-2xl font-semibold text-pink-500">
-            Join the Indie Tribe
-          </h2>
-          <p className="text-lg mt-2">
-            If you're passionate about indie films, you’re one of us. Join us in
-            celebrating indie cinema and exploring stories that break the norm.
-          </p>
-        </div>
-
-        {/* Film Festivals Section */}
+        <h2 className="text-2xl font-semibold text-pink-500">
+          Who We Are - What We Do
+        </h2>
+        <p className="text-lg mt-2">
+          We’re indie film lovers, festival junkies, and champions of movies
+          made on dreams and maxed-out credit cards. We dig through festivals to
+          find hidden gems, bizarre masterpieces, and the occasional two-hour
+          close-up of a potato. If you love cinema that breaks rules and
+          budgets, welcome to the tribe.
+        </p>
         <div>
           <h2 className="text-2xl font-semibold text-pink-500">
             Film Festivals
