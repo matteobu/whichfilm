@@ -25,7 +25,7 @@ export async function GET(req: Request) {
     const results = await client.search({
       term: query,
       limit: 12,
-      mode: 'fulltext',
+      mode: 'hybrid',
     });
 
     if (!results || results.hits?.length === 0) {

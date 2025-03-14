@@ -1,4 +1,5 @@
 import filmData from '../../../database/jsonFiles/filmFetched.json';
+import youtube_links from '../../../database/jsonFiles/youtube_links.json';
 import SimilarFilmsBox from '../../../components/search/SimilarFilmBox';
 import CastGrid from '../../../components/cards/CastCrewGrid';
 import { FESTIVAL_NAMES } from '../../../utils/constants';
@@ -18,6 +19,7 @@ export default async function FilmPage({ params }) {
   }
 
   const {
+    id,
     title,
     backdrop_path,
     release_date,
@@ -27,6 +29,7 @@ export default async function FilmPage({ params }) {
     infoIndieAndAwards,
     cast,
     crew,
+    vote_average,
   } = filmInfo;
 
   const festival = Object.keys(infoIndieAndAwards).find(
@@ -39,6 +42,10 @@ export default async function FilmPage({ params }) {
   const languageList = spoken_languages.map((lang) => lang).join(', ');
   const genreList = genres.map((genre) => genre).join(', ');
   const cast_crew = [...crew, ...cast.slice(0, 4)];
+  const youtubeObject = youtube_links.find((item) => item.id === id);
+  const embedUrl = `https://www.youtube.com/embed/${
+    youtubeObject ? youtubeObject.key : null
+  }`;
 
   return (
     <main className="bg-gradient-dark-gray-blue min-h-screen text-white px-6 py-6">
@@ -66,6 +73,9 @@ export default async function FilmPage({ params }) {
             <p>
               <strong>Year:</strong> {year}
             </p>
+            <p>
+              <strong>Vote:</strong> {vote_average}
+            </p>
             {festival && (
               <p>
                 <strong>Festival & Award:</strong> {FESTIVAL_NAMES[festival]} -{' '}
@@ -83,8 +93,8 @@ export default async function FilmPage({ params }) {
         <div className="w-full min-h-96 flex justify-center items-center">
           <iframe
             className="w-full h-full rounded-xl shadow-xl"
-            src={`https://www.youtube.com/embed/${filmInfo.title} trailer`}
-            title="Trailer"
+            src={embedUrl}
+            title={`Trailer for ${filmInfo.title}`}
             allowFullScreen
           />
         </div>

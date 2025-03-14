@@ -64,9 +64,12 @@ const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
 
             <div className="flex flex-row gap-2">
               <FilmTag text={year || 'n.d.'} />
-              <FilmTag text={genres[0]} />
-              <FilmTag text={genres[1]} />
-              <FilmTag text={genres[2]} />
+              {genres.slice(0, 3).map((genre, index) => (
+                <FilmTag
+                  key={index}
+                  text={genre === 'Science Fiction' ? 'Sci-Fi' : genre}
+                />
+              ))}
             </div>
           </div>
         </div>

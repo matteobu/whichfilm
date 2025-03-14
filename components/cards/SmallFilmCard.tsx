@@ -22,45 +22,34 @@ const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {
       href={`/film-search/${film.id}`}
       className="block m-2 text-xl font-semibold text-pink-300 hover:text-pink-500"
     >
-      <div className="w-[150px] h-auto z-9 relative overflow-visible border-2 rounded-xl border-pink-500 group hover:opacity-60">
+      <div className="w-[150px] h-[210px] z-9 relative overflow-visible border-2 rounded-xl border-pink-500 group">
         <span
-          className="w-[140px] h-[190px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-          flex flex-col items-center justify-center text-center px-4 py-3 gap-2
-          bg-gradient-to-b from-gray-900 to-gray-800 text-white rounded-xl shadow-lg
-          opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 gap-3 
+    bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300"
         >
-          {' '}
+          <span className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
+            {title}
+          </span>
+          <div className="w-8 h-[1px] bg-gray-500 opacity-30 my-2"></div>
           <span
-            className={`text-xs font-semibold px-2 py-[2px] rounded-md 
-            ${isNotIndie ? 'bg-red-600' : 'bg-green-600'} text-white`}
+            className={`text-xs font-semibold px-3 py-1 rounded-full 
+    ${isNotIndie ? 'text-red-600' : 'text-green-600'}`}
           >
             {isNotIndie ? 'ain’t that indie' : 'certified indie'}
           </span>
-          <div className="w-10 h-[2px] bg-gray-500 opacity-50"></div>
-          <span className="text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500  leading-tight">
-            {title}
-          </span>
-          <div className="w-10 h-[2px] bg-gray-500 opacity-50"></div>
-          <span className="text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500  leading-tight">
+          <div className="w-8 h-[1px] bg-gray-500 opacity-30 my-2"></div>
+          <span className="text-xs font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
             click for more juice
           </span>
         </span>
-        <div
-          className="w-10 h-10 flex items-center justify-center 
-                absolute bottom-[-12px] right-[-5px] 
-                text-white text-sm font-bold rounded-full 
-                z-10 p-1 border-2 border-pink-500 shadow-md 
-                bg-[linear-gradient(to_right,#2c2c2c,#1e3a5f)]"
-        >
-          {vote_average ? vote_average.toFixed(1) : 'N.P'}
-        </div>
+        <CircularVote vote={vote_average ? +vote_average.toFixed(1) : 0.0} />
 
         <Image
           src={imageSrc}
+          layout="fill"
           alt={title || 'Film Image'}
-          className="object-cover rounded-lg"
-          width={150}
-          height={250}
+          objectFit="cover"
+          className="rounded-lg transition-opacity duration-300 group-hover:opacity-0"
         />
       </div>
     </Link>
@@ -68,48 +57,47 @@ const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {
 };
 
 export default SmallFilmCard;
-// 'use client';
-// import Link from 'next/link';
-// import defaultImage from '../../assets/logo.png';
-// import { SmallFilmCardProps } from '../../utils/types';
-// import Image from 'next/image';
 
-// const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {
-//   if (!film) {
-//     return null;
-//   }
+const CircularVote: React.FC<{ vote: number }> = ({ vote }) => {
+  const radius = 10;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDasharray = `${(vote / 10) * circumference} ${circumference}`;
+  const color = vote > 7 ? '#3B82F6' : vote > 5 ? '#8B5CF6' : '#F43F5E';
 
-//   const { title, poster_path, infoIndieAndAwards } = film.document;
-//   const imageSrc = poster_path
-//     ? `https://image.tmdb.org/t/p/w500${poster_path}`
-//     : defaultImage.src;
-
-//   const isNotIndie = infoIndieAndAwards.notStrictIndie;
-//   return (
-//     <Link
-//       href={`/film-search/${film.id}`}
-//       className="block m-2 text-xl font-semibold text-pink-300 hover:text-pink-500"
-//     >
-//       <div className="w-[150px] h-[250px] relative overflow-hidden border-2 rounded-xl border-pink-500 transition-opacity duration-300 opacity-40 hover:opacity-100">
-//         <Image
-//           src={imageSrc}
-//           alt={title || 'Film Image'}
-//           className="object-cover"
-//           width={150}
-//           height={250}
-//         />
-//         {isNotIndie ? (
-//           <div className="relative bottom-0 left-0 w-full bg-red-800 opacity-80 text-white text-center text-sm py-1 z-20">
-//             this ain’t that indie
-//           </div>
-//         ) : (
-//           <div className="absolute bottom-0 left-0 w-full bg-green-800 opacity-80 text-white text-center text-sm py-1 z-20">
-//             whichfilm approved
-//           </div>
-//         )}
-//       </div>
-//     </Link>
-//   );
-// };
-
-// export default SmallFilmCard;
+  return (
+    <div className="absolute bottom-[-12px] right-[-5px] w-10 h-10 flex items-center justify-center z-10 ">
+      <svg width="60" height="60" viewBox="0 0 40 40" className="absolute">
+        <circle
+          cx="20"
+          cy="20"
+          r={radius + 3}
+          fill="#101828"
+          stroke="#ec4899"
+          strokeWidth="1.5"
+        />
+        <circle
+          cx="20"
+          cy="20"
+          r={radius}
+          fill="#101828"
+          stroke="gray"
+          strokeWidth="2"
+          opacity="0.5"
+        />
+        <circle
+          cx="20"
+          cy="20"
+          r={radius}
+          fill="#101828"
+          stroke={color}
+          strokeWidth="2"
+          strokeDasharray={strokeDasharray}
+          strokeDashoffset="0"
+          strokeLinecap="round"
+          transform="rotate(-90 20 20)"
+        />
+      </svg>
+      <span className="text-white text-sm font-bold z-10">{vote}</span>
+    </div>
+  );
+};
