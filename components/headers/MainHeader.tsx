@@ -3,6 +3,7 @@ import NavLink from './NavLink';
 import { PiFilmReel } from 'react-icons/pi';
 import { MdOutlineFestival } from 'react-icons/md';
 import { FaCircleInfo } from 'react-icons/fa6';
+import { AiOutlineDiscord } from 'react-icons/ai';
 
 export default function MainHeader() {
   return (
@@ -15,9 +16,6 @@ export default function MainHeader() {
           >
             which film ?
           </Link>
-          <span className="hidden sm:block text-l font-bold text-transparent bg-gradient-pink-purple-blue-text">
-            independent film database, because who needs Hollywood anyway?
-          </span>
         </div>
 
         <nav>
@@ -34,6 +32,10 @@ export default function MainHeader() {
             <NavLink href="/about">
               <FaCircleInfo className="text-xl sm:hidden" />
               <span className="hidden sm:inline">About</span>
+            </NavLink>
+            <NavLink href="https://discord.gg/BEHSKHP8">
+              <AiOutlineDiscord className="text-xl sm:hidden" />
+              <span className="hidden sm:inline">discord</span>
             </NavLink>
           </ul>
         </nav>

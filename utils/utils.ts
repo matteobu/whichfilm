@@ -74,6 +74,7 @@ export const getRandomFilms = (films: any[], count: number) => {
   }
   return randomFilms;
 };
+
 export const isDifferentDay = (storedTimestamp, currentTimestamp) => {
   const storedDate = new Date(storedTimestamp);
   const currentDate = new Date(currentTimestamp);
@@ -85,10 +86,23 @@ export const isDifferentDay = (storedTimestamp, currentTimestamp) => {
 };
 
 export const getInfoForLocalStorage = () => {
-  const storedFilms = localStorage.getItem('filmsData');
+  const storedRandomFilms = localStorage.getItem('storedRandomFilms');
+  const storedRandomBestOverall = localStorage.getItem(
+    'storedRandomBestOverall'
+  );
+  const storedRandomBestFFFilm = localStorage.getItem('storedRandomBestFFFilm');
+  const randomFestivalName = localStorage.getItem('randomFestivalName');
+
   const storedTimestamp = localStorage.getItem('filmsTimestamp');
   const currentTime = new Date().getTime();
-  return { storedFilms, storedTimestamp, currentTime };
+  return {
+    storedRandomFilms,
+    storedRandomBestOverall,
+    storedRandomBestFFFilm,
+    randomFestivalName,
+    storedTimestamp,
+    currentTime,
+  };
 };
 
 export async function extractAndVerifySimilarTitles(
