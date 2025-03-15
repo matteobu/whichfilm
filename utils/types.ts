@@ -72,14 +72,10 @@ export type OramaSearchHits = {
 };
 
 export type OramaSearchHitDocument = {
-  adult: boolean;
   backdrop_path: string | null;
-  belongs_to_collection: string | null;
-  budget: number;
   cast: CastInfo[];
   crew: CrewInfo[];
   genres: string[];
-  homepage: string;
   id: string;
   imdb_id: string;
   infoIndieAndAwards: IndieAwards;
@@ -89,13 +85,10 @@ export type OramaSearchHitDocument = {
   popularity: number;
   poster_path: string | null;
   release_date: string;
-  revenue: number;
-  runtime: number;
   spoken_languages: string[];
   status: string;
   tagline: string;
   title: string;
-  video: boolean;
   vote_average: number;
   vote_count: number;
 };
