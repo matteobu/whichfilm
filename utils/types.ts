@@ -23,11 +23,10 @@ export interface FilmCardProps {
 }
 // SMALL FILM CARD
 export interface SmallFilmCardProps {
-  film: OramaSearchHits;
+  film: OramaSearchHitDocument;
 }
-// FILM FESTIVAL CARD
-
 export interface Festival {
+  id: number;
   name: string;
   location: string;
   overview: string;
@@ -69,32 +68,42 @@ export type IndieAwards = {
 export type OramaSearchHits = {
   id: string;
   score: number;
-  document: {
-    adult: boolean;
-    backdrop_path: string | null;
-    belongs_to_collection: string | null;
-    budget: number;
-    cast: CastInfo[];
-    crew: CrewInfo[];
-    genres: string[];
-    homepage: string;
-    id: string;
-    imdb_id: string;
-    infoIndieAndAwards: IndieAwards;
-    origin_country: string[];
-    original_language: string;
-    overview: string;
-    popularity: number;
-    poster_path: string | null;
-    release_date: string;
-    revenue: number;
-    runtime: number;
-    spoken_languages: string[];
-    status: string;
-    tagline: string;
-    title: string;
-    video: boolean;
-    vote_average: number;
-    vote_count: number;
-  };
+  document: OramaSearchHitDocument;
 };
+
+export type OramaSearchHitDocument = {
+  adult: boolean;
+  backdrop_path: string | null;
+  belongs_to_collection: string | null;
+  budget: number;
+  cast: CastInfo[];
+  crew: CrewInfo[];
+  genres: string[];
+  homepage: string;
+  id: string;
+  imdb_id: string;
+  infoIndieAndAwards: IndieAwards;
+  origin_country: string[];
+  original_language: string;
+  overview: string;
+  popularity: number;
+  poster_path: string | null;
+  release_date: string;
+  revenue: number;
+  runtime: number;
+  spoken_languages: string[];
+  status: string;
+  tagline: string;
+  title: string;
+  video: boolean;
+  vote_average: number;
+  vote_count: number;
+};
+
+// FETCH FILM HOME PAGE
+
+export enum SearchRandomType {
+  RANDOM = 'random',
+  OVERALL = 'overall',
+  BEST_OF_FF = 'bestOfFF',
+}

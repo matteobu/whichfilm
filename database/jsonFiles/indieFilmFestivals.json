@@ -24,10 +24,6 @@
     "imageUrl": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202305/img_3804-sixteen_nine.jpeg",
     "awards": [
       {
-        "name": "Palme d'Or",
-        "award_id": 201
-      },
-      {
         "name": "Grand Prix",
         "award_id": 202
       },
@@ -51,23 +47,6 @@
     ]
   },
   {
-    "id": 321654,
-    "name": "Tribeca Film Festival",
-    "location": "New York City, USA",
-    "overview": "Founded by Robert De Niro, the Tribeca Film Festival highlights independent films and fosters creative collaborations. It has become an important destination for both emerging filmmakers and established voices in the industry.",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Tribeca_Cinemas_marquee.jpg/275px-Tribeca_Cinemas_marquee.jpg",
-    "awards": [
-      {
-        "name": "Best Narrative Feature",
-        "award_id": 401
-      },
-      {
-        "name": "Best Documentary Feature",
-        "award_id": 402
-      }
-    ]
-  },
-  {
     "id": 741852,
     "name": "Berlin International Film Festival (Berlinale)",
     "location": "Berlin, Germany",
@@ -85,23 +64,6 @@
     ]
   },
   {
-    "id": 963258,
-    "name": "South by Southwest (SXSW)",
-    "location": "Austin, Texas, USA",
-    "overview": "Originally known for music and technology, SXSW has grown into a major film festival, particularly for indie filmmakers. The festival often features cutting-edge, genre-bending independent films.",
-    "imageUrl": "https://www.sxsw.com/wp-content/uploads/2019/06/JordanHefler_Atmosphere_OutdoorStage_AuditoriumShores-5608.jpg",
-    "awards": [
-      {
-        "name": "Audience Award (Film)",
-        "award_id": 601
-      },
-      {
-        "name": "Best Documentary Feature",
-        "award_id": 602
-      }
-    ]
-  },
-  {
     "id": 852369,
     "name": "Venice Film Festival",
     "location": "Venice, Italy",
@@ -115,175 +77,6 @@
       {
         "name": "Silver Lion",
         "award_id": 702
-      }
-    ]
-  },
-  {
-    "id": 147852,
-    "name": "AFI Fest",
-    "location": "Los Angeles, USA",
-    "overview": "Hosted by the American Film Institute, AFI Fest is an important showcase for independent cinema. It features films from both established and emerging filmmakers, often with a focus on socially conscious storytelling.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Best Independent Feature",
-        "award_id": 801
-      }
-    ]
-  },
-  {
-    "id": 369852,
-    "name": "Locarno Film Festival",
-    "location": "Locarno, Switzerland",
-    "overview": "The Locarno Film Festival is known for its dedication to experimental and independent films. It’s one of the leading festivals in Europe for discovering new filmmakers.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Golden Leopard",
-        "award_id": 901
-      }
-    ]
-  },
-  {
-    "id": 951753,
-    "name": "Telluride Film Festival",
-    "location": "Telluride, Colorado, USA",
-    "overview": "Telluride is a prestigious festival that showcases a mix of both independent films and big-name productions. It’s considered a key festival for Oscar hopefuls and independent films alike.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Best of the Fest",
-        "award_id": 1001
-      }
-    ]
-  },
-  {
-    "id": 123987,
-    "name": "Raindance Film Festival",
-    "location": "London, UK",
-    "overview": "Raindance is one of the leading independent film festivals in the UK, with a focus on innovative storytelling and supporting emerging filmmakers.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Best Independent Feature",
-        "award_id": 1101
-      }
-    ]
-  },
-  {
-    "id": 789456,
-    "name": "Busan International Film Festival",
-    "location": "Busan, South Korea",
-    "overview": "Busan is Asia’s leading film festival, promoting both Asian and international independent films. It showcases diverse, innovative works and acts as a bridge for global cinema.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Best Asian Film",
-        "award_id": 1201
-      }
-    ]
-  },
-  {
-    "id": 456123,
-    "name": "Rotterdam International Film Festival",
-    "location": "Rotterdam, Netherlands",
-    "overview": "One of the largest and most important film festivals in Europe, the Rotterdam festival is dedicated to showcasing innovative and daring independent films, with a focus on up-and-coming directors.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Tiger Award",
-        "award_id": 1301
-      }
-    ]
-  },
-  {
-    "id": 753159,
-    "name": "San Sebastián International Film Festival",
-    "location": "San Sebastián, Spain",
-    "overview": "This Spanish festival is one of the most prestigious in Europe and often showcases independent cinema alongside international and European films.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Golden Shell",
-        "award_id": 1401
-      }
-    ]
-  },
-  {
-    "id": 951852,
-    "name": "Karlovy Vary International Film Festival",
-    "location": "Karlovy Vary, Czech Republic",
-    "overview": "Known as one of Central Europe’s most prestigious film festivals, Karlovy Vary emphasizes both independent films and regional cinema, offering a platform for emerging filmmakers.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Crystal Globe",
-        "award_id": 1501
-      }
-    ]
-  },
-  {
-    "id": 789123,
-    "name": "Hong Kong International Film Festival",
-    "location": "Hong Kong",
-    "overview": "The Hong Kong International Film Festival is one of Asia’s oldest and most influential, focusing on both independent cinema and cutting-edge films from the Asian region.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Best Asian Feature",
-        "award_id": 1601
-      }
-    ]
-  },
-  {
-    "id": 852741,
-    "name": "Cleveland International Film Festival",
-    "location": "Cleveland, Ohio, USA",
-    "overview": "Known for supporting independent filmmakers, the Cleveland International Film Festival is a well-established platform for films of all genres and budgets.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Audience Choice Award",
-        "award_id": 1701
-      }
-    ]
-  },
-  {
-    "id": 147369,
-    "name": "Seattle International Film Festival (SIFF)",
-    "location": "Seattle, Washington, USA",
-    "overview": "SIFF is one of the largest film festivals in the U.S., focusing on independent cinema and providing a platform for filmmakers from around the world.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Golden Space Needle Award",
-        "award_id": 1801
-      }
-    ]
-  },
-  {
-    "id": 321987,
-    "name": "New York Film Festival (NYFF)",
-    "location": "New York City, USA",
-    "overview": "Although it also features large studio films, NYFF is a significant platform for independent filmmakers and often showcases avant-garde, experimental works.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Best Feature Film",
-        "award_id": 1901
-      }
-    ]
-  },
-  {
-    "id": 159753,
-    "name": "New Zealand International Film Festival (NZIFF)",
-    "location": "Multiple cities across New Zealand",
-    "overview": "This festival is a key platform for independent films in the Pacific region, featuring both international and New Zealand-based filmmakers.",
-    "imageUrl": "undefined",
-    "awards": [
-      {
-        "name": "Best Film",
-        "award_id": 2001
       }
     ]
   }

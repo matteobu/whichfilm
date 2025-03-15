@@ -10,7 +10,7 @@ const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {
   }
 
   const { title, poster_path, infoIndieAndAwards, vote_average, tagline } =
-    film.document;
+    film;
   const imageSrc = poster_path
     ? `https://image.tmdb.org/t/p/w500${poster_path}`
     : defaultImage.src;
