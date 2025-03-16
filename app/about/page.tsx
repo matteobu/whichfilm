@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import SmallCardInfo from '../../components/about/SmallFilmCardInfo';
 import FilmPageInfo from '../../components/about/FilmPageInfo';
@@ -15,20 +14,35 @@ const About = () => {
           About this cool place on the internet
         </h1>
       </header>
-      <section className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8">
-        <ContactSection />
-      </section>
-      <section className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6  mt-8">
+      <section
+        id="who-we-are"
+        className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6  mt-8"
+      >
         <WhoWeAreInfo />
       </section>
-      <section className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8">
+      <section
+        id="orama-info"
+        className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8"
+      >
         <OramaInfo />
       </section>
-      <section className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8">
+      <section
+        id="film-page"
+        className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8"
+      >
         <FilmPageInfo />
       </section>
-      <section className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8">
+      <section
+        id="small-card"
+        className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8"
+      >
         <SmallCardInfo />
+      </section>
+      <section
+        id="contact-info"
+        className="w-full max-w-3xl mx-auto px-6 py-8 bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8"
+      >
+        <ContactSection />
       </section>
       <div className="relative z-10 text-center m-4 flex flex-col border-t-2 border-t-pink-500">
         <h1 className="text-sm text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
@@ -56,7 +70,7 @@ const About = () => {
             href="mailto:your-email@example.com"
             className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500"
           >
-            matteo.codes@pm.me
+            whichfilm@pm.me
           </Link>
           .
         </h1>

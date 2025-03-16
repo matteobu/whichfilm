@@ -91,7 +91,7 @@ export default function Home() {
 
     switch (type) {
       case SearchRandomType.RANDOM:
-        const _RANDOM_FILMS = getRandomFilms(_filmFetchedFiltered, 7);
+        const _RANDOM_FILMS = getRandomFilms(_filmFetchedFiltered, 6);
         localStorage.setItem(
           'storedRandomFilms',
           JSON.stringify(_RANDOM_FILMS)
@@ -113,7 +113,7 @@ export default function Home() {
         );
         const _RANDOM_OVERALL_FF_FILMS = getRandomFilms(
           filteredFilms.sort((a, b) => b.vote_average - a.vote_average),
-          7
+          6
         );
         localStorage.setItem(
           'storedRandomBestFFFilm',
@@ -131,7 +131,7 @@ export default function Home() {
         );
         const _RANDOM_OVERALL_FILMS = getRandomFilms(
           sortedFilms.slice(0, 50),
-          7
+          6
         );
         localStorage.setItem(
           'storedRandomBestOverall',
@@ -211,37 +211,52 @@ export default function Home() {
             </p>
           ) : (
             <>
-              <h1 className="text-lg text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left ml-2">
-                Hot picks of the week, only the juiciest flicks made the cut:
-              </h1>
-              <div className="flex flex-wrap justify-center">
-                {filmsToDisplay.randomFilms.map((film, index) => (
-                  <SmallFilmCard key={index} film={film} />
-                ))}
-              </div>
-              <h1 className="text-lg text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
-                Straight from {randomFilmFestival.replace(/"/g, '')} Film
-                Festival, the dopest festival gems, handpicked for your
-                cinephile cravings:
-              </h1>
-              <div className="flex flex-wrap justify-center">
-                {filmsToDisplay.bestFFFilms.map((film, index) => (
-                  <SmallFilmCard key={index} film={film} />
-                ))}
-              </div>
-              <h1 className="text-lg text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
-                Top-tier bangers from our indie goldmine, certified fresh:
-              </h1>
-              <div className="flex flex-wrap justify-center">
-                {filmsToDisplay.bestOverallFilms.map((film, index) => (
-                  <SmallFilmCard key={index} film={film} />
-                ))}
-              </div>
+              <section
+                id="contact-info"
+                className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1"
+              >
+                <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left ml-2">
+                  Hot picks of the week, only the juiciest flicks made the cut:
+                </h1>
+                <div className="flex flex-wrap justify-center">
+                  {filmsToDisplay.randomFilms.map((film, index) => (
+                    <SmallFilmCard key={index} film={film} />
+                  ))}
+                </div>
+              </section>
+              <section
+                id="contact-info"
+                className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1"
+              >
+                <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
+                  Straight from {randomFilmFestival.replace(/"/g, '')} Film
+                  Festival, top festival gems, handpicked for your cinephile
+                  cravings:
+                </h1>
+                <div className="flex flex-wrap justify-center">
+                  {filmsToDisplay.bestFFFilms.map((film, index) => (
+                    <SmallFilmCard key={index} film={film} />
+                  ))}
+                </div>
+              </section>
+              <section
+                id="contact-info"
+                className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1 mb-4"
+              >
+                <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
+                  Top-tier bangers from our indie goldmine, certified fresh:
+                </h1>
+                <div className="flex flex-wrap justify-center">
+                  {filmsToDisplay.bestOverallFilms.map((film, index) => (
+                    <SmallFilmCard key={index} film={film} />
+                  ))}
+                </div>
+              </section>
             </>
           )}
         </div>
       </div>
-      <div className="relative z-10 text-center m-4 flex flex-col border-t-2 border-t-pink-500">
+      {/* <div className="relative z-10 text-center m-4 flex flex-col border-t-2 border-t-pink-500">
         <h1 className="text-sm text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
           This is an independent, open-source web app developed by{' '}
           <Link
@@ -267,11 +282,11 @@ export default function Home() {
             href="mailto:your-email@example.com"
             className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500"
           >
-            matteo.codes@pm.me
+            whichfilm@pm.me
           </Link>
           .
         </h1>
-      </div>
+      </div> */}
     </main>
   );
 }
