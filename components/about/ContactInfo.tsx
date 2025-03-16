@@ -5,7 +5,7 @@ function ContactSection() {
     <>
       <div className="flex justify-evenly items-center space-x-6">
         <a
-          href="mailto:matteo.codes@pm.me"
+          href="mailto:whichfilm@pm.me"
           className="flex items-center space-x-2 text-white text-lg hover:text-pink-400"
         >
           <FaEnvelope size={30} />

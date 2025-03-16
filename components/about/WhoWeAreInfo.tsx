@@ -41,6 +41,30 @@ const WhoWeAreInfo = () => {
           </a>{' '}
           to chat about it. We’re all about keeping it real and transparent.
         </p>
+        <h2 className="text-2xl font-semibold text-pink-300 mb-2  mt-2">
+          Do you wanna help?
+        </h2>
+
+        <p className="text-lg mt-2">
+          Spot a mistake in a film listing, missing info, or anything off? Let
+          us know! Accuracy is key, and your help keeps things correct. Reach
+          out via our{' '}
+          <a
+            href="https://discord.gg/BEHSKHP8"
+            className="text-blue-400 hover:underline"
+          >
+            Discord channel
+          </a>{' '}
+          or email us at
+          <a
+            href="mailto:whichfilm@pm.me"
+            className="text-blue-400 hover:underline"
+          >
+            {' '}
+            whichfilm@pm.me
+          </a>
+          . Every correction counts!
+        </p>
       </div>
     </>
   );

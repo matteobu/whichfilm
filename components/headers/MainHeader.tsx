@@ -2,8 +2,7 @@ import Link from 'next/link';
 import NavLink from './NavLink';
 import { PiFilmReel } from 'react-icons/pi';
 import { MdOutlineFestival } from 'react-icons/md';
-import { FaCircleInfo } from 'react-icons/fa6';
-import { AiOutlineDiscord } from 'react-icons/ai';
+import { FaCircleInfo, FaDiscord, FaEnvelope, FaGithub } from 'react-icons/fa6';
 
 export default function MainHeader() {
   return (
@@ -34,8 +33,13 @@ export default function MainHeader() {
               <span className="hidden sm:inline">About</span>
             </NavLink>
             <NavLink href="https://discord.gg/BEHSKHP8">
-              <AiOutlineDiscord className="text-xl sm:hidden" />
-              <span className="hidden sm:inline">discord</span>
+              <FaDiscord size={20} style={{ color: '#9d174d' }} />
+            </NavLink>
+            <NavLink href="mailto:whichfilm@pm.me">
+              <FaEnvelope size={20} style={{ color: '#9d174d' }} />
+            </NavLink>
+            <NavLink href="https://github.com/matteobu/whichfilm">
+              <FaGithub size={20} style={{ color: '#9d174d' }} />
             </NavLink>
           </ul>
         </nav>

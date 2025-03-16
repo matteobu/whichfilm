@@ -1,8 +1,10 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
+import { IoMdInformationCircle } from 'react-icons/io';
+
 import defaultImage from '../../assets/logo.png';
 import { SmallFilmCardProps } from '../../utils/types';
-import Image from 'next/image';
 
 const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {
   if (!film) {
@@ -27,7 +29,17 @@ const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {
           className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 gap-3 
     bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300"
         >
-          <span className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
+          <Link
+            href="/about#small-card"
+            className="absolute top-1 left-1 z-20"
+            about="test"
+          >
+            <IoMdInformationCircle size={20} style={{ color: 'pink-500' }} />
+          </Link>
+          <span
+            className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 
+block max-w-[120px] truncate break-words text-center"
+          >
             {title}
           </span>
           <div className="w-8 h-[1px] bg-gray-500 opacity-30 my-2"></div>

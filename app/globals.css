@@ -1,4 +1,11 @@
-html,
+html {
+  scroll-behavior: smooth;
+  background: linear-gradient(
+    to right,
+    var(--color-dark-gray),
+    var(--color-dark-gray-blue)
+  );
+},
 body {
   height: 100%;
   margin: 0;
