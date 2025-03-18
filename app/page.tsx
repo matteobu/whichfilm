@@ -185,7 +185,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative z-10  mt-4 flex flex-col">
+      <div className="relative z-10  mt-4 flex flex-col bg-amber-400">
         <h1 className="text-xl font-bold text-white bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 m-1">
           We’ve got your picks locked and loaded, or just hit up{' '}
           <Link
@@ -212,20 +212,20 @@ export default function Home() {
           ) : (
             <>
               <section
-                id="contact-info"
+                id="hot-week"
                 className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1"
               >
                 <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left ml-2">
                   Hot picks of the week, only the juiciest flicks made the cut:
                 </h1>
-                <div className="flex flex-wrap justify-center">
+                <div className="flex overflow-x-auto whitespace-nowrap gap-x-4 gap-y-6 items-stretch snap-x snap-mandatory scrollbar-hidden">
                   {filmsToDisplay.randomFilms.map((film, index) => (
                     <SmallFilmCard key={index} film={film} />
                   ))}
                 </div>
               </section>
               <section
-                id="contact-info"
+                id="random-ff-films"
                 className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1"
               >
                 <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
@@ -233,20 +233,22 @@ export default function Home() {
                   Festival, top festival gems, handpicked for your cinephile
                   cravings:
                 </h1>
-                <div className="flex flex-wrap justify-center">
+                <div className="flex overflow-x-auto whitespace-nowrap gap-x-4 gap-y-6 items-stretch snap-x snap-mandatory scrollbar-hidden">
                   {filmsToDisplay.bestFFFilms.map((film, index) => (
-                    <SmallFilmCard key={index} film={film} />
+                    <div key={index} className="snap-start">
+                      <SmallFilmCard film={film} />
+                    </div>
                   ))}
                 </div>
               </section>
               <section
-                id="contact-info"
-                className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1 mb-4"
+                id="top-tier"
+                className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1"
               >
                 <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
                   Top-tier bangers from our indie goldmine, certified fresh:
                 </h1>
-                <div className="flex flex-wrap justify-center">
+                <div className="flex overflow-x-auto whitespace-nowrap gap-x-4 gap-y-6 items-stretch snap-x snap-mandatory scrollbar-hidden">
                   {filmsToDisplay.bestOverallFilms.map((film, index) => (
                     <SmallFilmCard key={index} film={film} />
                   ))}
@@ -256,37 +258,6 @@ export default function Home() {
           )}
         </div>
       </div>
-      {/* <div className="relative z-10 text-center m-4 flex flex-col border-t-2 border-t-pink-500">
-        <h1 className="text-sm text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
-          This is an independent, open-source web app developed by{' '}
-          <Link
-            href="https://matteo.codes"
-            className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500"
-          >
-            matteo.codes
-          </Link>
-          . Content is for informational purposes only. The developers do not
-          guarantee accuracy or reliability. Use at your own risk and in
-          compliance with applicable laws. <br></br>This project is intended to
-          be open-source, and any help is truly appreciated. The repository can
-          be found at this{' '}
-          <Link
-            href="https://github.com/matteobu/whichfilm"
-            className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500"
-          >
-            GitHub Repo
-          </Link>
-          . For inquiries, suggestions, or corrections, you can contact the
-          developers at{' '}
-          <Link
-            href="mailto:your-email@example.com"
-            className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500"
-          >
-            whichfilm@pm.me
-          </Link>
-          .
-        </h1>
-      </div> */}
     </main>
   );
 }
