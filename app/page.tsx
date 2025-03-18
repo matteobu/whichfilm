@@ -23,7 +23,7 @@ export default function Home() {
     bestFFFilms: [],
   });
   const [randomFilmFestival, setRandomFilmFestival] = useState('');
-
+  const howManyFilmsToDisplay = 18;
   const router = useRouter();
 
   useEffect(() => {
@@ -91,7 +91,10 @@ export default function Home() {
 
     switch (type) {
       case SearchRandomType.RANDOM:
-        const _RANDOM_FILMS = getRandomFilms(_filmFetchedFiltered, 6);
+        const _RANDOM_FILMS = getRandomFilms(
+          _filmFetchedFiltered,
+          howManyFilmsToDisplay
+        );
         localStorage.setItem(
           'storedRandomFilms',
           JSON.stringify(_RANDOM_FILMS)
@@ -113,7 +116,7 @@ export default function Home() {
         );
         const _RANDOM_OVERALL_FF_FILMS = getRandomFilms(
           filteredFilms.sort((a, b) => b.vote_average - a.vote_average),
-          6
+          howManyFilmsToDisplay
         );
         localStorage.setItem(
           'storedRandomBestFFFilm',
@@ -131,7 +134,7 @@ export default function Home() {
         );
         const _RANDOM_OVERALL_FILMS = getRandomFilms(
           sortedFilms.slice(0, 50),
-          6
+          howManyFilmsToDisplay
         );
         localStorage.setItem(
           'storedRandomBestOverall',
@@ -185,7 +188,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative z-10  mt-4 flex flex-col">
+      <div className="relative z-10 mt-4 flex flex-col w-full max-w-6xl mx-aut overflow-hidden">
         <h1 className="text-xl font-bold text-white bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 m-1">
           We’ve got your picks locked and loaded, or just hit up{' '}
           <Link
@@ -203,6 +206,7 @@ export default function Home() {
           </Link>
           and hunt down that flick you’re craving!
         </h1>
+
         <div className="flex flex-col mt-2">
           {filmsToDisplay.randomFilms.length === 0 ? (
             <p className="text-xl text-white italic font-semibold text-center">
@@ -211,21 +215,26 @@ export default function Home() {
             </p>
           ) : (
             <>
+              {/* Sections with Scrollable Film Cards */}
               <section
-                id="contact-info"
+                id="hot-week"
                 className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1"
               >
                 <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left ml-2">
                   Hot picks of the week, only the juiciest flicks made the cut:
                 </h1>
-                <div className="flex flex-wrap justify-center">
-                  {filmsToDisplay.randomFilms.map((film, index) => (
-                    <SmallFilmCard key={index} film={film} />
-                  ))}
+                {/* Scrollable Wrapper */}
+                <div className="relative w-full">
+                  <div className="flex overflow-x-auto whitespace-nowrap gap-x-4 gap-y-6 items-stretch snap-x snap-mandatory scrollbar-hidden">
+                    {filmsToDisplay.randomFilms.map((film, index) => (
+                      <SmallFilmCard key={index} film={film} />
+                    ))}
+                  </div>
                 </div>
               </section>
+
               <section
-                id="contact-info"
+                id="random-ff-films"
                 className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1"
               >
                 <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
@@ -233,60 +242,36 @@ export default function Home() {
                   Festival, top festival gems, handpicked for your cinephile
                   cravings:
                 </h1>
-                <div className="flex flex-wrap justify-center">
-                  {filmsToDisplay.bestFFFilms.map((film, index) => (
-                    <SmallFilmCard key={index} film={film} />
-                  ))}
+                <div className="relative w-full">
+                  <div className="flex overflow-x-auto whitespace-nowrap gap-x-4 gap-y-6 items-stretch snap-x snap-mandatory scrollbar-hidden">
+                    {filmsToDisplay.bestFFFilms.map((film, index) => (
+                      <div key={index} className="snap-start">
+                        <SmallFilmCard film={film} />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </section>
+
               <section
-                id="contact-info"
-                className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1 mb-4"
+                id="top-tier"
+                className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1"
               >
                 <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
                   Top-tier bangers from our indie goldmine, certified fresh:
                 </h1>
-                <div className="flex flex-wrap justify-center">
-                  {filmsToDisplay.bestOverallFilms.map((film, index) => (
-                    <SmallFilmCard key={index} film={film} />
-                  ))}
+                <div className="relative w-full">
+                  <div className="flex overflow-x-auto whitespace-nowrap gap-x-4 gap-y-6 items-stretch snap-x snap-mandatory scrollbar-hidden">
+                    {filmsToDisplay.bestOverallFilms.map((film, index) => (
+                      <SmallFilmCard key={index} film={film} />
+                    ))}
+                  </div>
                 </div>
               </section>
             </>
           )}
         </div>
       </div>
-      {/* <div className="relative z-10 text-center m-4 flex flex-col border-t-2 border-t-pink-500">
-        <h1 className="text-sm text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left mt-6 ml-2">
-          This is an independent, open-source web app developed by{' '}
-          <Link
-            href="https://matteo.codes"
-            className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500"
-          >
-            matteo.codes
-          </Link>
-          . Content is for informational purposes only. The developers do not
-          guarantee accuracy or reliability. Use at your own risk and in
-          compliance with applicable laws. <br></br>This project is intended to
-          be open-source, and any help is truly appreciated. The repository can
-          be found at this{' '}
-          <Link
-            href="https://github.com/matteobu/whichfilm"
-            className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500"
-          >
-            GitHub Repo
-          </Link>
-          . For inquiries, suggestions, or corrections, you can contact the
-          developers at{' '}
-          <Link
-            href="mailto:your-email@example.com"
-            className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500"
-          >
-            whichfilm@pm.me
-          </Link>
-          .
-        </h1>
-      </div> */}
     </main>
   );
 }

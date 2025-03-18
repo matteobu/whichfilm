@@ -1,6 +1,7 @@
 import festivalData from '../../../database/jsonFiles/indieFilmFestivals.json';
 import filmData from '../../../database/jsonFiles/filmFetched.json';
 import CastGrid from '../../../components/cards/CastCrewGrid';
+import Link from 'next/link';
 
 export default async function FilmFestivalPage({ params }) {
   const { slug } = await params;
@@ -47,7 +48,7 @@ export default async function FilmFestivalPage({ params }) {
 
       <section className="max-w-7xl mx-auto mt-8">
         <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
-          🏆 Awards
+          Awards
         </h2>
         <ul className="list-disc pl-6">
           {awards.map((award) => (
@@ -60,28 +61,30 @@ export default async function FilmFestivalPage({ params }) {
 
       <section className="max-w-7xl mx-auto mt-8">
         <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500">
-          🎬 Winning Films
+          Winning Films
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {winningFilms.map((film) => (
-            <div
-              key={film.id}
-              className="bg-gray-900 bg-opacity-60 p-4 rounded-xl shadow-md"
-            >
-              <img
-                className="w-full h-64 object-cover rounded-xl mb-4"
-                src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-                alt={film.title}
-              />
-              <h3 className="text-xl font-bold">
-                {film.title} ({film.release_date.split('-')[0]})
-              </h3>
-              <p className="text-sm">
-                Awards:{' '}
-                {film.infoIndieAndAwards[festivalKey].awards.join(', ')}
-              </p>
-              <CastGrid cast={film.cast.slice(0, 4)} />
-            </div>
+            <Link href={`/film-search/${film.id}`}>
+              <div
+                key={film.id}
+                className="bg-gray-900 bg-opacity-60 p-4 rounded-xl shadow-md"
+              >
+                <img
+                  className="w-full h-64 object-cover rounded-xl mb-4"
+                  src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
+                  alt={film.title}
+                />
+                <h3 className="text-xl font-bold">
+                  {film.title} ({film.release_date.split('-')[0]})
+                </h3>
+                <p className="text-sm">
+                  Awards:{' '}
+                  {film.infoIndieAndAwards[festivalKey].awards.join(', ')}
+                </p>
+                <CastGrid cast={film.cast.slice(0, 4)} />
+              </div>
+            </Link>
           ))}
         </div>
       </section>
