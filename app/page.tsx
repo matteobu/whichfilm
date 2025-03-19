@@ -221,7 +221,7 @@ export default function Home() {
                 className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1"
               >
                 <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left ml-2">
-                  Hot picks of the week, only the juiciest flicks made the cut:
+                  Hot picks of the day, only the juiciest flicks made the cut:
                 </h1>
                 {/* Scrollable Wrapper */}
                 <div className="relative w-full">

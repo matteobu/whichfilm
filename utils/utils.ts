@@ -1,5 +1,5 @@
 import { FESTIVAL_NAMES } from './constants';
-import { OramaSearchHits } from './types';
+import { OramaSearchHitDocument, OramaSearchHits } from './types';
 
 /**
  * Generates a deterministically random subset of film objects based on the current date
@@ -122,3 +122,21 @@ export async function extractAndVerifySimilarTitles(
 
   return filteredTitles;
 }
+
+export const getGenresYearsLanguages = (films: OramaSearchHitDocument[]) => {
+  const genres = new Set<string>();
+  const years = new Set<number>();
+  const languages = new Set<string>();
+
+  films.forEach((film) => {
+    film.genres.forEach((genre) => genres.add(genre));
+    years.add(Number(film.release_date.split('-')[0]));
+    film.spoken_languages.flat().forEach((language) => languages.add(language));
+  });
+
+  return {
+    genres: Array.from(genres),
+    years: Array.from(years).sort((a, b) => b - a),
+    languages: Array.from(languages),
+  };
+};

@@ -7,12 +7,20 @@
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Sundance_Film_Festival.jpg/1920px-Sundance_Film_Festival.jpg",
     "awards": [
       {
-        "name": "Grand Jury Prize",
+        "name": "Grand Jury Prize Dramatic",
         "award_id": 101
       },
       {
-        "name": "Audience Award",
+        "name": "Audience Award Dramatic",
         "award_id": 102
+      },
+      {
+        "name": "Special Jury Prize Dramatic",
+        "award_id": 103
+      },
+      {
+        "name": "Special Jury Recognition",
+        "award_id": 104
       }
     ]
   },

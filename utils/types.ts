@@ -25,14 +25,19 @@ export interface FilmCardProps {
 export interface SmallFilmCardProps {
   film: OramaSearchHitDocument;
 }
+export interface Award {
+  name: string;
+  award_id: number;
+}
+
 export interface Festival {
   id: number;
   name: string;
   location: string;
   overview: string;
-  imageUrl?: string;
+  imageUrl: string;
+  awards: Award[];
 }
-
 export interface FilmFestivalCardProps {
   festival: Festival;
 }
@@ -76,7 +81,7 @@ export type OramaSearchHitDocument = {
   cast: CastInfo[];
   crew: CrewInfo[];
   genres: string[];
-  id: string;
+  id: number;
   imdb_id: string;
   infoIndieAndAwards: IndieAwards;
   origin_country: string[];
