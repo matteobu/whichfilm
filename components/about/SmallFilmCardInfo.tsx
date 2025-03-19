@@ -17,7 +17,9 @@ const SmallCardInfo = () => {
           Displays the movie’s poster from TMDB.
         </li>
         <li>
-          <span className="text-2xl font-semibold text-pink-300">Hover Overlay:</span>{' '}
+          <span className="text-2xl font-semibold text-pink-300">
+            Hover Overlay:
+          </span>{' '}
           <br></br>
           Appears when hovered, showing:
           <ul className="list-disc ml-6 mt-1 space-y-1">
@@ -62,7 +64,7 @@ const SmallCardInfo = () => {
 export default SmallCardInfo;
 
 export const mockedFilmForAbout = {
-  id: '803700',
+  id: 803700,
   backdrop_path: '/xmqxG859eJbe2bJpSonJY6UazGr.jpg',
   genres: ['Drama'],
   imdb_id: 'tt14641542',

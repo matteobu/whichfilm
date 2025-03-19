@@ -10,7 +10,7 @@ import { NavLinkProps } from '../../utils/types';
 
 const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname.startsWith(href);
 
   let className = '';
 
