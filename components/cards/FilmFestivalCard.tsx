@@ -9,7 +9,7 @@ const FilmFestivalCard: React.FC<FilmFestivalCardProps> = ({ festival }) => {
       href={`/film-festival/${festival.id}`}
       className="block m-2 text-xl font-semibold text-pink-300 hover:text-pink-500"
     >
-      <div className="w-64 h-64 rounded-lg overflow-hidden shadow-lg bg-gradient-to-r from-purple-900 via-indigo-900 to-violet-700 p-4 hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
+      <div className="w-48 h-64 rounded-lg overflow-hidden shadow-lg bg-gradient-to-r from-purple-900 via-indigo-900 to-violet-700 p-1 hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col items-center">
         {festival.imageUrl ? (
           <img
             src={

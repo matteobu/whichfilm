@@ -39,6 +39,7 @@ const SmallFilmCard: React.FC<SmallFilmCardProps> = ({ film }) => {
       <Link
         href={`/film-search/${film.id}`}
         className="text-xl font-semibold text-pink-300 hover:text-pink-500"
+        prefetch={true}
       >
         <div
           className="w-[150px] h-[210px] z-9 relative overflow-hidden border-2 rounded-xl border-pink-500 

@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import SmallFilmCard from '../components/cards/SmallFilmCard';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import {
   getInfoForLocalStorage,
   getRandomFilms,
@@ -13,6 +13,7 @@ import { useRouter } from 'next/navigation';
 import { FESTIVAL_NAMES } from '../utils/constants';
 import filmFetched from '../database/jsonFiles/filmFetched.json';
 import { SearchRandomType } from '../utils/types';
+import Loading from '../components/error/Loading';
 
 export default function Home() {
   const [query, setQuery] = useState('');
@@ -215,7 +216,6 @@ export default function Home() {
             </p>
           ) : (
             <>
-              {/* Sections with Scrollable Film Cards */}
               <section
                 id="hot-week"
                 className="w-full max-w-6xl mx-auto bg-gradient-dark-gray-blue rounded-xl shadow-2xl space-y-6 mt-8 p-4 border-1"
@@ -223,11 +223,12 @@ export default function Home() {
                 <h1 className="text-2xl text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-left ml-2">
                   Hot picks of the day, only the juiciest flicks made the cut:
                 </h1>
-                {/* Scrollable Wrapper */}
                 <div className="relative w-full">
                   <div className="flex overflow-x-auto whitespace-nowrap gap-x-4 gap-y-6 items-stretch snap-x snap-mandatory scrollbar-hidden">
                     {filmsToDisplay.randomFilms.map((film, index) => (
-                      <SmallFilmCard key={index} film={film} />
+                      <Suspense key={index} fallback={<Loading />}>
+                        <SmallFilmCard key={index} film={film} />
+                      </Suspense>
                     ))}
                   </div>
                 </div>

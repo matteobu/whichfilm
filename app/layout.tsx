@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
           property="og:description"
           content="Search, discover, and filter through a curated database of festival films."
         />
-        <meta property="og:image" content="/path-to-image.jpg" />{' '}
+        <meta property="og:image" content="/path-to-image.jpg" />
         <meta property="og:url" content="https://whichfilm-xi.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           name="twitter:description"
           content="Find, search, and explore independent films from top festivals with WhichFilm."
         />
-        <meta name="twitter:image" content="/path-to-image.jpg" />{' '}
+        <meta name="twitter:image" content="/path-to-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <title>WhichFilm - Discover Festival Gems</title>
       </head>
