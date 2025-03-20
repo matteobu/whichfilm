@@ -17,7 +17,7 @@ export default function FilmPageInfo() {
           TMDB vote and the awards.
           <br />
           <Image
-            src="/info/BackdropInfo.png"
+            src="/images/backdrop-info.png"
             alt="Backdrop & Details"
             width={300}
             height={150}
@@ -32,7 +32,7 @@ export default function FilmPageInfo() {
           Brief summary of the film's plot.
           <br />
           <Image
-            src="/info/OverviewInfo.png"
+            src="/images/overview-info.png"
             alt="Film Overview"
             width={300}
             height={150}
@@ -45,7 +45,7 @@ export default function FilmPageInfo() {
           Embedded YouTube trailer (if available).
           <br />
           <Image
-            src="/info/YoutubeInfo.png"
+            src="/images/youtube-info.png"
             alt="Trailer"
             width={300}
             height={150}
@@ -60,7 +60,7 @@ export default function FilmPageInfo() {
           Key actors and crew members featured prominently.
           <br />
           <Image
-            src="/info/CastCrewInfo.png"
+            src="/images/cast-crew-info.png"
             alt="Cast & Crew"
             width={300}
             height={150}
@@ -78,14 +78,14 @@ export default function FilmPageInfo() {
             Orama ensures a rich and immersive search experience.
           </p>
           <Image
-            src="/info/OramaInfo.png"
+            src="/images/orama-info.png"
             alt="Orama Integration"
             width={300}
             height={150}
             className="rounded-lg mt-2"
           />
           <Image
-            src="/info/OramaInfo2.png"
+            src="/images/orama-info-2.png"
             alt="Orama Integration"
             width={300}
             height={150}
