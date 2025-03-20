@@ -2,7 +2,7 @@
 const nextConfig = {
   devIndicators: false,
   images: {
-    domains: ['image.tmdb.org'],
+    remotePatterns: [{ hostname: 'image.tmdb.org' }],
   },
 };
 

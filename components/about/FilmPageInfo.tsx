@@ -25,7 +25,9 @@ export default function FilmPageInfo() {
           />
         </li>
         <li>
-          <span className="text-2xl font-semibold text-pink-300">Film Overview:</span>{' '}
+          <span className="text-2xl font-semibold text-pink-300">
+            Film Overview:
+          </span>{' '}
           <br />
           Brief summary of the film's plot.
           <br />
@@ -38,7 +40,8 @@ export default function FilmPageInfo() {
           />
         </li>
         <li>
-          <span className="text-2xl font-semibold text-pink-300">Trailer:</span> <br />
+          <span className="text-2xl font-semibold text-pink-300">Trailer:</span>{' '}
+          <br />
           Embedded YouTube trailer (if available).
           <br />
           <Image
@@ -50,7 +53,9 @@ export default function FilmPageInfo() {
           />
         </li>
         <li>
-          <span className="text-2xl font-semibold text-pink-300">Cast & Crew:</span>{' '}
+          <span className="text-2xl font-semibold text-pink-300">
+            Cast & Crew:
+          </span>{' '}
           <br />
           Key actors and crew members featured prominently.
           <br />
