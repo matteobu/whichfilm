@@ -150,6 +150,120 @@
     ]
   },
   {
+    "id": 375273,
+    "backdrop_path": "/tPfZwmLobKQE9ab573z76hCNH7r.jpg",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "TV Movie",
+      "Action",
+      "Comedy",
+      "Family",
+      "Fantasy",
+      "Science Fiction"
+    ],
+    "imdb_id": "",
+    "original_language": "en",
+    "origin_country": ["US"],
+    "original_title": "The Fairly OddParents: Channel Chasers",
+    "overview": "After being punished with no more television for the rest of his life, Timmy wishes himself into the world of television in order to escape the harsh reality of his life and his parents. Unfortunately for him, his carelessness with magic results in Vicky taking over the world in the future. It's all up to Timmy to stop her in attempts to prevent her from destroying Dimmsdale, while escaping a mysterious masked man that is trying to track him down.",
+    "poster_path": "/cZrXJfX0CkEPJgIrHzkCkKhSnMb.jpg",
+    "release_date": "2004-01-13",
+    "spoken_languages": ["English"],
+    "status": "Released",
+    "popularity": 2.896,
+    "title": "The Fairly OddParents: Channel Chasers",
+    "tagline": "",
+    "vote_average": 7.6,
+    "vote_count": 82,
+    "infoIndieAndAwards": {
+      "berlin": {
+        "awards": ["Silver Bear"]
+      },
+      "notStrictIndie": true,
+      "noteOnIndie": "The film was backed by traditional production funding, meaning it does not meet independent film criteria."
+    },
+    "cast": [
+      {
+        "original_name": "Tara Strong",
+        "profile_path": "/8Z86FfWbnUJnyFTcLa9MpVVFhMh.jpg",
+        "character": "Timmy Turner / Paula Poundcake / Vicky's Mom / Tommy Turner / Tammy Turner (voice)"
+      },
+      {
+        "original_name": "Daran Norris",
+        "profile_path": "/oLaegqPwuEdNNJVqrvcgI6guYsi.jpg",
+        "character": "Cosmo / Mr. Turner (voice)"
+      },
+      {
+        "original_name": "Susanne Blakeslee",
+        "profile_path": "/5s4vquKADCS90iOiEwgCTZkaQjX.jpg",
+        "character": "Wanda / Mrs. Turner (voice)"
+      },
+      {
+        "original_name": "Grey DeLisle",
+        "profile_path": "/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg",
+        "character": "Vicky (voice)"
+      },
+      {
+        "original_name": "Carlos Alazraqui",
+        "profile_path": "/d2hufnjlfsZiY7N9NLZ6b7FE1IZ.jpg",
+        "character": "Denzel Crocker / Sheldon Dinkleberg / Dinkledog / Tony Futurelli / Mayor of Dimmsdale / Man #1 (voice)"
+      },
+      {
+        "original_name": "Jason Marsden",
+        "profile_path": "/53aVh2ka0b4ZyR8dO8hBTQxQ9hc.jpg",
+        "character": "Chester McBadbat / Clint / Jeff / Johnny Hunt / Shaggy (voice)"
+      },
+      {
+        "original_name": "Gary LeRoi Gray",
+        "profile_path": "/2NDjq601E5BFBPGx5fyL43UnJmQ.jpg",
+        "character": "AJ (voice)"
+      },
+      {
+        "original_name": "Dee Bradley Baker",
+        "profile_path": "/9oFnToDZWp0I484s7Ua1EzNQQ2m.jpg",
+        "character": "Big Kid / Ned Flanders (voice)"
+      },
+      {
+        "original_name": "Kevin Michael Richardson",
+        "profile_path": "/xXt9Nh7RAT5bOen66TaXreNYmCl.jpg",
+        "character": "Adult AJ / Mr. Turner's Boss / Snoop / Donnie Donut / Frosty (voice)"
+      },
+      {
+        "original_name": "Jim Ward",
+        "profile_path": "/7Um56ftGoxN6c5GxJSNckeARCDy.jpg",
+        "character": "Chet Ubetcha / Mr. Joel / Vicky's Dad / Doug Dimmadome / Blackbird (voice)"
+      },
+      {
+        "original_name": "Butch Hartman",
+        "profile_path": "/wEzwotJekBQLPvG93cXaQ6wqJLD.jpg",
+        "character": "Race Official / Oscar (voice)"
+      },
+      {
+        "original_name": "Adam West",
+        "profile_path": "/a3Yw8bb6AF7a8Zr7IyEZhZxWVWN.jpg",
+        "character": "Himself (voice)"
+      },
+      {
+        "original_name": "Alec Baldwin",
+        "profile_path": "/hzKy7x574eeUS3wt1R3yvWBRpeR.jpg",
+        "character": "Adult Timmy Turner (voice)"
+      },
+      {
+        "original_name": "Chris Kirkpatrick",
+        "profile_path": "/r0HqkLuH5a2dSQ2lgTd5FxOPUkK.jpg",
+        "character": "Chip Skylark (voice)"
+      }
+    ],
+    "crew": [
+      {
+        "original_name": "Butch Hartman",
+        "profile_path": "/wEzwotJekBQLPvG93cXaQ6wqJLD.jpg",
+        "job": "Director"
+      }
+    ]
+  },
+  {
     "id": 267662,
     "backdrop_path": "/jWSZQro57xqaXWOv5aigF3gNENJ.jpg",
     "genres": ["Drama"],
@@ -28359,6 +28473,40 @@
     ]
   },
   {
+    "id": 133439,
+    "backdrop_path": null,
+    "genres": ["Documentary"],
+    "imdb_id": "tt0092630",
+    "original_language": "en",
+    "origin_country": ["US"],
+    "original_title": "Beirut: The Last Home Movie",
+    "overview": "Beirut: The Last Home Movie is a 1987 documentary film directed by Jennifer Fox. It follows the life of Gaby Bustros and her family, who live in in a 200-year old mansion in Beirut during the Lebanese Civil War. The Bustros family, one of the noble families of Beirut, remain in their ancestral home despite the endless war that surrounds them.",
+    "poster_path": "/v2ROriS1RMiG9mEm5j6hvr7rjHf.jpg",
+    "release_date": "1987-11-11",
+    "spoken_languages": ["English"],
+    "status": "Released",
+    "popularity": 0.106,
+    "title": "Beirut: The Last Home Movie",
+    "tagline": "",
+    "vote_average": 6.3,
+    "vote_count": 3,
+    "infoIndieAndAwards": {
+      "sundance": {
+        "awards": ["Grand Jury Prize Documentary"]
+      },
+      "notStrictIndie": false,
+      "noteOnIndie": "Beirut: The Last Home Movie is an independent documentary film produced with minimal budget and outside mainstream studios."
+    },
+    "cast": [],
+    "crew": [
+      {
+        "original_name": "Jennifer Fox",
+        "profile_path": "/d1z8dsmC3L5QcNPvloY6DcbNXYp.jpg",
+        "job": "Director"
+      }
+    ]
+  },
+  {
     "id": 41782,
     "backdrop_path": "/prWk9ccgRdO7kNCVmckwoqhTHXO.jpg",
     "genres": ["Crime", "Drama", "Romance"],
@@ -28902,7 +29050,7 @@
     "vote_count": 50,
     "infoIndieAndAwards": {
       "sundance": {
-        "awards": ["Audience Award Dramatic"]
+        "awards": ["Excellence in Cinematography Award Dramatic"]
       },
       "notStrictIndie": false,
       "noteOnIndie": "Daughters of the Dust is considered independent due to its small budget and unique storytelling, outside the mainstream Hollywood system."
@@ -55412,23 +55560,23 @@
     ]
   },
   {
-    "id": 483455,
-    "backdrop_path": "/vjnS4iu0SdwXm2LLqZGNCfpId9t.jpg",
-    "genres": ["Animation", "Action", "Comedy", "Mystery", "Crime", "Fantasy"],
-    "imdb_id": "tt8391976",
-    "original_language": "ja",
-    "origin_country": ["JP"],
-    "original_title": "文豪ストレイドッグス DEAD APPLE",
-    "overview": "A large scale catastrophe is occurring across the planet. Ability users are discovered after the appearance of a mysterious fog, apparently having committed suicide, so the Armed Detective Agency sets out to investigate these mysterious deaths. The case seems to involve an unknown ability user referred to as \"Collector,\" a man who could be the mastermind behind the incident.\r Trust and courage are put to the test in order to save the city of Yokohama and ability users across the world from the grip of Collector where the Armed Detective Agency forms an unlikely partnership with the dangerous Port Mafia.",
-    "poster_path": "/vy8dW9kDuXWmdXcsBga3V4i1vtP.jpg",
-    "release_date": "2018-03-03",
-    "spoken_languages": ["Japanese"],
+    "id": 209840,
+    "backdrop_path": "/wY63GAssmaUwFX8futj7E4hpgVc.jpg",
+    "genres": ["Drama"],
+    "imdb_id": "tt3119416",
+    "original_language": "zh",
+    "origin_country": ["TW"],
+    "original_title": "郊遊",
+    "overview": "An alcoholic man and his two young children barely survive in Taipei. They cross paths with a lonely grocery clerk who might help them make a better life.",
+    "poster_path": "/zRwQzUDQlGwCeHkRUTuCkIyaaJj.jpg",
+    "release_date": "2014-02-21",
+    "spoken_languages": ["Mandarin"],
     "status": "Released",
     "popularity": 3.537,
-    "title": "Bungo Stray Dogs: Dead Apple",
-    "tagline": "An underworld is rising.",
-    "vote_average": 8.1,
-    "vote_count": 159,
+    "title": "Stray Dogs",
+    "tagline": "",
+    "vote_average": 6.4,
+    "vote_count": 89,
     "infoIndieAndAwards": {
       "venice": {
         "awards": ["Grand Jury Prize"]
@@ -55438,95 +55586,15 @@
     },
     "cast": [
       {
-        "original_name": "小野賢章",
-        "profile_path": "/wUYJ3HIeygHfh4rAqupE4RPoG3W.jpg",
-        "character": "Ryuunosuke Akutagawa (voice)"
-      },
-      {
-        "original_name": "宮野真守",
-        "profile_path": "/nuok8ueG7k9hPZ09Tpr8e7Qn0ah.jpg",
-        "character": "Osamu Dazai (voice)"
-      },
-      {
-        "original_name": "谷山紀章",
-        "profile_path": "/9lOnUF6C6xEhZ0FQmYNzNZhcUpd.jpg",
-        "character": "Chuuya Nakahara (voice)"
-      },
-      {
-        "original_name": "上村祐翔",
-        "profile_path": "/boQMSI9WA5x2LYDEsiq0udeKMNe.jpg",
-        "character": "Atsushi Nakajima (voice)"
-      },
-      {
-        "original_name": "石田彰",
-        "profile_path": "/jnW2Gn2NlR2uwOCeyOuzypnTmkH.jpg",
-        "character": "Fyodor Dostoyevsky (voice)"
-      },
-      {
-        "original_name": "雨宮天",
-        "profile_path": "/4ZZcdFH4QgbIC8AeJ3BLG1ue7G5.jpg",
-        "character": "Elise (voice)"
-      },
-      {
-        "original_name": "小山力也",
-        "profile_path": "/hsZm87BORLpzhaycBaWOD5xpjVC.jpg",
-        "character": "Yukichi Fukuzawa (voice)"
-      },
-      {
-        "original_name": "諸星すみれ",
-        "profile_path": "/dGmqlaC2o2TmWLWFDv7JTvpUmzp.jpg",
-        "character": "Kyouka Izumi (voice)"
-      },
-      {
-        "original_name": "細谷佳正",
-        "profile_path": "/lUR5oN1LrqGgp25IOcI1qOH1Ud5.jpg",
-        "character": "Doppo Kunikida (voice)"
-      },
-      {
-        "original_name": "花倉桔道",
-        "profile_path": "/hsTsib1CBugcfYKOp3MBzylnmro.jpg",
-        "character": "Kenji Miyazawa (voice)"
-      },
-      {
-        "original_name": "宮本充",
-        "profile_path": "/zcgbjwPHY9YV4UMpm6bvFXorWCJ.jpg",
-        "character": "Ougai Mori (voice)"
-      },
-      {
-        "original_name": "諏訪部順一",
-        "profile_path": "/4S7c3n3r07A83HvkLrnWZGVhiHg.jpg",
-        "character": "Sakunosuke Oda (voice)"
-      },
-      {
-        "original_name": "福山潤",
-        "profile_path": "/eT9eloyIaIkTvTqMmpcsAleP2hM.jpg",
-        "character": "Ango Sakaguchi (voice)"
-      },
-      {
-        "original_name": "中井和哉",
-        "profile_path": "/78PKViY7brjF3AJI8h3tXyUyYT7.jpg",
-        "character": "Tatsuhiko Shibusawa (voice)"
-      },
-      {
-        "original_name": "豊永利行",
-        "profile_path": "/duhxGjWjgo6WagvGgKu529ztz7u.jpg",
-        "character": "Junichirou Tanizaki (voice)"
-      },
-      {
-        "original_name": "小見川千明",
-        "profile_path": "/hNHPri7hu7ApEht5uGdQxTaV3GO.jpg",
-        "character": "Naomi Tanizaki (voice)"
-      },
-      {
-        "original_name": "嶋村侑",
-        "profile_path": "/uwfGYR10w70RLH8z00eqWIx5YOY.jpg",
-        "character": "Akiko Yosano (voice)"
+        "original_name": "Lee Kang-sheng",
+        "profile_path": "/rdyfLsAHK0h1ijwdJbXtDJ0iGOd.jpg",
+        "character": " Lao Wu (father)"
       }
     ],
     "crew": [
       {
-        "original_name": "五十嵐卓哉",
-        "profile_path": "/cHQB4yoWqVQWwUsH5aCeAInz6d5.jpg",
+        "original_name": "Tsai Ming-liang",
+        "profile_path": "/ceVmDE537vnoxiGmkoNOf5srJWr.jpg",
         "job": "Director"
       }
     ]
