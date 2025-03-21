@@ -1,4 +1,3 @@
-import { FESTIVAL_NAMES } from './constants';
 import { OramaSearchHitDocument, OramaSearchHits } from './types';
 
 /**

@@ -1,3 +1,5 @@
+import { FestivalOrGenre } from "./types";
+
 // HEADER CONSTANTS
 const activeButtonClassName =
   'text-lg font-semibold text-pink-500 hover:text-pink-500 transition duration-300';
@@ -9,10 +11,14 @@ const oramaSearchButtonClassName =
 export const mainClassName =
   'flex flex-col bg-gradient-dark-gray-blue text-white h-screen overflow-hidden py-4';
 
-export const FESTIVAL_OR_GENRE = {
+//
+export const FESTIVAL_OR_GENRE: Record<FestivalOrGenre, FestivalOrGenre> = {
   festival: 'festival',
   genre: 'genre',
 };
+
+// Number of films to display in the main page
+export const N_FILMS_TO_DISPLAY = 18;
 
 const FESTIVAL_NAMES: Record<string, string> = {
   sundance: 'Sundance',

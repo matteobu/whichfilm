@@ -10,6 +10,10 @@ export interface SearchResultsProps {
   handleNoQueryResults: Dispatch<SetStateAction<boolean>>;
   noSearch: boolean;
 }
+// SEARCH FILTER MODAL
+export type FestivalOrGenre = 'festival' | 'genre';
+
+
 
 // NAVLINK
 export interface NavLinkProps {

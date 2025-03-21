@@ -10,7 +10,7 @@ import {
 } from '../utils/utils';
 import SearchInput from '../components/search/SearchInput';
 import { useRouter } from 'next/navigation';
-import { FESTIVAL_NAMES } from '../utils/constants';
+import { FESTIVAL_NAMES, N_FILMS_TO_DISPLAY } from '../utils/constants';
 import filmFetched from '../database/jsonFiles/filmFetched.json';
 import { SearchRandomType } from '../utils/types';
 import Loading from '../components/error/Loading';
@@ -24,7 +24,6 @@ export default function Home() {
     bestFFFilms: [],
   });
   const [randomFilmFestival, setRandomFilmFestival] = useState('');
-  const howManyFilmsToDisplay = 18;
   const router = useRouter();
 
   useEffect(() => {
@@ -94,7 +93,7 @@ export default function Home() {
       case SearchRandomType.RANDOM:
         const _RANDOM_FILMS = getRandomFilms(
           _filmFetchedFiltered,
-          howManyFilmsToDisplay
+          N_FILMS_TO_DISPLAY
         );
         localStorage.setItem(
           'storedRandomFilms',
@@ -117,7 +116,7 @@ export default function Home() {
         );
         const _RANDOM_OVERALL_FF_FILMS = getRandomFilms(
           filteredFilms.sort((a, b) => b.vote_average - a.vote_average),
-          howManyFilmsToDisplay
+          N_FILMS_TO_DISPLAY
         );
         localStorage.setItem(
           'storedRandomBestFFFilm',
@@ -135,7 +134,7 @@ export default function Home() {
         );
         const _RANDOM_OVERALL_FILMS = getRandomFilms(
           sortedFilms.slice(0, 50),
-          howManyFilmsToDisplay
+          N_FILMS_TO_DISPLAY
         );
         localStorage.setItem(
           'storedRandomBestOverall',
