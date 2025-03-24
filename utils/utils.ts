@@ -1,4 +1,7 @@
 import { OramaSearchHitDocument, OramaSearchHits } from './types';
+import { SearchRandomType } from '../utils/types';
+import { FESTIVAL_NAMES, N_FILMS_TO_DISPLAY } from '../utils/constants';
+import filmFetched from '../database/jsonFiles/filmFetched.json';
 
 /**
  * Generates a deterministically random subset of film objects based on the current date
@@ -138,4 +141,81 @@ export const getGenresYearsLanguages = (films: OramaSearchHitDocument[]) => {
     years: Array.from(years).sort((a, b) => b - a),
     languages: Array.from(languages),
   };
+};
+
+export const fetchFilms = async (
+  type: SearchRandomType,
+  setFilmsToDisplay: Function,
+  setRandomFilmFestival: Function
+) => {
+  const _filmFetchedFiltered = filmFetched.filter(
+    (film) =>
+      film.infoIndieAndAwards &&
+      film.infoIndieAndAwards.notStrictIndie === false &&
+      film.backdrop_path !== null &&
+      film.poster_path !== null
+  );
+  const actualDate = new Date().getTime().toString();
+  localStorage.setItem('filmsTimestamp', actualDate);
+
+  switch (type) {
+    case SearchRandomType.RANDOM:
+      const _RANDOM_FILMS = getRandomFilms(
+        _filmFetchedFiltered,
+        N_FILMS_TO_DISPLAY
+      );
+      localStorage.setItem('storedRandomFilms', JSON.stringify(_RANDOM_FILMS));
+      setFilmsToDisplay((prev: any) => ({
+        ...prev,
+        randomFilms: _RANDOM_FILMS,
+      }));
+      break;
+
+    case SearchRandomType.BEST_OF_FF:
+      const festivalNames = Object.values(FESTIVAL_NAMES);
+      const randomFestival =
+        festivalNames[Math.floor(Math.random() * festivalNames.length)];
+      setRandomFilmFestival(randomFestival);
+      localStorage.setItem(
+        'randomFestivalName',
+        JSON.stringify(randomFestival)
+      );
+      const filteredFilms = _filmFetchedFiltered.filter(
+        (film) => film.infoIndieAndAwards[randomFestival.toLowerCase()]
+      );
+      const _RANDOM_OVERALL_FF_FILMS = getRandomFilms(
+        filteredFilms.sort((a, b) => b.vote_average - a.vote_average),
+        N_FILMS_TO_DISPLAY
+      );
+      localStorage.setItem(
+        'storedRandomBestFFFilm',
+        JSON.stringify(_RANDOM_OVERALL_FF_FILMS)
+      );
+      setFilmsToDisplay((prev: any) => ({
+        ...prev,
+        bestFFFilms: _RANDOM_OVERALL_FF_FILMS,
+      }));
+      break;
+
+    case SearchRandomType.OVERALL:
+      const sortedFilms = _filmFetchedFiltered.sort(
+        (a, b) => b.vote_average - a.vote_average
+      );
+      const _RANDOM_OVERALL_FILMS = getRandomFilms(
+        sortedFilms.slice(0, 50),
+        N_FILMS_TO_DISPLAY
+      );
+      localStorage.setItem(
+        'storedRandomBestOverall',
+        JSON.stringify(_RANDOM_OVERALL_FILMS)
+      );
+      setFilmsToDisplay((prev: any) => ({
+        ...prev,
+        bestOverallFilms: _RANDOM_OVERALL_FILMS,
+      }));
+      break;
+
+    default:
+      console.error('Unknown film type.');
+  }
 };

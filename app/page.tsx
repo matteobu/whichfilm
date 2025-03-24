@@ -4,14 +4,12 @@ import Link from 'next/link';
 import SmallFilmCard from '../components/cards/SmallFilmCard';
 import { Suspense, useEffect, useState } from 'react';
 import {
+  fetchFilms,
   getInfoForLocalStorage,
-  getRandomFilms,
   isDifferentDay,
 } from '../utils/utils';
 import SearchInput from '../components/search/SearchInput';
 import { useRouter } from 'next/navigation';
-import { FESTIVAL_NAMES, N_FILMS_TO_DISPLAY } from '../utils/constants';
-import filmFetched from '../database/jsonFiles/filmFetched.json';
 import { SearchRandomType } from '../utils/types';
 import Loading from '../components/error/Loading';
 
@@ -75,80 +73,11 @@ export default function Home() {
       SearchRandomType.OVERALL,
       SearchRandomType.BEST_OF_FF,
     ];
-    await Promise.all(types.map(async (type) => fetchFilms(type)));
-  };
-
-  const fetchFilms = async (type: SearchRandomType) => {
-    const _filmFetchedFiltered = filmFetched.filter(
-      (film) =>
-        film.infoIndieAndAwards &&
-        film.infoIndieAndAwards.notStrictIndie === false &&
-        film.backdrop_path !== null &&
-        film.poster_path !== null
+    await Promise.all(
+      types.map(async (type) =>
+        fetchFilms(type, setFilmsToDisplay, setRandomFilmFestival)
+      )
     );
-    const actualDate = new Date().getTime().toString();
-    localStorage.setItem('filmsTimestamp', actualDate);
-
-    switch (type) {
-      case SearchRandomType.RANDOM:
-        const _RANDOM_FILMS = getRandomFilms(
-          _filmFetchedFiltered,
-          N_FILMS_TO_DISPLAY
-        );
-        localStorage.setItem(
-          'storedRandomFilms',
-          JSON.stringify(_RANDOM_FILMS)
-        );
-        setFilmsToDisplay((prev) => ({ ...prev, randomFilms: _RANDOM_FILMS }));
-        break;
-
-      case SearchRandomType.BEST_OF_FF:
-        const festivalNames = Object.values(FESTIVAL_NAMES);
-        const randomFestival =
-          festivalNames[Math.floor(Math.random() * festivalNames.length)];
-        setRandomFilmFestival(randomFestival);
-        localStorage.setItem(
-          'randomFestivalName',
-          JSON.stringify(randomFestival)
-        );
-        const filteredFilms = _filmFetchedFiltered.filter(
-          (film) => film.infoIndieAndAwards[randomFestival.toLowerCase()]
-        );
-        const _RANDOM_OVERALL_FF_FILMS = getRandomFilms(
-          filteredFilms.sort((a, b) => b.vote_average - a.vote_average),
-          N_FILMS_TO_DISPLAY
-        );
-        localStorage.setItem(
-          'storedRandomBestFFFilm',
-          JSON.stringify(_RANDOM_OVERALL_FF_FILMS)
-        );
-        setFilmsToDisplay((prev) => ({
-          ...prev,
-          bestFFFilms: _RANDOM_OVERALL_FF_FILMS,
-        }));
-        break;
-
-      case SearchRandomType.OVERALL:
-        const sortedFilms = _filmFetchedFiltered.sort(
-          (a, b) => b.vote_average - a.vote_average
-        );
-        const _RANDOM_OVERALL_FILMS = getRandomFilms(
-          sortedFilms.slice(0, 50),
-          N_FILMS_TO_DISPLAY
-        );
-        localStorage.setItem(
-          'storedRandomBestOverall',
-          JSON.stringify(_RANDOM_OVERALL_FILMS)
-        );
-        setFilmsToDisplay((prev) => ({
-          ...prev,
-          bestOverallFilms: _RANDOM_OVERALL_FILMS,
-        }));
-        break;
-
-      default:
-        console.error('Unknown film type.');
-    }
   };
 
   const handleClick = (q: string) => {
