@@ -91,7 +91,8 @@ export default function FeedbackBox() {
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60">
-      <div className="bg-gradient-dark-gray-blue text-white  p-6 rounded-lg w-[90%] max-w-md shadow-xl relative border-2 border-pink-500">
+      <div className="bg-gradient-dark-gray-blue text-white p-6 rounded-lg w-[90%] max-w-md max-h-[90vh] overflow-y-auto shadow-xl relative border-2 border-pink-500 scrollbar-thin scrollbar-thumb-pink-500 scrollbar-track-transparent">
+        {' '}
         <button
           className="absolute top-2 right-3 text-pink-500 font-bold"
           onClick={() => {
@@ -101,9 +102,7 @@ export default function FeedbackBox() {
         >
           ×
         </button>
-
         <h2 className="text-xl font-semibold mb-4">🎬 Calling for Feedback!</h2>
-
         {success ? (
           <p className="text-green-600 font-semibold text-center">
             Thanks a ton! Your voice makes this app better ❤️
@@ -197,7 +196,6 @@ export default function FeedbackBox() {
             </p>
           </>
         )}
-
         {status === 'error' && (
           <p className="text-red-600 mt-2 font-semibold text-center">
             Something went wrong. Please try again.
