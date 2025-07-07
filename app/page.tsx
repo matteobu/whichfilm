@@ -14,6 +14,7 @@ import { FESTIVAL_NAMES } from '../utils/constants';
 import filmFetched from '../database/jsonFiles/filmFetched.json';
 import { SearchRandomType } from '../utils/types';
 import Loading from '../components/error/Loading';
+import FeedbackBox from '../components/feedback-box/FeedbackBox';
 
 export default function Home() {
   const [query, setQuery] = useState('');
@@ -158,6 +159,7 @@ export default function Home() {
 
   return (
     <main className="w-full flex flex-col justify-center items-center bg-gradient-dark-gray-blue">
+      <FeedbackBox />
       <div className="relative w-full h-[30vh] sm:h-[30vh]">
         <Image
           src="/whichfilm.png"
