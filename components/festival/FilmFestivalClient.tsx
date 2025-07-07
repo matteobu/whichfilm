@@ -65,10 +65,8 @@ export default function FilmFestivalClient({ festivalInfo }) {
       return awardMatch && genreMatch && yearMatch && languageMatch;
     });
   }, [filterKeysValues, filmsAwarded, festivalKey]);
-  console.log(filmsToDisplay);
   // Update filter values when an option is selected or removed
   const onFilterKeysClick = (selectedOptions, filterType) => {
-    console.log(selectedOptions, filterType);
     setFilterKeysValues((prevFilters) => ({
       ...prevFilters,
       [filterType]: selectedOptions.map((option) => option.value),
