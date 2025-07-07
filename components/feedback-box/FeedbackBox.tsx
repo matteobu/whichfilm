@@ -25,9 +25,10 @@ export default function FeedbackBox() {
   const [easeOfUse, setEaseOfUse] = useState('');
   const [futureFeature, setFutureFeature] = useState('');
   const FEEDBACK_KEY = 'whichfilm_feedback_sent';
+
   useEffect(() => {
     const hasSent = localStorage.getItem(FEEDBACK_KEY);
-    if (hasSent === 'false') {
+    if (hasSent !== 'true') {
       setIsVisible(true);
     }
     setShouldRender(true);
